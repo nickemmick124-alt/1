@@ -4,7 +4,7 @@ A live business-acumen quiz for HR managers, using fictional agriculture and con
 
 ## Play live
 
-The assessment owner hosts a room, shares its six-character code or link, and waits for players to join. Each of the five questions allows **10 seconds**. Correct answers earn **500–1,000 points**, with faster correct answers scoring higher; wrong or late answers earn zero. The first accepted answer is final.
+The assessment owner hosts a room, shares its six-character code or link, and waits for players to join. Each of the five questions allows **20 seconds**. Correct answers earn **500–1,000 points**, with faster correct answers scoring higher; wrong or late answers earn zero. The first accepted answer is final.
 
 The host advances after each timer ends. The correct answer, explanation, and top three appear after the deadline. Final results are saved, and the host can review and export a CSV. Player identities and total scores appear on the leaderboard; email addresses and full exported results remain host-only.
 
@@ -37,6 +37,6 @@ Scores and deadlines are calculated server-side. Client-supplied scores and time
 
 Rooms and scores use D1, not browser storage. The application does not send invitations or weekly emails. Host a new room each week and distribute its link through your usual company channel.
 
-Question content is in `src/challenges.json`. New questions should fit the 10-second format, include unambiguous assumptions, and preserve any arithmetic when monetary figures scale together. Two rounds are included; there is no automatic generation of new questions.
+Question content is in `src/challenges.json`. New questions should fit the 20-second format, include unambiguous assumptions, and preserve any arithmetic when monetary figures scale together. Two rounds are included; there is no automatic generation of new questions.
 
 Schema changes belong in `db/live-schema.ts`. Generate and inspect Drizzle migrations before building. Applied migrations must stay immutable.

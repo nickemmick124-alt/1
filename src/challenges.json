@@ -6,7 +6,7 @@
     "facts": [
       {
         "label": "Question time",
-        "value": "10 seconds"
+        "value": "20 seconds"
       },
       {
         "label": "Scenarios",
@@ -87,7 +87,7 @@
     "facts": [
       {
         "label": "Question time",
-        "value": "10 seconds"
+        "value": "20 seconds"
       },
       {
         "label": "Scenarios",

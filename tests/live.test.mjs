@@ -10,9 +10,9 @@ const fast = { id: 'fast', email: 'fast@example.test' }, slow = { id: 'slow', em
 function req(path, user, body, overrides = {}) {
   return new Request(origin + path, { method: body === undefined ? 'GET' : 'POST', headers: { ...(user ? { 'oai-authenticated-user-id': user.id, 'oai-authenticated-user-email': user.email } : {}), ...(body !== undefined ? { origin, 'content-type': 'application/json' } : {}), ...overrides }, ...(body !== undefined ? { body: JSON.stringify(body) } : {}) });
 }
-test('speed rewards only correct answers inside the 10-second window', () => {
-  assert.equal(livePoints(0, true), 1000); assert.equal(livePoints(1000, true), 950); assert.equal(livePoints(9000, true), 550);
-  assert.equal(livePoints(10000, true), 0); assert.equal(livePoints(-1, true), 0); assert.equal(livePoints(1, false), 0);
+test('speed rewards only correct answers inside the 20-second window', () => {
+  assert.equal(livePoints(0, true), 1000); assert.equal(livePoints(1000, true), 975); assert.equal(livePoints(10000, true), 750); assert.equal(livePoints(18000, true), 550);
+  assert.equal(livePoints(20000, true), 0); assert.equal(livePoints(-1, true), 0); assert.equal(livePoints(1, false), 0);
 });
 test('week rollover and CSV exports are predictable', () => {
   assert.equal(weekKey(new Date('2026-10-05T00:00:00Z')), '2026-10-05');
@@ -48,20 +48,23 @@ test('full live round: joins, timed scoring, answer lock, reveal, podium and pri
     assert.equal((await call('/api/live/advance', host, { code, questionIndex: -1 })).status, 200);
     assert.equal((await call('/api/live/advance', host, { code, questionIndex: 0 })).status, 409);
     const room = await env.DB.prepare('SELECT * FROM rooms WHERE code = ?').bind(code).first(), snapshot = JSON.parse(room.snapshot), correct = snapshot.questions[0].correct;
-    const visible = await (await call('/api/live/room?code=' + code, fast)).json(); assert.equal(visible.phase, 'question'); assert.equal(visible.deadline, clock + 10000); assert(!('correct' in visible.question)); assert(!('explanation' in visible.question));
+    const visible = await (await call('/api/live/room?code=' + code, fast)).json(); assert.equal(visible.phase, 'question'); assert.equal(visible.deadline, clock + 20000); assert.equal(visible.questionDurationMs, 20000); assert(!('correct' in visible.question)); assert(!('explanation' in visible.question));
     clock += 1000;
     const submission = { code, questionIndex: 0, selected: correct, points: 5000, elapsed: 0 };
     assert.equal((await call('/api/live/answer', fast, submission)).status, 200);
     const locked = await (await call('/api/live/answer', fast, { ...submission, selected: (correct + 1) % 4 })).json(); assert.equal(locked.selected, correct);
     assert.equal((await call('/api/live/answer', wrong, { ...submission, selected: (correct + 1) % 4 })).status, 200);
     const unrevealed = await (await call('/api/live/room?code=' + code, fast)).json(); assert.equal(unrevealed.you.score, 0); assert(!('points' in unrevealed.ownAnswer)); assert(unrevealed.top3.every(p => !('email' in p)));
-    clock = room.started_at + 9000; assert.equal((await call('/api/live/answer', slow, submission)).status, 200);
-    clock = room.started_at + 10000; assert.equal((await call('/api/live/answer', late, submission)).status, 409);
-    const revealed = await (await call('/api/live/room?code=' + code, fast)).json(); assert.equal(revealed.phase, 'reveal'); assert.equal(revealed.question.correct, correct); assert.equal(revealed.ownAnswer.points, 950); assert.equal(revealed.top3[0].name, 'fast'); assert.equal(revealed.top3[1].score, 550); assert.equal(revealed.top3[2].score, 0);
+    clock = room.started_at + 18000; assert.equal((await call('/api/live/answer', slow, submission)).status, 200);
+    clock = room.started_at + 19999;
+    const stillOpen = await (await call('/api/live/room?code=' + code, slow)).json(); assert.equal(stillOpen.phase, 'question'); assert(!('correct' in stillOpen.question));
+    assert.equal((await call('/api/live/advance', host, { code, questionIndex: 0 })).status, 409);
+    clock = room.started_at + 20000; assert.equal((await call('/api/live/answer', late, submission)).status, 409);
+    const revealed = await (await call('/api/live/room?code=' + code, fast)).json(); assert.equal(revealed.phase, 'reveal'); assert.equal(revealed.question.correct, correct); assert.equal(revealed.ownAnswer.points, 975); assert.equal(revealed.top3[0].name, 'fast'); assert.equal(revealed.top3[1].score, 550); assert.equal(revealed.top3[2].score, 0);
     assert.equal((await call('/api/live/join', { id: 'new', email: 'new@example.test' }, { code, name: 'new' })).status, 409);
     for (let i = 0; i < snapshot.questions.length; i++) {
       const current = await env.DB.prepare('SELECT * FROM rooms WHERE code = ?').bind(code).first();
-      clock = current.started_at + 10000;
+      clock = current.started_at + 20000;
       assert.equal((await call('/api/live/advance', host, { code, questionIndex: current.question_index })).status, 200);
     }
     const final = await (await call('/api/live/room?code=' + code, host)).json(); assert.equal(final.phase, 'finished'); assert.equal(final.results.length, 4); assert.equal(final.top3.length, 3); assert.equal(final.review.length, 5);
@@ -82,6 +85,6 @@ test('concurrent answer retries produce one scored answer', async t => {
     const selected = JSON.parse(room.snapshot).questions[0].correct;
     const responses = await Promise.all(Array.from({ length: 8 }, () => worker.fetch(req('/api/live/answer', fast, { code, questionIndex: 0, selected }), env)));
     assert(responses.every(r => r.status === 200)); const count = await env.DB.prepare('SELECT count(*) AS n FROM answers').first(); assert.equal(count.n, 1);
-    const score = await env.DB.prepare('SELECT points FROM answers').first(); assert.equal(score.points, 900);
+    const score = await env.DB.prepare('SELECT points FROM answers').first(); assert.equal(score.points, 950);
   } finally { local.close(); }
 });

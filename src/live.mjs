@@ -1,7 +1,7 @@
 import challenges from './challenges.json' with { type: 'json' };
 import { weekKey, challengeIndex, challengeForWeek, safeCsv } from './domain.mjs';
 import { assets } from './assets.mjs';
-export const QUESTION_MS = 10000;
+export const QUESTION_MS = 20000;
 export function livePoints(elapsed, correct) { return !correct || elapsed < 0 || elapsed >= QUESTION_MS ? 0 : 500 + Math.round(500 * (1 - elapsed / QUESTION_MS)); }
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' } });
 function identity(request) {
@@ -30,7 +30,7 @@ async function roomState(env, room, user, now) {
   const counts = q ? await db(env).prepare('SELECT count(*) AS count FROM answers WHERE room_code = ? AND question_index = ?').bind(room.code, room.question_index).first() : { count: 0 };
   const revealed = phase === 'reveal' || phase === 'finished';
   const safeScores = scores.map(({ user_id, email, joined_at, answer_time, ...p }) => ({ ...p, isYou: user_id === user.id }));
-  return json({ code: room.code, title: challenge.title, story: challenge.story, phase, host, serverNow: now, deadline: room.started_at ? room.started_at + QUESTION_MS : null, questionIndex: room.question_index, questionCount: challenge.questions.length, playerCount: scores.length, answeredCount: counts.count, question: q ? { topic: q.topic, prompt: q.prompt, options: q.options, ...(revealed ? { correct: q.correct, explanation: q.explanation } : {}) } : null, ownAnswer: answer ? { selected: answer.selected, ...(revealed ? { points: answer.points, correct: !!answer.is_correct } : {}) } : null, top3: safeScores.slice(0, 3), you: safeScores.find(p => p.isYou) || null, players: phase === 'lobby' || host && phase === 'finished' ? safeScores : [], ...(host && phase === 'finished' ? { results: scores.map(({ user_id, joined_at, answer_time, ...p }) => p), review: challenge.questions } : {}) });
+  return json({ code: room.code, title: challenge.title, story: challenge.story, phase, host, serverNow: now, questionDurationMs: QUESTION_MS, deadline: room.started_at ? room.started_at + QUESTION_MS : null, questionIndex: room.question_index, questionCount: challenge.questions.length, playerCount: scores.length, answeredCount: counts.count, question: q ? { topic: q.topic, prompt: q.prompt, options: q.options, ...(revealed ? { correct: q.correct, explanation: q.explanation } : {}) } : null, ownAnswer: answer ? { selected: answer.selected, ...(revealed ? { points: answer.points, correct: !!answer.is_correct } : {}) } : null, top3: safeScores.slice(0, 3), you: safeScores.find(p => p.isYou) || null, players: phase === 'lobby' || host && phase === 'finished' ? safeScores : [], ...(host && phase === 'finished' ? { results: scores.map(({ user_id, joined_at, answer_time, ...p }) => p), review: challenge.questions } : {}) });
 }
 export default {
   async fetch(request, env) {
@@ -82,7 +82,7 @@ export default {
           if (room.host_id !== user.id || !owner) return json({ error: 'Only this room’s host can advance the game.' }, 403);
           if (body.questionIndex !== room.question_index) return json({ error: 'The room has already advanced. Refresh the round.' }, 409);
           if (room.phase === 'finished') return json({ code });
-          if (room.phase === 'question' && phaseOf(room, Date.now()) !== 'reveal') return json({ error: 'Wait for the ten-second timer to finish.' }, 409);
+          if (room.phase === 'question' && phaseOf(room, Date.now()) !== 'reveal') return json({ error: 'Wait for the twenty-second timer to finish.' }, 409);
           const challenge = JSON.parse(room.snapshot);
           if (room.phase === 'lobby') { const count = await db(env).prepare('SELECT count(*) AS count FROM players WHERE room_code = ?').bind(code).first(); if (!count.count) return json({ error: 'At least one player needs to join before you start.' }, 409); }
           const next = room.question_index + 1, finished = next >= challenge.questions.length;
