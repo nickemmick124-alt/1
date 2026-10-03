@@ -1,0 +1,164 @@
+[
+  {
+    "title": "Round 1 · Equipment & Cash",
+    "story": "Agriculture and construction equipment scenarios for business-acumen practice. Every company, transaction, and figure is fictional; these are not actual CNH results. Each question is independent.",
+    "difficulty": "Quickfire · Foundation",
+    "facts": [
+      {
+        "label": "Question time",
+        "value": "10 seconds"
+      },
+      {
+        "label": "Scenarios",
+        "value": "Fictional equipment business"
+      },
+      {
+        "label": "Amount notation",
+        "value": "USD · k = thousand · m = million"
+      }
+    ],
+    "questions": [
+      {
+        "topic": "inventory",
+        "prompt": "A fictional equipment maker pays $20m for inventory. Nothing is sold yet. What immediately happens to cash?",
+        "options": [
+          "Rises $20m",
+          "Falls $20m",
+          "Stays unchanged",
+          "Falls $10m"
+        ],
+        "correct": 1,
+        "explanation": "Paying for inventory uses $20m of cash. Inventory is an asset, but it cannot fund payments until converted into cash."
+      },
+      {
+        "topic": "working-capital",
+        "prompt": "Current assets are $50m; current liabilities are $20m. Working capital equals current assets minus current liabilities. How much?",
+        "options": [
+          "$70m",
+          "$20m",
+          "$50m",
+          "$30m"
+        ],
+        "correct": 3,
+        "explanation": "Working capital is $50m − $20m = $30m. It measures current assets remaining after current liabilities."
+      },
+      {
+        "topic": "dealer-financing",
+        "prompt": "Equipment is delivered to a dealer. The $100k sale is recorded now; payment is due in 60 days. What is recorded?",
+        "options": [
+          "A $100k receivable",
+          "$100k more cash",
+          "A $100k payable",
+          "No revenue yet"
+        ],
+        "correct": 0,
+        "explanation": "The dealer owes $100k, creating accounts receivable. Offering payment terms delays cash collection even though the sale is recorded."
+      },
+      {
+        "topic": "cash-conversion",
+        "prompt": "Dealers pay invoices sooner. Sales, costs, and supplier-payment dates stay unchanged. What is the direct benefit?",
+        "options": [
+          "Higher sales revenue",
+          "Lower product costs",
+          "Cash available sooner",
+          "Fewer supplier bills"
+        ],
+        "correct": 2,
+        "explanation": "Faster collections convert receivables into cash sooner and shorten the cash-conversion cycle. They do not directly change sales revenue or product costs."
+      },
+      {
+        "topic": "capital-expenditure",
+        "prompt": "A factory pays $10m cash for a machine, recorded as equipment. Ignoring depreciation, what changes immediately?",
+        "options": [
+          "Cash +$10m; equipment −$10m",
+          "Cash −$10m; equipment +$10m",
+          "Cash unchanged; profit +$10m",
+          "Cash −$10m; equipment unchanged"
+        ],
+        "correct": 1,
+        "explanation": "Cash falls by $10m while the equipment asset rises by $10m. A capital purchase changes the asset mix; it is not immediately a $10m operating expense."
+      }
+    ]
+  },
+  {
+    "title": "Round 2 · Revenue & Returns",
+    "story": "Test commercial decisions in a fictional agriculture and construction equipment business. All figures are invented and do not describe CNH performance. Each question stands alone.",
+    "difficulty": "Quickfire · Foundation",
+    "facts": [
+      {
+        "label": "Question time",
+        "value": "10 seconds"
+      },
+      {
+        "label": "Scenarios",
+        "value": "Fictional equipment business"
+      },
+      {
+        "label": "Amount notation",
+        "value": "USD · k = thousand · m = million"
+      }
+    ],
+    "questions": [
+      {
+        "topic": "revenue",
+        "prompt": "A fictional dealer sells 100 tractors for $100k each. What is total sales revenue?",
+        "options": [
+          "$1m",
+          "$100m",
+          "$5m",
+          "$10m"
+        ],
+        "correct": 3,
+        "explanation": "100 tractors × $100,000 each = $10,000,000, or $10m. Revenue counts sales before subtracting costs."
+      },
+      {
+        "topic": "profit-margin",
+        "prompt": "Revenue is $100m; total expenses are $80m. Profit margin equals profit divided by revenue. What is the margin?",
+        "options": [
+          "20%",
+          "80%",
+          "25%",
+          "10%"
+        ],
+        "correct": 0,
+        "explanation": "Profit is $100m − $80m = $20m. Margin is $20m ÷ $100m = 20%."
+      },
+      {
+        "topic": "aftermarket-revenue",
+        "prompt": "A dealer sells a machine once, then earns $2,000 each year servicing it. Which revenue recurs?",
+        "options": [
+          "Original machine sale",
+          "Loan principal repayment",
+          "Yearly servicing",
+          "One-time land sale"
+        ],
+        "correct": 2,
+        "explanation": "Yearly servicing produces recurring aftermarket revenue. The original machine sale occurs once, and repayment of loan principal is not revenue."
+      },
+      {
+        "topic": "cyclicality",
+        "prompt": "In a fictional downturn, monthly equipment orders fall from 1,000 to 800. What is the percentage decline?",
+        "options": [
+          "25%",
+          "20%",
+          "80%",
+          "10%"
+        ],
+        "correct": 1,
+        "explanation": "Orders fall by 200. Dividing 200 by the original 1,000 gives 20%. Lower demand may require changes to production and cash forecasts."
+      },
+      {
+        "topic": "capacity-utilization",
+        "prompt": "A factory can produce 100 machines weekly and makes 80. Utilization equals actual output divided by capacity. What is utilization?",
+        "options": [
+          "20%",
+          "100%",
+          "125%",
+          "80%"
+        ],
+        "correct": 3,
+        "explanation": "Utilization is 80 ÷ 100 = 80%. The factory is using four-fifths of its available weekly capacity."
+      }
+    ]
+  }
+]

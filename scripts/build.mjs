@@ -1,0 +1,12 @@
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+const files = { '/index.html': 'text/html; charset=utf-8', '/style.css': 'text/css; charset=utf-8', '/live-style.css': 'text/css; charset=utf-8', '/live-app.js': 'text/javascript; charset=utf-8', '/favicon.svg': 'image/svg+xml' };
+const assets = {};
+for (const [path, type] of Object.entries(files)) assets[path] = { type, body: await readFile('public' + path, 'utf8') };
+await mkdir('src', { recursive: true });
+await writeFile('src/assets.mjs', 'export const assets = ' + JSON.stringify(assets) + ';\n');
+await mkdir('dist/server', { recursive: true });
+const domain = (await readFile('src/domain.mjs', 'utf8')).replaceAll('export function ', 'function ');
+const data = await readFile('src/challenges.json', 'utf8');
+const worker = (await readFile('src/live.mjs', 'utf8')).split('\n').filter(line => !line.startsWith('import ')).join('\n');
+await writeFile('dist/server/index.js', `const challenges = ${data};\nconst assets = ${JSON.stringify(assets)};\n${domain}\n${worker}`);
+console.log('Built Cloudflare Worker with embedded frontend.');
