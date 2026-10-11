@@ -57,7 +57,7 @@
         "options": [
           "Only the sales total",
           "Volume/mix and the cost bridge",
-          "Only the share price",
+          "Only currency translation",
           "Only total headcount"
         ],
         "correct": 1,
@@ -80,7 +80,7 @@
           "H1 cash generation was positive",
           "Q2 erased the H1 cash outflow",
           "Q2 was positive; H1 remained negative",
-          "FCF and EBIT are identical"
+          "H1 excludes the positive Q2 cash result"
         ],
         "correct": 2,
         "explanation": "Quarter and year-to-date measures answer different questions. Check both before calling the cash position healthy.",
@@ -147,7 +147,7 @@
           "A guaranteed cash price",
           "Today's nearby futures quote",
           "A season-average farm-price forecast",
-          "CNH's selling price"
+          "The price received by every corn grower"
         ],
         "correct": 2,
         "explanation": "A seasonal forecast cannot replace a contract-specific futures quote or a local cash bid.",
@@ -190,8 +190,8 @@
         "options": [
           "Yes, from crop prices alone",
           "No; check revenue, costs, and liquidity together",
-          "Yes, regardless of yield",
-          "No farmer will buy equipment"
+          "No; lower yields alone decide buying capacity",
+          "Yes; nominal crop prices measure purchasing power"
         ],
         "correct": 1,
         "explanation": "Price × saleable yield drives revenue. Input cost, debt service, cash, and timing determine how much reaches an equipment decision.",
@@ -209,9 +209,9 @@
         "prompt": "If CNH wholesale shipments rise while dealer retail sales stay flat, what should you check first?",
         "options": [
           "Whether channel inventory is building",
-          "Whether farmer income doubled",
-          "Whether staffing is automatically too low",
-          "Whether every dealer sold more"
+          "Whether wholesale growth proves stronger farmer demand",
+          "Whether staffing should rise with wholesale shipments",
+          "Whether reported revenue rose with wholesale shipments"
         ],
         "correct": 0,
         "explanation": "Wholesale moves equipment into the dealer channel; retail moves it to the end customer. Compare both before treating shipments as demand recovery.",
@@ -231,7 +231,7 @@
           "Commit to a full ramp now",
           "Treat improved indicators as confirmed orders",
           "Prepare capability while validating demand",
-          "Stop monitoring the channel"
+          "Use wholesale shipments as the sole ramp trigger"
         ],
         "correct": 2,
         "explanation": "Readiness work can begin before a schedule increase. The size and timing of a ramp still need current demand evidence.",
@@ -271,8 +271,8 @@
         "options": [
           "Add only assembly operators",
           "Add qualified final-test coverage",
-          "Increase finished-goods inventory",
-          "Ignore certification"
+          "Schedule more assembly overtime",
+          "Move assembly operators into test before qualification"
         ],
         "correct": 1,
         "explanation": "Staff the constraint. Adding people elsewhere may build work in process without increasing completed machines.",
@@ -291,8 +291,8 @@
         "options": [
           "It falls automatically",
           "It rises",
-          "It disappears",
-          "It becomes sales revenue"
+          "It stays constant with the factory's total cost",
+          "It rises only if wages increase"
         ],
         "correct": 1,
         "explanation": "Fewer units carry the same fixed cost. That pressure needs a cost and schedule response; it does not prove that extra inventory is useful.",
@@ -309,10 +309,10 @@
         "topic": "dealer-inventory",
         "prompt": "Dealer sell-through is weak. Why avoid building extra units purely to improve absorption?",
         "options": [
-          "Units never use cash",
-          "More inventory always creates profit",
+          "Unsold units release cash when production finishes",
+          "Better absorption guarantees stronger cash flow",
           "Inventory ties up cash and can add discount risk",
-          "Dealers must accept every unit"
+          "Wholesale shipments prove machines sold to farmers"
         ],
         "correct": 2,
         "explanation": "Align the plan with credible demand. A favorable unit-cost metric can conceal a worse cash or inventory outcome.",
@@ -349,10 +349,10 @@
         "topic": "downcycle",
         "prompt": "During a downcycle, what is the best cross-training priority?",
         "options": [
-          "Every course equally",
+          "Spread training evenly across all operations",
           "Skills needed at the next likely constraint",
           "Training only by tenure",
-          "Training without qualification checks"
+          "Use course attendance as proof of readiness"
         ],
         "correct": 1,
         "explanation": "Prioritize coverage that changes executable capacity. Include training lead time and quality requirements.",
@@ -438,7 +438,7 @@
           "Only base wages",
           "Benefits, productivity, overtime, scrap, and rework",
           "Only corporate SG&A",
-          "Only number of requisitions"
+          "Hiring cost instead of ongoing productivity"
         ],
         "correct": 1,
         "explanation": "Evaluate cost per good unit and total cash impact. Manufacturing labor and corporate labor can appear in different financial lines.",
@@ -457,7 +457,7 @@
         "options": [
           "Training hours alone",
           "Credible good-unit gain and measured cost/cash benefit",
-          "The largest attendance list",
+          "Savings based on everyone who attended",
           "Assuming immediate full productivity"
         ],
         "correct": 1,
@@ -476,9 +476,9 @@
         "prompt": "A plan reduces rework and work in process without hurting shipments. Which benefit should Finance test?",
         "options": [
           "Lower trapped inventory cash and conversion cost",
-          "Guaranteed revenue growth",
-          "Higher dealer inventory",
-          "Automatic EPS improvement"
+          "Higher revenue from rework hours eliminated",
+          "Labor savings equal to the full WIP reduction",
+          "Cash release equal to the entire WIP balance"
         ],
         "correct": 0,
         "explanation": "Less work in process can release working capital; less rework can lower cost. Confirm both with the controller because accounting and cash timing differ.",

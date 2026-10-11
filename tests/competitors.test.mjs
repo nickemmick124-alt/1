@@ -71,6 +71,30 @@ test('full and compact comparisons show detailed figures and explanations while 
   }
 });
 
+test('published segment profit bridges reconcile and keep causes tied to the correct business', () => {
+  const facts = competitorRound.factSheet;
+  const rows = facts.comparison.drivers.flatMap(group=>group.rows);
+  for (const row of rows) {
+    assert(row.profitBridge?.items?.length, `${row.company} ${row.segment}: published bridge required`);
+    const bridge = row.profitBridge;
+    const total = bridge.items.reduce((sum,item)=>sum+item.amountMillion,0);
+    assert(Math.abs(row.priorProfitMillion+total-row.profitMillion) <= (bridge.roundingToleranceMillion || 0), `${row.segment}: profit bridge must reconcile`);
+    assert(facts.sources.some(source=>source.id===bridge.sourceId));
+  }
+  const cnhAg=rows.find(row=>row.company==='CNH'&&row.segment==='Agriculture');
+  const deereConstruction=rows.find(row=>/deere/i.test(row.company)&&row.segment==='Construction & Forestry');
+  assert.equal(cnhAg.profitBridge.items.find(item=>/volume/i.test(item.label)).amountMillion,-102);
+  assert.equal(deereConstruction.profitBridge.items.find(item=>/price|pricing/i.test(item.label)).amountMillion,244);
+  for (const question of competitorRound.questions) {
+    assert(question.businessReasoning.changed && question.businessReasoning.drivers && question.businessReasoning.decision);
+    assert(!/peer-stock|peer-workforce/.test(question.topic), 'current comparison quiz should teach business performance');
+  }
+  for (const compact of [false,true]) {
+    const html=renderCompetitorSheet(facts,{compact});
+    for(const text of ['Published profit bridge','−$102m','+$244m','Prior-year profit','Current profit']) assert(html.includes(text),text);
+  }
+});
+
 test('competitor reference is public while creating the separate eight-question round still requires hosting access', async () => {
   const { local, env, call } = setup();
   try {
@@ -125,7 +149,7 @@ test('competitor answers remain hidden until the saved twenty-five-second deadli
     assert.equal(active.questionDurationMs, 25000);
     assert.equal(active.deadline, start + 25000);
     assert.deepEqual(active.factSheet, original.challenge.factSheet);
-    for (const key of ['correct', 'explanation', 'discussion', 'valueConnection', 'learning', 'reviewOf', 'sources']) assert(!Object.hasOwn(active.question, key));
+    for (const key of ['correct', 'explanation', 'businessReasoning', 'discussion', 'valueConnection', 'learning', 'reviewOf', 'sources']) assert(!Object.hasOwn(active.question, key));
     assert.deepEqual(active.ownAnswer, { selected: question.correct });
     assert.equal((await call('/api/live/advance', host, { code, questionIndex: 0 })).status, 409);
     clock++;
@@ -133,6 +157,7 @@ test('competitor answers remain hidden until the saved twenty-five-second deadli
     assert.equal(reveal.phase, 'reveal');
     assert.equal(reveal.question.correct, question.correct);
     assert.equal(reveal.question.explanation, question.explanation);
+    assert.deepEqual(reveal.question.businessReasoning, question.businessReasoning);
     assert.deepEqual(reveal.question.sources, question.sources);
     assert.equal(reveal.ownAnswer.points, 750);
     assert.equal((await call('/api/live/answer', latePlayer, { code, questionIndex: 0, selected: question.correct })).status, 409);

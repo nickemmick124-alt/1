@@ -3,6 +3,7 @@ const files = { '/index.html': 'text/html; charset=utf-8', '/style.css': 'text/c
 for (const file of ['arena.css','fonts.css','arena-backdrop.webp','arena-game-art.webp', ...Array.from({ length: 7 }, (_, i) => `font-${i}.woff2`), ...['arrow-right','check-circle','triangle','diamond','circle','square'].map(name => `icon-${name}.svg`)]) {
   files['/' + file] = file.endsWith('.css') ? 'text/css; charset=utf-8' : file.endsWith('.webp') ? 'image/webp' : file.endsWith('.woff2') ? 'font/woff2' : 'image/svg+xml';
 }
+Object.assign(files, { '/practice.html': 'text/html; charset=utf-8', '/practice.js': 'text/javascript; charset=utf-8', '/practice.css': 'text/css; charset=utf-8' });
 const assets = {};
 for (const [path, type] of Object.entries(files)) {
   const binary = type === 'image/png' || type === 'image/webp' || type === 'font/woff2';

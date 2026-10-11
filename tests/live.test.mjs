@@ -109,7 +109,7 @@ test('guests play a complete round without an account, reconnect securely, and n
       // A refresh, and optional later account sign-in in this browser, keep the guest entry and answer.
       assert.equal((await call('/api/live/join',null,{code,name:'Guest Tester'},headers)).status,200);
       const reloaded=await (await call('/api/live/room?code='+code,fast,undefined,headers)).json(); assert.equal(reloaded.ownAnswer.selected,correct); assert.equal(reloaded.you.participantType,'guest');
-      assert.equal((await call('/api/live/join',null,{code,name:'Guest Tester'})).status,409);
+      assert.equal((await call('/api/live/room?code='+code,null)).status,401);
       clock=start+40000;
       const reveal=await (await call('/api/live/room?code='+code,null,undefined,headers)).json(); assert.equal(reveal.ownAnswer.points,988); assert.equal(reveal.question.correct,correct); assert(reveal.question.valueConnection.name);
       assert(!JSON.stringify(reveal.top3).includes(slow.email)); assert(!JSON.stringify(reveal).includes(sessionRow.user_id));
@@ -123,6 +123,86 @@ test('guests play a complete round without an account, reconnect securely, and n
     assert.equal((await env.DB.prepare('SELECT count(*) AS count FROM players WHERE user_id = ?').bind(sessionRow.user_id).first()).count,2);
     assert.equal((await (await call('/api/live/room?code='+code,null,undefined,headers)).json()).you.name,'Guest Tester');
   } finally { local.close(); }
+});
+test('late arrivals join the current decision, keep its deadline, and score only answers they submit', async t => {
+  let clock=20000000; t.mock.method(Date,'now',()=>clock);
+  const local=openDatabase(),env={DB:local.DB,OWNER_EMAIL:host.email};
+  const call=(path,user,body,headers)=>worker.fetch(req(path,user,body,headers),env);
+  try {
+    const code=(await (await call('/api/live/create',host,{round:0})).json()).code;
+    await call('/api/live/join',fast,{code,name:'Early Player'});
+    const snapshot=JSON.parse((await env.DB.prepare('SELECT snapshot FROM rooms WHERE code = ?').bind(code).first()).snapshot);
+    await call('/api/live/advance',host,{code,questionIndex:-1});
+    clock+=1000; await call('/api/live/answer',fast,{code,questionIndex:0,selected:snapshot.questions[0].correct});
+    clock+=39000; await call('/api/live/advance',host,{code,questionIndex:0});
+    const started=clock;
+    clock=started+20000;
+    const joined=await call('/api/live/join',null,{code,name:'Late Guest'});
+    assert.equal(joined.status,200);
+    assert.deepEqual((await joined.json()).entry,{kind:'late',phase:'question',questionIndex:1,questionCount:5});
+    const cookie=joined.headers.get('set-cookie').split(';')[0],headers={cookie};
+    const current=await (await call('/api/live/room?code='+code,null,undefined,headers)).json();
+    assert.equal(current.questionIndex,1); assert.equal(current.deadline,started+40000); assert.equal(current.you.score,0); assert.equal(current.ownAnswer,null); assert(!('correct' in current.question));
+    assert.equal((await call('/api/live/answer',null,{code,questionIndex:0,selected:snapshot.questions[0].correct},headers)).status,409);
+    assert.equal((await env.DB.prepare('SELECT count(*) AS count FROM answers WHERE user_id IN (SELECT user_id FROM guest_sessions)').first()).count,0);
+    clock=started+30000;
+    assert.equal((await call('/api/live/answer',null,{code,questionIndex:1,selected:snapshot.questions[1].correct},headers)).status,200);
+    const returning=await (await call('/api/live/join',null,{code,name:'Changed Name'},headers)).json(); assert.deepEqual(returning.entry,{kind:'rejoin'}); assert.equal(returning.guest.name,'Late Guest');
+    const signedIn=await (await call('/api/live/room?code='+code,slow,undefined,headers)).json(); assert.equal(signedIn.ownAnswer.selected,snapshot.questions[1].correct); assert.equal(signedIn.you.participantType,'guest');
+    const accountJoin=await call('/api/live/join',wrong,{code,name:'Late Account'}); assert.equal(accountJoin.status,200); assert.equal((await accountJoin.json()).entry.kind,'late');
+    // A matching display name in another browser cannot recover someone else's answer or points.
+    const sameName=await call('/api/live/join',null,{code,name:'Late Guest'}); assert.equal(sameName.status,200);
+    const secondHeaders={cookie:sameName.headers.get('set-cookie').split(';')[0]}; assert.notEqual(secondHeaders.cookie,cookie);
+    const separate=await (await call('/api/live/room?code='+code,null,undefined,secondHeaders)).json(); assert.equal(separate.you.score,0); assert.equal(separate.ownAnswer,null);
+    clock=started+40000;
+    const revealJoin=await call('/api/live/join',slow,{code,name:'Discussion Arrival'}); assert.equal(revealJoin.status,200); assert.equal((await revealJoin.json()).entry.phase,'reveal');
+    assert.equal((await call('/api/live/answer',slow,{code,questionIndex:1,selected:snapshot.questions[1].correct})).status,409);
+    const revealed=await (await call('/api/live/room?code='+code,null,undefined,headers)).json(); assert.equal(revealed.you.score,625); assert.equal(revealed.you.correct,1); assert.equal(revealed.ownAnswer.points,625);
+    await call('/api/live/advance',host,{code,questionIndex:1});
+    const next=await (await call('/api/live/room?code='+code,null,undefined,headers)).json(); assert.equal(next.questionIndex,2); assert.equal(next.ownAnswer,null); assert.equal(next.you.score,625);
+    clock+=1000; await call('/api/live/answer',wrong,{code,questionIndex:2,selected:snapshot.questions[2].correct});
+    for(let index=2;index<5;index++) { clock+=40000; await call('/api/live/advance',host,{code,questionIndex:index}); }
+    const final=await (await call('/api/live/room?code='+code,host)).json(); assert.equal(final.phase,'finished'); assert.equal(final.results.length,5);
+    const guestResults=final.results.filter(p=>p.name==='Late Guest'); assert.deepEqual(guestResults.map(p=>p.score).sort((a,b)=>a-b),[0,625]);
+    assert.equal(final.results.find(p=>p.name==='Late Account').score,988); assert.equal(final.results.find(p=>p.name==='Discussion Arrival').score,0);
+    assert.equal((await call('/api/live/join',null,{code,name:'After Finish'})).status,409);
+    assert.equal((await call('/api/live/join',late,{code,name:'After Finish'})).status,409);
+    assert.deepEqual((await (await call('/api/live/join',null,{code,name:'Late Guest'},headers)).json()).entry,{kind:'rejoin'});
+    assert.equal((await (await call('/api/live/room?code='+code,null,undefined,headers)).json()).you.score,625);
+  } finally {local.close();}
+});
+test('joins at the final reveal wait for results and a completion during registration leaves no new player', async t => {
+  let clock=40000000; t.mock.method(Date,'now',()=>clock);
+  const local=openDatabase(),env={DB:local.DB,OWNER_EMAIL:host.email};
+  const call=(path,user,body,headers)=>worker.fetch(req(path,user,body,headers),env);
+  try {
+    const code=(await (await call('/api/live/create',host,{track:'leadership'})).json()).code;
+    await call('/api/live/join',fast,{code,name:'Early Player'});
+    await call('/api/live/advance',host,{code,questionIndex:-1});
+    const snapshot=JSON.parse((await env.DB.prepare('SELECT snapshot FROM rooms WHERE code = ?').bind(code).first()).snapshot);
+    clock+=12000;
+    const halfway=await call('/api/live/join',slow,{code,name:'Leadership Late'}); assert.equal(halfway.status,200);
+    const state=await (await call('/api/live/room?code='+code,slow)).json(); assert.equal(state.deadline,40000000+25000); assert.equal(state.questionDurationMs,25000);
+    for(let index=0;index<snapshot.questions.length-1;index++) { clock+=25000; await call('/api/live/advance',host,{code,questionIndex:index}); }
+    clock+=25000;
+    const finalReveal=await call('/api/live/join',null,{code,name:'Last Arrival'}); assert.equal(finalReveal.status,200);
+    const entry=(await finalReveal.json()).entry; assert.equal(entry.phase,'reveal'); assert.equal(entry.questionIndex,snapshot.questions.length-1);
+    const headers={cookie:finalReveal.headers.get('set-cookie').split(';')[0]};
+    assert.equal((await call('/api/live/answer',null,{code,questionIndex:entry.questionIndex,selected:0},headers)).status,409);
+    const beforePlayers=(await env.DB.prepare('SELECT count(*) AS count FROM players').first()).count;
+    const beforeSessions=(await env.DB.prepare('SELECT count(*) AS count FROM guest_sessions').first()).count;
+    const racingEnv={...env,DB:{prepare(sql) {
+      const statement=env.DB.prepare(sql);
+      if(!sql.startsWith('INSERT INTO players')) return statement;
+      const wrapper={bind(...args){statement.bind(...args);return wrapper;},async run(){await env.DB.prepare('UPDATE rooms SET phase = ? WHERE code = ?').bind('finished',code).run();return statement.run();}};
+      return wrapper;
+    }}};
+    const rejected=await worker.fetch(req('/api/live/join',null,{code,name:'Closing Arrival'}),racingEnv); assert.equal(rejected.status,409); assert.equal(rejected.headers.get('set-cookie'),null);
+    assert.equal((await env.DB.prepare('SELECT count(*) AS count FROM players').first()).count,beforePlayers);
+    assert.equal((await env.DB.prepare('SELECT count(*) AS count FROM guest_sessions').first()).count,beforeSessions);
+    assert.equal((await call('/api/live/join',null,{code,name:'Last Arrival'},headers)).status,200);
+    const final=await (await call('/api/live/room?code='+code,null,undefined,headers)).json(); assert.equal(final.phase,'finished'); assert.equal(final.you.score,0);
+  } finally {local.close();}
 });
 test('guest join validates code and name, rejects forged or expired credentials, and respects room capacity', async t => {
   let clock=50000000; t.mock.method(Date,'now',()=>clock);
@@ -151,6 +231,8 @@ test('guest join validates code and name, rejects forged or expired credentials,
     await call('/api/live/advance',host,{code,questionIndex:-1});
     const correct=JSON.parse((await env.DB.prepare('SELECT snapshot FROM rooms WHERE code = ?').bind(code).first()).snapshot).questions[0].correct;
     clock+=1000; await call('/api/live/answer',null,{code,questionIndex:0,selected:correct},headers);
+    assert.equal((await call('/api/live/join',null,{code,name:'Active room overflow'})).status,409);
+    assert.deepEqual((await (await call('/api/live/join',null,{code,name:'Tester'},headers)).json()).entry,{kind:'rejoin'});
     clock+=30*24*60*60*1000;
     const expired=await (await call('/api/session',null,undefined,headers)).json(); assert.equal(expired.guest,null); assert.equal(expired.canHost,false);
     assert.equal((await call('/api/live/room?code='+code,null,undefined,headers)).status,401);
@@ -268,13 +350,14 @@ test('full live round: joins, timed scoring, answer lock, reveal, podium and pri
     assert.equal((await call('/api/live/advance', host, { code, questionIndex: 0 })).status, 409);
     clock = room.started_at + 40000; assert.equal((await call('/api/live/answer', late, submission)).status, 409);
     const revealed = await (await call('/api/live/room?code=' + code, fast)).json(); assert.equal(revealed.phase, 'reveal'); assert.equal(revealed.question.correct, correct); assert.deepEqual(revealed.question.valueConnection,snapshot.questions[0].valueConnection); assert.equal(revealed.ownAnswer.points, 988); assert.equal(revealed.top3[0].name, 'fast'); assert.equal(revealed.top3[1].score, 550); assert.equal(revealed.top3[2].score, 0);
-    assert.equal((await call('/api/live/join', { id: 'new', email: 'new@example.test' }, { code, name: 'new' })).status, 409);
+    const lateJoin=await call('/api/live/join', { id: 'new', email: 'new@example.test' }, { code, name: 'new' });
+    assert.equal(lateJoin.status,200); assert.equal((await lateJoin.json()).entry.phase,'reveal');
     for (let i = 0; i < snapshot.questions.length; i++) {
       const current = await env.DB.prepare('SELECT * FROM rooms WHERE code = ?').bind(code).first();
       clock = current.started_at + 40000;
       assert.equal((await call('/api/live/advance', host, { code, questionIndex: current.question_index })).status, 200);
     }
-    const final = await (await call('/api/live/room?code=' + code, host)).json(); assert.equal(final.phase, 'finished'); assert.equal(final.results.length, 4); assert.equal(final.top3.length, 3); assert.equal(final.review.length, 5); final.review.forEach((q,i)=>assert.deepEqual(q.valueConnection,snapshot.questions[i].valueConnection));
+    const final = await (await call('/api/live/room?code=' + code, host)).json(); assert.equal(final.phase, 'finished'); assert.equal(final.results.length, 5); assert.equal(final.results.find(p=>p.name==='new').score,0); assert.equal(final.top3.length, 3); assert.equal(final.review.length, 5); final.review.forEach((q,i)=>assert.deepEqual(q.valueConnection,snapshot.questions[i].valueConnection));
     const playerFinal = await (await call('/api/live/room?code=' + code, fast)).json(); assert(!('results' in playerFinal)); assert(!JSON.stringify(playerFinal).includes(slow.email));
     assert.equal((await call('/api/live/results.csv?code=' + code, fast)).status, 403);
     const csv = await call('/api/live/results.csv?code=' + code, host); assert.equal(csv.status, 200); assert((await csv.text()).includes(fast.email));

@@ -97,3 +97,9 @@ Questions allow 45, 60 or 75 seconds. Total answer time is 5¾–6 minutes, leav
 Completed rounds include host-only question insights: correct/submitted, unanswered count, median response time, option selections and the help stage available when the server received each answer. These stages do not prove a player read a hint. Historical games without hints count submissions as unassisted. No schema migration is needed: stages derive from saved question timing and existing answer timestamps.
 
 The initial pilot audit found 12/15, 12/15 and 13/15 correct on three practical questions, followed by 14/14 on revenue identification and 13/14 on simple profit. Median response times on the last two were 8.6 and 7.0 seconds. This is one 15-participant session with five questions observed, not a completed eight-question assessment; do not pool individual development runs into the cohort or infer competency from speed. Those results and host feedback motivated the new applied track.
+
+## Saved results reports
+
+Open **Saved rounds → View results** for a dedicated host-only report. Reports show team scores, correct answers out of closed questions, question insights, answer choices, and discussion details before the podium. Completed reports retain CSV export and replay; **Podium** and **Resume game** still open the live game. Direct report links use `/results?room=ROOMCODE` and survive reload.
+
+Unfinished reports include only questions whose timers have ended. They exclude scores, answers and explanations from the active and future questions, and do not advance or finish the game. Viewing is restricted to the room’s approved host. An unsigned or wrong-account visitor is directed to host sign-in rather than silently seeing a player-only result.

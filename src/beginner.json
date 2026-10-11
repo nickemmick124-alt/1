@@ -34,12 +34,16 @@
           "id": "constraint",
           "term": "Constraint",
           "definition": "A constraint is the factor currently limiting useful output.",
-          "lookFor": "Check materials, qualified people, and equipment before choosing a staffing response.",
-          "prepare": "Describe one reason a staffed line might still be unable to produce.",
+          "lookFor": "Read Constraint in the preparation guide, then search \u201cBottleneck\u201d in Vocabulary for the related production idea. Picture dinner delayed by a missing ingredient. For a real plant decision, Operations should verify materials, equipment, and qualified people.",
+          "prepare": "Describe one reason a fully staffed team might still be unable to finish a job.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Constraint",
               "url": "/prepare#constraint"
+            },
+            {
+              "label": "Look up Bottleneck",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -50,10 +54,10 @@
         "stage": "Familiar situation",
         "prompt": "A short backlog may need overtime. What should HR and Operations check before approving it?",
         "options": [
-          "Only the number of volunteers",
-          "Only the normal hourly rate",
+          "Volunteer coverage and last month\u2019s overtime",
+          "Base wages for the extra scheduled hours",
           "Needed good output, qualified coverage, and total overtime cost",
-          "Only last month\u2019s overtime hours"
+          "Budgeted headcount and remaining open jobs"
         ],
         "correct": 2,
         "explanation": "Overtime may help, but only if trained people, materials, and equipment can produce the needed good units. Include the overtime premium in the cost.",
@@ -68,11 +72,11 @@
           "id": "overtime",
           "term": "Overtime",
           "definition": "Overtime adds working time and usually costs more per hour than regular time.",
-          "lookFor": "Use the production need, available qualified coverage, and applicable payroll cost; confirm the figures locally.",
-          "prepare": "Explain what additional output the extra hours would buy.",
+          "lookFor": "Read Overtime in the preparation guide. Ask whether extra hours would actually produce useful work or just add cost. For a real workplace decision, confirm qualified coverage, available materials, and the applicable overtime cost with Operations and Payroll.",
+          "prepare": "Imagine a team working two extra hours. Explain what needs to be ready for those hours to help.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Overtime",
               "url": "/prepare#overtime"
             }
           ]
@@ -84,9 +88,9 @@
         "stage": "Familiar situation",
         "prompt": "Only one person is qualified for a critical station. What would reduce the coverage risk?",
         "options": [
-          "Rotate an untrained employee into the job",
-          "Add people to an unrelated station",
-          "Remove the qualification check",
+          "Treat course attendance as job qualification",
+          "Count the whole shift as qualified coverage",
+          "Assign a backup before qualification",
           "Train and qualify backup coverage"
         ],
         "correct": 3,
@@ -102,12 +106,16 @@
           "id": "qualified-coverage",
           "term": "Qualified Coverage",
           "definition": "Qualified coverage means people with the skills and authorization required for the work.",
-          "lookFor": "Check the skills matrix, qualification requirements, and actual shift coverage with Operations.",
-          "prepare": "Find one critical task and explain how its backup is qualified.",
+          "lookFor": "Read Qualified Coverage in the preparation guide, then search \u201cSkill matrix\u201d in Vocabulary. A full team does not mean everyone can do a specialist task. For actual work, Operations should verify training, qualifications, and coverage.",
+          "prepare": "Choose a task at home or work that needs a specific skill. Explain what a backup would need to learn before taking over.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Qualified Coverage",
               "url": "/prepare#qualified-coverage"
+            },
+            {
+              "label": "Look up Skill matrix",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -136,12 +144,16 @@
           "id": "revenue",
           "term": "Revenue",
           "definition": "Revenue is the amount earned from sales before subtracting business costs.",
-          "lookFor": "Look for the revenue or net-sales line, its period, and what business it covers.",
-          "prepare": "Explain the difference between a sale and a loan.",
+          "lookFor": "Read Revenue in the preparation guide. For a public company example, open Quarter decoder and find \u201cNet sales\u201d for Industrial Activities or \u201cRevenue\u201d for Financial Services. Check the selected period and business scope; the number does not tell you profit.",
+          "prepare": "Explain why money from a customer sale is revenue but money from a bank loan is not.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Revenue",
               "url": "/prepare#revenue"
+            },
+            {
+              "label": "Find sales in Quarter decoder",
+              "url": "/decoder"
             }
           ]
         }
@@ -170,12 +182,16 @@
           "id": "profit",
           "term": "Profit",
           "definition": "Profit is what remains after the relevant costs are subtracted from revenue.",
-          "lookFor": "Read which profit measure is shown; ask Finance what costs it includes.",
-          "prepare": "Try a different sales-minus-costs example and explain the result.",
+          "lookFor": "Read Profit in the preparation guide and try sales minus costs. To explore a real result, search \u201cAdjusted EBIT\u201d in Vocabulary and read its definition. Real profit measures include different costs, so Finance must validate the measure for an actual business decision.",
+          "prepare": "Try sales of $150 and all costs of $100. Explain what remains and why sales alone do not show profit.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Profit",
               "url": "/prepare#profit"
+            },
+            {
+              "label": "Look up Adjusted EBIT",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -186,10 +202,10 @@
         "stage": "Business basic",
         "prompt": "Parts have been purchased but are still waiting to be used. What does that mean for cash?",
         "options": [
-          "All the money is still available in the bank",
+          "The purchase used no cash until the parts are consumed",
           "Some cash is tied up in inventory",
-          "The parts have already created profit",
-          "The purchase automatically creates customer revenue"
+          "The parts create profit as soon as they are purchased",
+          "The purchase counts as customer revenue"
         ],
         "correct": 1,
         "explanation": "Money spent on parts is no longer available as cash. Those parts are inventory until they are used or sold; collecting from customers is a separate step.",
@@ -204,12 +220,16 @@
           "id": "inventory",
           "term": "Inventory",
           "definition": "Inventory includes materials and products held for future use or sale. It can tie up cash.",
-          "lookFor": "Ask the controller how inventory is measured and how purchasing, production, and collection affect cash.",
-          "prepare": "Explain why a warehouse full of parts is different from a bank account full of cash.",
+          "lookFor": "Read Inventory in the preparation guide, then search \u201cWorking capital\u201d in Vocabulary. Think of groceries already paid for but still in the cupboard: useful stock is different from spendable cash. For real company figures, ask the controller how inventory and payment timing are measured.",
+          "prepare": "Explain why a warehouse full of purchased parts is different from a bank account full of cash.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Inventory",
               "url": "/prepare#inventory"
+            },
+            {
+              "label": "Look up Working capital",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -221,9 +241,9 @@
         "prompt": "A farming customer has less money available after paying operating costs. How might that affect a new machine purchase?",
         "options": [
           "They may delay it or look for financing",
-          "They will always buy more machines",
-          "The purchase becomes unrelated to their finances",
-          "The purchase must happen immediately"
+          "Their replacement budget is unaffected by available cash",
+          "Borrowing makes their cash position irrelevant",
+          "Crop prices alone determine their ability to buy"
         ],
         "correct": 0,
         "explanation": "A customer with less available money may delay replacement or need financing. This is a possible response, not a prediction for every customer.",
@@ -238,16 +258,20 @@
           "id": "customer-demand",
           "term": "Customer Demand",
           "definition": "Customer demand depends partly on whether customers need a product and can afford to buy it.",
-          "lookFor": "In Business drivers, follow the farmer-economics explanation; discuss actual demand evidence with the business.",
-          "prepare": "Explain how a customer\u2019s costs and cash can affect equipment decisions.",
+          "lookFor": "Open Business drivers and read \u201cFarmer cash is the link to equipment\u201d and the \u201cFarmer economics\u201d tab. The linked USDA farm-income page is public background; you do not need to memorize figures. For a real staffing plan, validate customer demand with the business.",
+          "prepare": "Imagine you need a new car but have less cash after paying bills. Explain how that could affect when or how you buy it.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Customer Demand",
               "url": "/prepare#customer-demand"
             },
             {
-              "label": "Business drivers",
+              "label": "Read Farmer economics",
               "url": "/drivers"
+            },
+            {
+              "label": "Public source \u00b7 USDA farm income",
+              "url": "https://www.ers.usda.gov/topics/farm-economy/farm-sector-income-finances/highlights-from-the-farm-income-forecast"
             }
           ]
         }
@@ -258,9 +282,9 @@
         "stage": "CNH connection",
         "prompt": "You want to understand a CNH financial result you do not recognize. What is the best first step?",
         "options": [
-          "Compare it with a figure from any other period",
-          "Guess from the size of the number",
-          "Treat every profit measure as the same",
+          "Compare headline results without checking business scope",
+          "Use revenue as the profit measure",
+          "Use a full-year total for any quarterly comparison",
           "Check the measure, business scope, period, and source notes"
         ],
         "correct": 3,
@@ -276,16 +300,20 @@
           "id": "reading-results",
           "term": "Reading Results",
           "definition": "A financial figure needs a measure, a business scope, a period, and an evidence source to be interpreted.",
-          "lookFor": "Open Quarter decoder, select the period and business, then read the measure\u2019s note and linked source.",
-          "prepare": "Find one measure and explain what it describes without memorizing its value.",
+          "lookFor": "Open Quarter decoder, choose a reporting period and business scope, then read a measure and its note. Open the public CNH results link to check the original report and definitions. You can do this without a CNH login; start by understanding one number rather than memorizing it.",
+          "prepare": "Find one measure in Quarter decoder. Say what it measures, which business it covers, and whether it describes a quarter or six months.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Reading Results",
               "url": "/prepare#reading-results"
             },
             {
-              "label": "Quarter decoder",
+              "label": "Read Quarter decoder",
               "url": "/decoder"
+            },
+            {
+              "label": "Public source \u00b7 CNH Q2 2026 results",
+              "url": "https://investors.cnh.com/news/news-details/2026/CNH-Industrial-N-V--Reports-Second-Quarter-2026-Results/default.aspx"
             }
           ]
         }
@@ -309,10 +337,10 @@
         "stage": "Familiar situation",
         "prompt": "Orders are expected to slow. What should the team check before changing staffing schedules?",
         "options": [
-          "Only the number of open jobs",
+          "Open requisitions and the hiring budget",
           "Confirmed production needs, critical skills, and available coverage",
-          "Only last year\u2019s hiring plan",
-          "Only the size of the building"
+          "Last year\u2019s staffing at the same time",
+          "The regional sales headline alone"
         ],
         "correct": 1,
         "explanation": "Start with the actual production plan and the skills required to deliver it. A broad market headline alone does not tell you the plant\u2019s staffing need.",
@@ -327,12 +355,16 @@
           "id": "production-plan",
           "term": "Production Plan",
           "definition": "A production plan connects demand, output timing, and the resources required to deliver.",
-          "lookFor": "Discuss confirmed orders, planned output, and qualification needs with Operations.",
-          "prepare": "Explain which evidence you would request before changing a schedule.",
+          "lookFor": "Read Production Plan in the preparation guide. For the CNH connection, open Business drivers and select \u201cProduction & skills.\u201d A headline about fewer orders is a starting signal; an actual schedule needs confirmed work, timing, and qualified coverage verified with Operations.",
+          "prepare": "Imagine preparing meals for a party. What would you need to know about guest numbers, timing, and available help before changing the plan?",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Production Plan",
               "url": "/prepare#production-plan"
+            },
+            {
+              "label": "Read Production & skills",
+              "url": "/drivers"
             }
           ]
         }
@@ -343,10 +375,10 @@
         "stage": "Familiar situation",
         "prompt": "Some units need to be repaired before shipment. Why does this matter to the business?",
         "options": [
-          "The units are already ready for the customer",
-          "Repairs always create extra sales",
+          "Completed assembly means the units count as good shipments",
+          "Repair hours reduce cost per good unit",
           "Rework uses time and resources before good units can ship",
-          "Quality has no effect on output"
+          "Higher assembly speed offsets all rework losses"
         ],
         "correct": 2,
         "explanation": "Rework consumes labor, material, or equipment time. Counting completed work without checking quality can overstate what is ready to ship.",
@@ -361,12 +393,16 @@
           "id": "rework",
           "term": "Rework",
           "definition": "Rework is additional work needed to bring a product to the required standard.",
-          "lookFor": "Use quality and production records to distinguish good units from units awaiting repair.",
-          "prepare": "Explain why good units matter more than a count of all units worked on.",
+          "lookFor": "Read Rework in the preparation guide, then search \u201cFirst-pass yield\u201d in Vocabulary. Think of a job that must be fixed before it can be used. For actual production, Quality and Operations should distinguish finished good units from units awaiting repair.",
+          "prepare": "Explain why counting every item worked on can overstate how many are ready for a customer.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Rework",
               "url": "/prepare#rework"
+            },
+            {
+              "label": "Look up First-pass yield",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -379,8 +415,8 @@
         "options": [
           "Whether qualified backup coverage is available",
           "Whether any available person can be assigned immediately",
-          "Whether an unrelated station has spare capacity",
-          "Whether yesterday\u2019s output was high"
+          "Whether the shift\u2019s total headcount meets plan",
+          "Whether yesterday\u2019s output met the target"
         ],
         "correct": 0,
         "explanation": "Check for a qualified backup and follow the required operating and safety procedures. An available person may not have the right qualification.",
@@ -395,12 +431,16 @@
           "id": "shift-coverage",
           "term": "Shift Coverage",
           "definition": "Shift coverage is the availability of the right qualified people for the work scheduled.",
-          "lookFor": "Review the skills matrix and shift plan with the responsible supervisor.",
-          "prepare": "Distinguish total attendance from coverage of critical tasks.",
+          "lookFor": "Read Shift Coverage in the preparation guide, then search \u201cSkill matrix\u201d in Vocabulary. The useful question is who can cover the required task, not just how many people are present. For an actual shift, the responsible supervisor should verify qualified backup coverage.",
+          "prepare": "Imagine the only trained person for a task is absent. Explain why another available person may need training before filling in.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Shift Coverage",
               "url": "/prepare#shift-coverage"
+            },
+            {
+              "label": "Look up Skill matrix",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -411,9 +451,9 @@
         "stage": "Business basic",
         "prompt": "A customer receives a product today but will pay later. Which statement is most useful?",
         "options": [
-          "A sale and its cash collection always happen together",
-          "Profit and cash are always identical",
-          "The payment has already reached the bank",
+          "Delivery means the cash is already available",
+          "Recorded profit is available cash to spend",
+          "Revenue is recorded only when cash reaches the bank",
           "The sale and cash collection may happen at different times"
         ],
         "correct": 3,
@@ -429,12 +469,16 @@
           "id": "cash-timing",
           "term": "Cash Timing",
           "definition": "Cash timing describes when money is actually received or paid, which can differ from when sales or costs are recorded.",
-          "lookFor": "Ask Finance about customer payment terms and read cash-flow measures separately from profit.",
-          "prepare": "Explain why a profitable business still needs to manage cash.",
+          "lookFor": "Read Cash Timing in the preparation guide, then search \u201cWorking capital\u201d in Vocabulary. Picture delivering a product today and receiving payment next month: the sale and money received have different dates. For an actual business, Finance should confirm payment terms and accounting treatment.",
+          "prepare": "Explain why a business may need cash to pay bills while it waits for customers to pay.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Cash Timing",
               "url": "/prepare#cash-timing"
+            },
+            {
+              "label": "Look up Working capital",
+              "url": "/vocabulary"
             }
           ]
         }
@@ -463,11 +507,11 @@
           "id": "cost-per-good-unit",
           "term": "Cost Per Good Unit",
           "definition": "Cost per good unit divides a defined cost by output that meets the required standard.",
-          "lookFor": "Agree the cost scope and good-unit count with the controller before comparing two plans.",
-          "prepare": "Calculate a simple cost-per-unit example and say what is included.",
+          "lookFor": "Read Cost Per Good Unit in the preparation guide. Divide the stated total cost by units that meet the required standard, using the practice numbers in the question. For a real comparison, the controller and Operations should agree which costs and good units are counted.",
+          "prepare": "Try $600 of total cost for 30 good units. Explain what happens to cost per good unit if fewer units are good and the total cost stays the same.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Cost Per Good Unit",
               "url": "/prepare#cost-per-good-unit"
             }
           ]
@@ -497,15 +541,19 @@
           "id": "bottleneck",
           "term": "Bottleneck",
           "definition": "A bottleneck is the process step whose available capacity currently limits the flow.",
-          "lookFor": "Use Production readiness in Business drivers to compare stage capacity; confirm the real process with Operations.",
-          "prepare": "Explain why adding capacity at the fastest step may not improve total output.",
+          "lookFor": "Read Bottleneck in the preparation guide, or search the same word in Vocabulary. In Business drivers, scroll to \u201cCan the plan actually run?\u201d and try fictional capacity inputs. For a real production plan, Operations should verify the process and each capacity assumption.",
+          "prepare": "Imagine three steps that can each handle 80, 100, and 100 units. Explain which step limits the process and where an improvement would help.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Bottleneck",
               "url": "/prepare#bottleneck"
             },
             {
-              "label": "Business drivers",
+              "label": "Look up Bottleneck",
+              "url": "/vocabulary"
+            },
+            {
+              "label": "Try the production-readiness calculator",
               "url": "/drivers"
             }
           ]
@@ -518,9 +566,9 @@
         "prompt": "In a practice scenario, a CNH customer needs a machine during harvest. Why could faster, reliable repair support matter?",
         "options": [
           "It can help the customer return the machine to work",
-          "It removes the need for trained service staff",
-          "It guarantees higher crop prices",
-          "It makes repair quality less important"
+          "Faster repairs eliminate the customer\u2019s downtime cost",
+          "More repair activity means the customer is more productive",
+          "Shorter repair time proves the fault is fixed"
         ],
         "correct": 0,
         "explanation": "Reliable repair support can reduce time the machine is unavailable. The connection is the customer\u2019s ability to do the work, not a guaranteed financial outcome.",
@@ -535,12 +583,16 @@
           "id": "customer-uptime",
           "term": "Customer Uptime",
           "definition": "Uptime is the time equipment is available to do its intended work.",
-          "lookFor": "Discuss customer service needs and critical service skills with the responsible business team.",
-          "prepare": "Connect one skill or coverage decision to a customer\u2019s ability to work.",
+          "lookFor": "Read Customer Uptime in the preparation guide. Picture needing a working car to get to an appointment: reliable repair helps it return to use. For the CNH connection, open the public company page and read \u201cBuilt around customers.\u201d Actual service plans need the business team to verify customer needs and service skills.",
+          "prepare": "Explain how reliable repair or backup support can help someone complete the work they need to do.",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Customer Uptime",
               "url": "/prepare#customer-uptime"
+            },
+            {
+              "label": "Public source \u00b7 CNH values",
+              "url": "https://www.cnh.com/Our-Company"
             }
           ]
         }
@@ -569,15 +621,15 @@
           "id": "asking-finance",
           "term": "Asking Finance",
           "definition": "A business case connects an action to expected benefits, costs, timing, and evidence.",
-          "lookFor": "Bring the proposal\u2019s assumptions to the plant controller and Operations; use Vocabulary to clarify unfamiliar terms.",
-          "prepare": "Prepare three questions: what changes, what benefit is measurable, and who verifies it?",
+          "lookFor": "Read Asking Finance in the preparation guide. Use Vocabulary to look up unfamiliar terms, such as \u201cProduct Cost\u201d or \u201cWorking capital.\u201d For a real proposal, bring its costs, useful output, and timing assumptions to Finance and Operations for validation; you do not need internal records for this practice round.",
+          "prepare": "Imagine someone says a change will save money. Ask: what changes, which costs and benefits count, and when does money actually move?",
           "links": [
             {
-              "label": "Beginner preparation guide",
+              "label": "Learn Asking Finance",
               "url": "/prepare#asking-finance"
             },
             {
-              "label": "Vocabulary",
+              "label": "Look up business terms",
               "url": "/vocabulary"
             }
           ]

@@ -32,7 +32,7 @@
           "The matching net-sales base",
           "Only each segment’s headcount",
           "Only the higher percentage",
-          "Only the consolidated share price"
+          "Each segment's prior-year margin"
         ],
         "correct": 0,
         "explanation": "A margin is a ratio. Profit contribution depends on both the margin and the matching sales base; use the published dollar measures as well.",
@@ -71,9 +71,9 @@
         "topic": "product-cost",
         "prompt": "CNH cites tariffs and R&D in Construction’s Q2 EBIT decline. What should HR establish before claiming a staffing fix?",
         "options": [
-          "That every cost driver is a labor issue",
-          "That headcount reduction equals the entire EBIT gap",
-          "That higher sales remove the need for cost analysis",
+          "That the full tariff cost counts as a staffing saving",
+          "That lower headcount guarantees higher productivity",
+          "That higher revenue alone offsets the cost increase",
           "Which cost drivers the workforce action can actually change"
         ],
         "correct": 3,
@@ -166,7 +166,7 @@
         "prompt": "Why can’t you average Agriculture’s 5.2% and Construction’s 1.7% to obtain Industrial margin?",
         "options": [
           "The percentages use different currencies",
-          "Margins cannot be compared at all",
+          "The margins must be added instead of averaged",
           "Sales weights and corporate items also matter",
           "Financial Services must be added to both margins"
         ],
@@ -208,9 +208,9 @@
         "prompt": "Agriculture’s reported sales rose while EBIT declined. Which challenge belongs in the leadership review?",
         "options": [
           "Where did volume, mix, pricing, and cost change the outcome?",
-          "Why not assume all growth is profitable?",
-          "Why not treat revenue as cash generation?",
-          "Why not ramp every product line equally?"
+          "How much should staffing rise to match revenue growth?",
+          "How much cash did revenue growth generate automatically?",
+          "How quickly can every product line ramp equally?"
         ],
         "correct": 0,
         "explanation": "The useful challenge is to explain the bridge from sales to profit and then link actions to the drivers. Revenue alone does not establish a profitable ramp.",
@@ -275,7 +275,7 @@
         "options": [
           "Plan capability and monitor order conversion",
           "Treat aging fleets as booked production",
-          "Stop preparation until every order arrives",
+          "Wait for retail sales to peak before training",
           "Commit immediately to peak staffing"
         ],
         "correct": 0,
@@ -297,7 +297,7 @@
         "options": [
           "All retail growth must be new CNH shipments",
           "Farmer demand must be unchanged",
-          "CNH market share must have doubled",
+          "Wholesale revenue must rise at the same rate",
           "Dealers may be selling existing inventory"
         ],
         "correct": 3,
@@ -362,9 +362,9 @@
         "prompt": "Wholesale orders rise during a dealer financing promotion, but retail stays weak. What should you challenge?",
         "options": [
           "Whether orders convert to retail without excess stock or discounting",
-          "Whether every order guarantees profitable demand",
-          "Whether the promotion eliminates inventory carrying cost",
-          "Whether production should ignore dealer stocks"
+          "Only the factory's ability to fill promotional orders",
+          "Only the order count, ignoring cancellations",
+          "Only whether dealers received the advertised financing rate"
         ],
         "correct": 0,
         "explanation": "A channel order is a signal, but its quality depends on end-customer demand, inventory exposure, financing, and pricing. Test the conversion before treating it as sustainable recovery.",
@@ -401,9 +401,9 @@
         "topic": "farmer-economics",
         "prompt": "USDA forecasts +0.4% nominal net cash farm income but −2.5% in real terms. What does that justify for a plant?",
         "options": [
-          "An automatic production increase",
-          "An automatic production shutdown",
-          "A uniform hiring plan across all products",
+          "A 0.4% production increase matching nominal income",
+          "A 2.5% production decrease matching real income",
+          "The same hiring increase for every customer segment",
           "A customer-demand check before a schedule change"
         ],
         "correct": 3,
@@ -424,9 +424,9 @@
         "prompt": "A grain-price rally is used to justify immediate hiring. Which link in the argument most needs evidence?",
         "options": [
           "That a price move becomes customer cash and then executable equipment orders",
-          "That a futures contract has a quoted price",
-          "That farmers use equipment",
-          "That factories require qualified people"
+          "That the higher futures quote lasted through the close",
+          "That last year's farm income exceeded its long-run average",
+          "That factory headcount is below its previous peak"
         ],
         "correct": 0,
         "explanation": "The hiring case needs the whole chain: realized customer economics, buying decisions, order timing, and qualified capacity. A commodity signal alone does not establish each step.",
@@ -472,7 +472,7 @@
           "Assuming every added hour produces a good unit",
           "Counting offered overtime as accepted coverage",
           "Qualified coverage and sustainable good output",
-          "Using the largest overtime budget available"
+          "A funded overtime budget without shift commitments"
         ],
         "correct": 2,
         "explanation": "Extra hours help only if qualified people can cover them and sustain the required quality and throughput. Test the effect on good units and fatigue-sensitive work.",
@@ -510,7 +510,7 @@
         "prompt": "Training finishes after the proposed ramp starts. What should the readiness plan do?",
         "options": [
           "Count all trainees as fully qualified now",
-          "Remove qualification gates to match the schedule",
+          "Hold the ramp date and assume training accelerates",
           "Use training attendance as shipped capacity",
           "Stage the ramp around verified qualification dates"
         ],
@@ -531,8 +531,8 @@
         "options": [
           "Keep adding only final-test coverage",
           "Recheck the system and address the new constraint",
-          "Use the old bottleneck indefinitely",
-          "Measure training attendance instead of output"
+          "Keep using the original test capacity estimate",
+          "Move more assembly trainees into final-test training"
         ],
         "correct": 1,
         "explanation": "A capacity action can move the constraint. Recheck good-unit flow and the next limiting process before repeating the same intervention.",
@@ -555,8 +555,8 @@
         "topic": "ramp-readiness",
         "prompt": "In the capacity screen, how can better first-pass yield increase good output without adding headcount?",
         "options": [
-          "It changes the number of people on the roster",
-          "It removes all material limits",
+          "It increases paid hours available per shift",
+          "It raises assembly's maximum processing speed",
           "More of the constrained throughput becomes good units",
           "It automatically eliminates every rework hour"
         ],
@@ -576,9 +576,9 @@
         "prompt": "A small work-in-process buffer protects the bottleneck from starvation. What is the best review?",
         "options": [
           "Size and monitor the buffer against flow reliability and cash",
-          "Eliminate every buffer regardless of missed output",
-          "Increase all queues without a target",
-          "Treat every buffered unit as a sale"
+          "Minimize WIP without checking bottleneck downtime",
+          "Raise every queue to last year's peak stock",
+          "Judge the buffer by absorption savings alone"
         ],
         "correct": 0,
         "explanation": "Inventory can support flow, but excess ties up cash. Test a targeted buffer against constraint uptime, shipments, quality, and inventory exposure.",
@@ -616,7 +616,7 @@
         "prompt": "A higher-paid staffing option may still have lower cost per good unit. What must the comparison include?",
         "options": [
           "Only hourly base pay",
-          "Only the number of requisitions",
+          "Only the recruiting cost per hire",
           "Only total headcount",
           "Qualified productivity, benefits, overtime, and quality losses"
         ],
@@ -636,9 +636,9 @@
         "prompt": "A certified-test coverage gap is identified. Why might hiring alone fail to close it immediately?",
         "options": [
           "Qualification, onboarding, and shift coverage take time",
-          "A headcount increase always lowers demand",
-          "Every new hire has identical test capability",
-          "Qualified coverage is unrelated to output"
+          "A filled requisition equals full test-shift coverage",
+          "Prior work experience replaces test certification",
+          "Total headcount can substitute for qualified hours"
         ],
         "correct": 0,
         "explanation": "Hiring is a step toward capacity, but the relevant skills must be verified and scheduled. Include onboarding and qualification lead time in the recovery plan.",
@@ -686,7 +686,7 @@
           "Training invitations sent",
           "A monthly headcount total without shift context",
           "Qualified coverage at the constraint and the resulting good output",
-          "The number of slides in the staffing review"
+          "New hires recorded without qualification status"
         ],
         "correct": 2,
         "explanation": "A daily operating measure should connect the action to a relevant performance gap. Qualified coverage and good output can be checked alongside quality and delivery.",
@@ -743,10 +743,10 @@
         "topic": "working-capital",
         "prompt": "Work in process decreases. What should you verify before claiming the same amount as cash savings?",
         "options": [
-          "That each unit was counted as revenue",
+          "That each unit's selling price equals released cash",
           "Inventory valuation, cash timing, and replacement spending",
-          "That EBIT and cash are always equal",
-          "That all supplier payments immediately disappear"
+          "That booked inventory reduction equals same-day cash release",
+          "That lower WIP reduces supplier payments immediately"
         ],
         "correct": 1,
         "explanation": "A lower inventory balance can release working capital, but the cash effect depends on transactions, valuation, timing, and replenishment. Reconcile the benefit with Finance.",
@@ -769,10 +769,10 @@
         "topic": "capex",
         "prompt": "A business case counts the same avoided rework hours as labor savings and again as productivity savings. What needs correction?",
         "options": [
-          "Use the two labels to double the benefit",
-          "Count only the benefit with the larger title",
+          "Report one under HR and the other under Operations",
+          "Keep the larger estimate without reconciling the hours",
           "Remove overlap and reconcile incremental benefits",
-          "Move both benefits into revenue"
+          "Count both if they appear in different budget lines"
         ],
         "correct": 2,
         "explanation": "The same avoided cost cannot support two independent savings claims. Reconcile the hours, actual cost reduction, and any separate output benefit using one consistent baseline.",
@@ -791,8 +791,8 @@
         "options": [
           "Validated avoided overtime, rework, or coverage risk",
           "Full margin on every theoretical extra unit",
-          "Guaranteed new revenue from classroom hours",
-          "Immediate full output regardless of qualification"
+          "Revenue on extra units before orders are confirmed",
+          "Cash savings from better absorption on unsold units"
         ],
         "correct": 0,
         "explanation": "Do not count incremental sales without executable demand. A proposal may still have measured cost, quality, or coverage benefits, with the relevant assumptions stated.",
@@ -809,7 +809,7 @@
         "topic": "skills-capacity",
         "prompt": "A proposal adds people upstream while the downstream constraint stays unchanged. What should Finance challenge?",
         "options": [
-          "Whether every added head automatically raises shipments",
+          "Only whether new hires meet their training dates",
           "The claimed output benefit and added inventory or cost",
           "Only whether recruiting targets are met",
           "Only whether upstream utilization improves"
@@ -851,8 +851,8 @@
         "options": [
           "Validate good output, quality, delivery, and total cost together",
           "Accept speed alone as proof of success",
-          "Treat rework as unrelated to the improvement",
-          "Replace every quality measure with cycle time"
+          "Treat added rework as a separate team's cost",
+          "Use standard unit cost without the new rework"
         ],
         "correct": 0,
         "explanation": "An improvement needs a balanced operating outcome. Faster processing can fail to improve good shipments or cost when quality losses rise.",

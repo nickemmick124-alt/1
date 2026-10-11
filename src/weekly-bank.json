@@ -71,8 +71,8 @@
           "options": [
             "Whether dealer inventory and days of supply increased.",
             "Whether factory labor hours per shipment decreased.",
-            "Whether equipment list prices changed last year.",
-            "Whether plant benefit cost per employee increased."
+            "Whether wholesale revenue rose with factory shipments.",
+            "Whether factory capacity utilization increased."
           ],
           "correct": 0,
           "explanation": "Wholesale shipments can grow without growth in retail demand if dealers build inventory. Compare retail sales, inventory and order quality.",
@@ -171,10 +171,10 @@
           "questionDurationMs": 75000,
           "prompt": "Practice figures: Option A uses 100 overtime hours at $45 pay + $9 variable fringe per hour. Option B uses 120 agency hours at $43 all-in per hour. Both deliver the same good output and quality, with no other incremental cost. Which has lower incremental cost, and by how much?",
           "options": [
-            "A is lower by $900.",
+            "A is lower by $660.",
             "B is lower by $240.",
-            "A is lower by $1,200.",
-            "B is lower by $1,080."
+            "A is lower by $240.",
+            "B is lower by $1,100."
           ],
           "correct": 1,
           "explanation": "A costs 100 \u00d7 $54 = $5,400. B costs 120 \u00d7 $43 = $5,160. B is lower by $240 under the stated assumptions. Higher hourly cost alone does not settle total cost.",
@@ -285,7 +285,7 @@
             "It falls because fewer hours are worked.",
             "It stays constant because headcount is unchanged.",
             "It rises because the same cost is spread over fewer units.",
-            "It becomes overtime premium expense."
+            "It rises only if the health-plan premium rate increases."
           ],
           "correct": 2,
           "explanation": "The total premium is unchanged while good-unit output falls. A fixed cost per employee can rise per product unit. Actual benefits include both fixed and variable components.",
@@ -318,8 +318,8 @@
           "options": [
             "$24",
             "$30",
-            "$40",
-            "$50"
+            "$120",
+            "$150"
           ],
           "correct": 1,
           "explanation": "Cost per good unit rises from $120 to $150, an increase of $30 or 25%. A 20% output decline does not imply a 20% unit-cost increase.",
@@ -386,7 +386,7 @@
           "options": [
             "$4,500",
             "$4,950",
-            "$5,850",
+            "$450",
             "$6,750"
           ],
           "correct": 1,
@@ -421,7 +421,7 @@
             "Wage rates alone, because they already match.",
             "Total headcount alone, regardless of product mix.",
             "Product complexity, automation, quality losses and comparable process scope.",
-            "Sales growth alone, regardless of production."
+            "Total labor cost alone, without adjusting for good output."
           ],
           "correct": 2,
           "explanation": "Hours per good unit depend on product and process mix, capital equipment, quality and operating conditions. Establish a comparable basis before diagnosing workforce performance.",
@@ -463,7 +463,7 @@
           "options": [
             "Higher profit guarantees stronger cash generation.",
             "Working-capital growth may absorb cash despite higher profit.",
-            "Inventory growth is always reported as a financing inflow.",
+            "Rising inventory means cash has increased by the same amount.",
             "Receivables are already collected customer cash."
           ],
           "correct": 1,
@@ -496,9 +496,9 @@
           "prompt": "A supplier offers a discount for immediate payment instead of 60-day terms. What is the central tradeoff to assess?",
           "options": [
             "Lower purchase cost versus paying cash earlier.",
-            "Lower purchase cost versus automatic revenue growth.",
-            "Higher wages versus lower fixed overhead.",
-            "Lower inventory quantities versus higher customer collections."
+            "Lower purchase cost versus lower sales revenue during the 60-day period.",
+            "Lower purchase cost versus a matching reduction in the quantity delivered.",
+            "Lower purchase cost versus postponing the cash outflow until the original due date."
           ],
           "correct": 0,
           "explanation": "The discount may reduce cost but accelerates the cash outflow. Compare the discount economics, liquidity, financing cost and supplier reliability.",
@@ -529,7 +529,7 @@
           "questionDurationMs": 75000,
           "prompt": "Practice figures: inventory days fall from 60 to 50. Annual cost of goods sold is $36.5 million, using 365 days. With sales, receivables and payables unchanged, approximately how much inventory cash is released?",
           "options": [
-            "$0.5 million",
+            "$5.0 million",
             "$1.0 million",
             "$3.65 million",
             "$6.0 million"
@@ -675,8 +675,8 @@
           "prompt": "Financing rates rise while farm cash income and equipment prices are unchanged. Which is the most direct affordability effect for a farmer considering a financed tractor?",
           "options": [
             "Debt-service cost may rise, making replacement less attractive.",
-            "Higher rates automatically increase farm crop revenue.",
-            "Higher rates automatically reduce dealer equipment inventory.",
+            "Monthly loan payments stay unchanged because the tractor price did not change.",
+            "The amount borrowed falls by the same percentage as the rate increase.",
             "Debt-service cost falls because tractor prices are unchanged."
           ],
           "correct": 0,
@@ -812,7 +812,7 @@
           "options": [
             "B\u2019s margin is 7 percentage points higher; the figures alone do not identify the cause.",
             "B\u2019s margin is 7% higher; its labor cost must be lower.",
-            "A\u2019s margin is 140 percentage points lower; its benefits must be higher.",
+            "B\u2019s margin is 140% higher, so its total operating profit must also be 140% higher.",
             "B\u2019s margin is 7 percentage points higher; every B plant is more productive."
           ],
           "correct": 0,

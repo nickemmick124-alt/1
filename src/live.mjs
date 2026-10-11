@@ -57,7 +57,7 @@ async function roomState(env, room, user, now) {
   const counts = q ? await db(env).prepare('SELECT count(*) AS count FROM answers WHERE room_code = ? AND question_index = ?').bind(room.code, room.question_index).first() : { count: 0 };
   const revealed = phase === 'reveal' || phase === 'finished';
   const safeScores = scores.map(({ user_id, email, joined_at, answer_time, ...p }) => ({ ...p, isYou: user_id === user.id }));
-  return json({ code: room.code, title: challenge.title, story: challenge.story, format: challenge.format || 'current', level: challenge.level || null, weekNumber: challenge.weekNumber || null, reviewCount: challenge.questions.filter(q=>q.reviewOf).length, track:challenge.track || null, sources: challenge.sources || [], factSheet: challenge.factSheet || null, phase, host, serverNow: now, questionDurationMs: durationMs, timingRange: challenge.track === 'weekly' ? '45–75' : null, deadline: room.started_at !== null ? room.started_at + durationMs : null, questionIndex: room.question_index, questionCount: challenge.questions.length, playerCount: scores.length, answeredCount: counts.count, question: q ? { topic: q.topic, stage:q.stage || null, prompt: q.prompt, options: q.options, basis: q.basis, help: revealed ? [] : availableHelp(q, now - room.started_at, durationMs), ...(revealed ? { correct: q.correct, explanation: q.explanation, valueConnection: q.valueConnection, learning:q.learning || null, reviewOf: q.reviewOf || null, discussion: q.discussion, sources: q.sources || [] } : {}) } : null, ownAnswer: answer ? { selected: answer.selected, ...(revealed ? { points: answer.points, correct: !!answer.is_correct } : {}) } : null, top3: safeScores.slice(0, 3), you: safeScores.find(p => p.isYou) || null, players: phase === 'lobby' || host && phase === 'finished' ? safeScores : [], ...(phase==='finished' && player ? {learningReview:await learningReview(env,room.code,user.id,challenge.questions)} : {}), ...(host && phase === 'finished' ? { results: scores.map(({ user_id, joined_at, answer_time, ...p }) => p), review: challenge.questions, questionAnalytics: await questionAnalytics(env, room.code, challenge, scores.length) } : {}) });
+  return json({ code: room.code, title: challenge.title, story: challenge.story, format: challenge.format || 'current', level: challenge.level || null, weekNumber: challenge.weekNumber || null, reviewCount: challenge.questions.filter(q=>q.reviewOf).length, track:challenge.track || null, sources: challenge.sources || [], factSheet: challenge.factSheet || null, phase, host, serverNow: now, questionDurationMs: durationMs, timingRange: challenge.track === 'weekly' ? '45–75' : null, deadline: room.started_at !== null ? room.started_at + durationMs : null, questionIndex: room.question_index, questionCount: challenge.questions.length, playerCount: scores.length, answeredCount: counts.count, question: q ? { topic: q.topic, stage:q.stage || null, prompt: q.prompt, options: q.options, basis: q.basis, help: revealed ? [] : availableHelp(q, now - room.started_at, durationMs), ...(revealed ? { correct: q.correct, explanation: q.explanation, ...(q.businessReasoning ? {businessReasoning:q.businessReasoning} : {}), valueConnection: q.valueConnection, learning:q.learning || null, reviewOf: q.reviewOf || null, discussion: q.discussion, sources: q.sources || [] } : {}) } : null, ownAnswer: answer ? { selected: answer.selected, ...(revealed ? { points: answer.points, correct: !!answer.is_correct } : {}) } : null, top3: safeScores.slice(0, 3), you: safeScores.find(p => p.isYou) || null, players: phase === 'lobby' || host && phase === 'finished' ? safeScores : [], ...(phase==='finished' && player ? {learningReview:await learningReview(env,room.code,user.id,challenge.questions)} : {}), ...(host && phase === 'finished' ? { results: scores.map(({ user_id, joined_at, answer_time, ...p }) => p), review: challenge.questions, questionAnalytics: await questionAnalytics(env, room.code, challenge, scores.length) } : {}) });
 }
 async function questionAnalytics(env, code, challenge, playerCount) {
   const {results} = await db(env).prepare('SELECT question_index, selected, is_correct, elapsed_ms FROM answers WHERE room_code = ?').bind(code).all();
@@ -86,6 +86,26 @@ export default {
       if (path === '/api/leadership-facts' && request.method === 'GET') return json(leadershipRound.factSheet);
       if (path === '/api/learning' && request.method === 'GET') return json({topics:beginnerRounds.flatMap(r=>r.questions.map(q=>q.learning)).filter((item,index,all)=>all.findIndex(other=>other.id===item.id)===index)});
       if (path === '/api/business-context' && request.method === 'GET') return json({ ...businessContext, values: { source: businessContext.values.source, items: businessContext.values.items, fallback: businessContext.values.fallback } });
+      if (path.startsWith('/api/practice/')) {
+        const round = beginnerRounds[0], questions = round.questions.slice(0, 8);
+        if (path === '/api/practice/round' && request.method === 'GET') {
+          return json({ setId: round.setId, title: round.title, story: round.story, questionCount: questions.length, durationMs: QUESTION_MS, practiceScoreOnly: true, questions: questions.map((q, index) => ({ index, topic: q.topic, prompt: q.prompt, options: q.options, basis: q.basis, reference: { label: 'Where to learn this', url: '/prepare#' + q.learning.id } })) });
+        }
+        if (path !== '/api/practice/answer' || request.method !== 'POST') return json({ error: 'Not found.' }, 404);
+        if (request.headers.get('origin') !== url.origin) return json({ error: 'Request origin was rejected.' }, 403);
+        if (!request.headers.get('content-type')?.startsWith('application/json')) return json({ error: 'Send a JSON request.' }, 415);
+        const raw = await request.text();
+        if (raw.length > 4096) return json({ error: 'Request is too large.' }, 413);
+        let body;
+        try { body = JSON.parse(raw); } catch { return json({ error: 'Invalid request.' }, 400); }
+        if (!body || typeof body !== 'object' || Array.isArray(body)) return json({ error: 'Invalid request.' }, 400);
+        if (body.setId !== undefined && body.setId !== round.setId) return json({ error: 'This practice round has changed. Start a new attempt.' }, 409);
+        if (!Number.isInteger(body.questionIndex) || body.questionIndex < 0 || body.questionIndex >= questions.length) return json({ error: 'Choose a valid practice question.' }, 400);
+        const q = questions[body.questionIndex];
+        if (body.selected !== null && (!Number.isInteger(body.selected) || body.selected < 0 || body.selected >= q.options.length)) return json({ error: 'Choose one valid answer, or let the timer expire.' }, 400);
+        if (!Number.isFinite(body.elapsedMs) || body.elapsedMs < 0 || body.elapsedMs > QUESTION_MS) return json({ error: 'Use a valid practice answer time.' }, 400);
+        return json({ correct: q.correct, selected: body.selected, points: livePoints(body.elapsedMs, body.selected === q.correct), explanation: q.explanation, learning: q.learning, sources: q.sources || sourceItems(q.sourceIds), valueConnection: resolveValueConnection(q, businessContext.values), discussion: q.discussion, practiceScoreOnly: true });
+      }
       if (path.startsWith('/api/live/')) {
         const participantRoute=['/api/live/join','/api/live/room','/api/live/answer'].includes(path);
         if (!user && !participantRoute) return json({ error: 'Sign in with ChatGPT to use hosting controls.' }, 401);
@@ -170,6 +190,14 @@ export default {
         const room = await roomOf(env, code);
         if (!room) return json({ error: 'That room was not found. Check the code with your host.' }, 404);
         if (room.host_id===user?.id && !await canHost()) return json({error:'Your hosting access was removed. Contact the owner to restore it.'},403);
+        if (path === '/api/live/report' && request.method === 'GET') {
+          if (room.host_id !== user.id || !await canHost()) return json({error:'Only this round’s approved host can review team results. Sign in with the account that hosted it.'},403);
+          const snapshot=JSON.parse(room.snapshot), phase=phaseOf(room,Date.now(),snapshot);
+          const completedQuestions=room.phase==='finished'?snapshot.questions.length:Math.max(0,room.question_index)+(phase==='reveal'?1:0);
+          const review=snapshot.questions.slice(0,completedQuestions).map(q=>({...q,valueConnection:resolveValueConnection(q,businessContext.values)}));
+          const scores=await reviewScores(env,code,review,await standings(env,code,completedQuestions));
+          return json({code,title:room.title,createdAt:room.created_at,phase,complete:room.phase==='finished',questionCount:snapshot.questions.length,completedQuestions,playerCount:scores.length,results:scores.map(({user_id,joined_at,answer_time,...p})=>p),review,questionAnalytics:await questionAnalytics(env,code,{...snapshot,questions:review},scores.length),sources:snapshot.sources||[],factSheet:snapshot.factSheet||null});
+        }
         let participant=user;
         if (participantRoute && room.host_id!==user?.id) {
           const visitor=await guest();
@@ -177,21 +205,22 @@ export default {
         }
         if (path === '/api/live/join' && request.method === 'POST') {
           const existing=participant ? await playerOf(env,code,participant.id) : null;
-          if (room.host_id===user?.id || existing) return json({ code, ...(participant?.isGuest ? {guest:{name:existing.name}} : {}) });
-          if (room.phase !== 'lobby') return json({ error: 'This round has already started. Join the next round.' }, 409);
+          if (room.host_id===user?.id || existing) return json({ code, ...(participant?.isGuest ? {guest:{name:existing.name}} : {}), ...(existing && room.phase !== 'lobby' ? {entry:{kind:'rejoin'}} : {}) });
+          if (room.phase === 'finished') return json({ error: 'This round has finished. Ask your host for the next room code.' }, 409);
           const name = typeof body.name === 'string' ? body.name.trim() : participant?.name;
           if (!name || name.length > 40 || /[\u0000-\u001f\u007f]/.test(name)) return json({ error: 'Enter a display name between 1 and 40 characters.' }, 400);
           const capacity=await db(env).prepare('SELECT count(*) AS count FROM players WHERE room_code = ?').bind(code).first();
           if (capacity.count>=100) return json({ error: 'This room is full. Ask your host for the next round.' }, 409);
           const created=!participant ? await createGuest(env,name,now) : null;
           participant ||= created.identity;
-          await db(env).prepare('INSERT INTO players (id, room_code, user_id, name, email, joined_at, participant_type) SELECT ?, ?, ?, ?, ?, ?, ? WHERE (SELECT count(*) FROM players WHERE room_code = ?) < 100 AND EXISTS (SELECT 1 FROM rooms WHERE code = ? AND phase = ?) ON CONFLICT(room_code, user_id) DO NOTHING').bind(crypto.randomUUID(), code, participant.id, name, participant.email, new Date(now).toISOString(), participant.isGuest?'guest':'account', code, code, 'lobby').run();
+          await db(env).prepare("INSERT INTO players (id, room_code, user_id, name, email, joined_at, participant_type) SELECT ?, ?, ?, ?, ?, ?, ? WHERE (SELECT count(*) FROM players WHERE room_code = ?) < 100 AND EXISTS (SELECT 1 FROM rooms WHERE code = ? AND phase IN ('lobby', 'question', 'reveal')) ON CONFLICT(room_code, user_id) DO NOTHING").bind(crypto.randomUUID(), code, participant.id, name, participant.email, new Date(now).toISOString(), participant.isGuest?'guest':'account', code, code).run();
           if (!await playerOf(env, code, participant.id)) {
             if (created) await db(env).prepare('DELETE FROM guest_sessions WHERE user_id = ?').bind(participant.id).run();
-            return json({ error: 'This room is full or has started. Ask your host for the next round.' }, 409);
+            return json({ error: 'This room is full or has finished. Ask your host for the next round.' }, 409);
           }
           if (participant.isGuest) await db(env).prepare('UPDATE guest_sessions SET display_name = ? WHERE user_id = ?').bind(name,participant.id).run();
-          const response=json({ code, ...(participant.isGuest ? {guest:{name}} : {}) });
+          const currentRoom=await roomOf(env,code), challenge=JSON.parse(currentRoom.snapshot);
+          const response=json({ code, ...(participant.isGuest ? {guest:{name}} : {}), ...(currentRoom.phase !== 'lobby' ? {entry:{kind:'late',phase:phaseOf(currentRoom,Date.now(),challenge),questionIndex:currentRoom.question_index,questionCount:challenge.questions.length}} : {}) });
           if (created) response.headers.set('set-cookie',created.cookie);
           return response;
         }
@@ -231,7 +260,7 @@ export default {
         return json({ error: 'Not found.' }, 404);
       }
       if (path.startsWith('/api/')) return json({ error: 'Not found.' }, 404);
-      const asset = assets[['/', '/results', '/hosts', '/prepare', '/facts', '/competitors', '/decoder', '/drivers', '/vocabulary'].includes(path) ? '/index.html' : path];
+      const asset = assets[path === '/try' || path === '/try/' ? '/practice.html' : ['/', '/results', '/hosts', '/prepare', '/facts', '/competitors', '/decoder', '/drivers', '/vocabulary'].includes(path) ? '/index.html' : path];
       if (!asset) return new Response('Not found', { status: 404 });
       return new Response(asset.encoding === 'base64' ? Uint8Array.from(atob(asset.body), c => c.charCodeAt(0)) : asset.body, { headers: { 'content-type': asset.type, 'cache-control': 'no-cache', 'x-content-type-options': 'nosniff', 'referrer-policy': 'same-origin', 'content-security-policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'self' https://chatgpt.com https://*.chatgpt.com https://*.openai.com" } });
     } catch (e) { console.error('Live round failed', path, e.message); return json({ error: 'The live round could not connect. Please retry; accepted answers are saved.' }, 503); }

@@ -79,17 +79,13 @@ body[data-surface="room"] .intro-line>.secondary{color:#eaf2f7;border-color:#738
 .timer-track div{background:var(--arena-yellow);transition:width .08s linear}
 .live-prompt{color:#fff;font-family:Inter,Arial,sans-serif;font-weight:700;line-height:1.35;font-size:clamp(23px,2.35vw,33px);letter-spacing:-.65px;margin-bottom:27px}
 .live-options{gap:14px}
-.live-options .live-option{border:2px solid transparent;min-height:102px;border-radius:12px;font-size:17px;font-weight:650;padding:18px;gap:15px;line-height:1.4;color:#fff;opacity:1}
-.live-option.answer-0{background:#ad293b}.live-option.answer-1{background:#185d99}.live-option.answer-2{background:#f5c832;color:#102e45}.live-option.answer-3{background:#21684f}
-.live-option:hover:not(:disabled){border-color:#fff;transform:translateY(-2px);box-shadow:none}
-.live-option.answer-0:hover:not(:disabled){background:#ad293b}.live-option.answer-1:hover:not(:disabled){background:#185d99}.live-option.answer-2:hover:not(:disabled){background:#f5c832}.live-option.answer-3:hover:not(:disabled){background:#21684f}
+.live-options .live-option{border:2px solid transparent;min-height:102px;border-radius:12px;font-size:17px;font-weight:650;padding:18px;gap:15px;line-height:1.4;background:#185d99;color:#fff;opacity:1}
+/* Touch hover can stick at the last tapped answer across question changes. */
+@media(hover:hover) and (pointer:fine){.live-option:hover:not(:disabled){background:#1f6daa;box-shadow:none}}
 .live-option.chosen{outline:3px solid #fff;outline-offset:2px;box-shadow:none}
 .live-option:disabled{opacity:1}
 .live-options .live-option.muted-option{opacity:.45}
 .live-options .live-option.correct{background:#e2f6ed;color:#113f32;border-color:#71cfac;opacity:1;outline:0}
-.answer-symbol{color:inherit;flex:0 0 29px;width:29px;font-size:0}
-.answer-symbol img{display:block;filter:invert(1);width:27px;height:27px}
-.answer-2 .answer-symbol img,.correct .answer-symbol img{filter:none}
 .correct-tick{flex-shrink:0;margin-left:auto}
 .answer-status{font-size:14px;color:#d4e4ee;line-height:1.5;padding-top:5px}
 .question-reference-link{background:#1b405a;color:#fff;border-color:#5c7d93;font-size:13px}
