@@ -12,6 +12,8 @@ await mkdir('src', { recursive: true });
 await writeFile('src/assets.mjs', 'export const assets = ' + JSON.stringify(assets) + ';\n');
 await mkdir('dist/server', { recursive: true });
 const domain = (await readFile('src/domain.mjs', 'utf8')).replaceAll('export function ', 'function ');
+const weeklyBank = await readFile('src/weekly-bank.json', 'utf8');
+const weekly = (await readFile('src/weekly.mjs', 'utf8')).replaceAll('export function ', 'function ');
 const data = await readFile('src/challenges.json', 'utf8');
 const beginnerData = await readFile('src/beginner.json', 'utf8');
 const leadershipData = await readFile('src/leadership.json', 'utf8');
@@ -23,5 +25,5 @@ const values = (await readFile('public/values.js', 'utf8')).replaceAll('export f
 const access = (await readFile('src/access.mjs', 'utf8')).replaceAll('export async function ', 'async function ').replaceAll('export function ', 'function ');
 const guests = (await readFile('src/guests.mjs', 'utf8')).replaceAll('export async function ', 'async function ');
 const worker = (await readFile('src/live.mjs', 'utf8')).split('\n').filter(line => !line.startsWith('import ')).join('\n');
-await writeFile('dist/server/index.js', `const challenges = ${data};\nconst questionLevels = ${extraQuestions};\nconst beginnerRounds = ${beginnerData};\nconst leadershipRound = ${leadershipData};\nconst competitorRound = ${competitorData};\nconst businessContext = ${context};\nconst assets = ${JSON.stringify(assets)};\n${values}\n${rounds}\n${access}\n${guests}\n${domain}\n${worker}`);
+await writeFile('dist/server/index.js', `const weeklyBank = ${weeklyBank};\n${weekly}\nconst challenges = ${data};\nconst questionLevels = ${extraQuestions};\nconst beginnerRounds = ${beginnerData};\nconst leadershipRound = ${leadershipData};\nconst competitorRound = ${competitorData};\nconst businessContext = ${context};\nconst assets = ${JSON.stringify(assets)};\n${values}\n${rounds}\n${access}\n${guests}\n${domain}\n${worker}`);
 console.log('Built Cloudflare Worker with embedded frontend.');

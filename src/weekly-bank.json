@@ -1,0 +1,883 @@
+{
+  "version": 1,
+  "status": "Published reviewed bank",
+  "practiceFiguresOnly": true,
+  "rotation": {
+    "cadence": "weekly",
+    "starts": "Monday",
+    "basis": "UTC calendar week",
+    "editions": 4,
+    "behavior": "Select a stable edition for each week; cycle after four weeks; snapshot at room creation.",
+    "generatesFreshQuestions": false,
+    "anchor": "2026-10-12T00:00:00Z"
+  },
+  "meeting": {
+    "questions": 6,
+    "answerTimeSecondsRange": [
+      345,
+      360
+    ],
+    "suggestedDiscussionSeconds": 180,
+    "targetMinutes": 10
+  },
+  "rounds": [
+    {
+      "id": "weekly-1-v1",
+      "title": "Week 1 \u00b7 Farm economics to plant decisions",
+      "track": "weekly",
+      "story": "Six practical decisions, increasing in difficulty. Fictional practice figures; discuss each answer before advancing.",
+      "questionDurationMs": 45000,
+      "questions": [
+        {
+          "id": "weekly-1-1-v1",
+          "topic": "farmer-economics",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Soybean prices fall 15%; expected yield, planted acres and input costs are unchanged. Which change would most directly explain a farmer delaying a new combine?",
+          "options": [
+            "Lower crop revenue reduces cash available for replacement equipment.",
+            "Lower crop revenue lowers the financing rate on equipment.",
+            "Lower crop revenue reduces the dealer\u2019s existing inventory balance.",
+            "Lower crop revenue increases the resale value of used combines."
+          ],
+          "correct": 0,
+          "explanation": "With volume and costs held constant, lower selling prices reduce expected farm cash generation. That can weaken affordability and willingness to replace equipment. It does not by itself establish the size or timing of CNH demand changes.",
+          "discussion": "What additional evidence would you want: net farm income, fleet age, financing rates or dealer retail orders?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Think about the farmer\u2019s cash available after input costs."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Yield and costs are unchanged: what happens when the selling price falls?"
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Lower crop revenue reduces cash available for replacement equipment."
+            }
+          ]
+        },
+        {
+          "id": "weekly-1-2-v1",
+          "topic": "retail-wholesale",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Dealer retail sales to farmers are flat, but factory shipments to dealers rise 20%. What should you check before calling this stronger end-customer demand?",
+          "options": [
+            "Whether dealer inventory and days of supply increased.",
+            "Whether factory labor hours per shipment decreased.",
+            "Whether equipment list prices changed last year.",
+            "Whether plant benefit cost per employee increased."
+          ],
+          "correct": 0,
+          "explanation": "Wholesale shipments can grow without growth in retail demand if dealers build inventory. Compare retail sales, inventory and order quality.",
+          "discussion": "Which demand signals does your site use to plan labor?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Separate farmer purchases from factory shipments."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "If dealers receive more than they sell, where do the extra machines go?"
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Whether dealer inventory and days of supply increased."
+            }
+          ]
+        },
+        {
+          "id": "weekly-1-3-v1",
+          "topic": "product-cost",
+          "difficulty": "intermediate",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: base pay $30/hour; overtime is 1.5\u00d7 base pay; fringe adds $9 per worked hour without an overtime multiplier. 80 overtime labor-hours produce 200 good units. What is overtime labor cost per good unit?",
+          "options": [
+            "$18.00",
+            "$23.40",
+            "$21.60",
+            "$15.60"
+          ],
+          "correct": 2,
+          "explanation": "($30 \u00d7 1.5 + $9) \u00d7 80 \u00f7 200 = $21.60. Apply the premium to base pay only and divide by good output.",
+          "discussion": "What would change if overtime increased defects or required extra supervision?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Apply 1.5\u00d7 to base pay only, then add fringe."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Loaded overtime rate is $54/hour. Calculate $54 \u00d7 80 \u00f7 200."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "$21.60"
+            }
+          ]
+        },
+        {
+          "id": "weekly-1-4-v1",
+          "topic": "working-capital",
+          "difficulty": "intermediate",
+          "questionDurationMs": 45000,
+          "prompt": "A plant reduces finished-goods inventory by $4 million through customer shipments. Receivables rise $4 million; customers have not paid. What happened to cash from these two balances, all else equal?",
+          "options": [
+            "Cash increased $4 million.",
+            "Cash increased $8 million.",
+            "Cash decreased $4 million.",
+            "There is no net cash release yet."
+          ],
+          "correct": 3,
+          "explanation": "A $4 million inventory release is offset by a $4 million increase in receivables. These two working-capital movements net to zero; shipment is not collection. This simplified example excludes other operating cash flows.",
+          "discussion": "Who owns the steps between good production, shipment, invoicing and collection?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Shipment and collection happen at different times."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Inventory releases $4m, while receivables use $4m. Net the two movements."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "There is no net cash release yet."
+            }
+          ]
+        },
+        {
+          "id": "weekly-1-5-v1",
+          "topic": "benefits",
+          "difficulty": "stretch",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: Option A uses 100 overtime hours at $45 pay + $9 variable fringe per hour. Option B uses 120 agency hours at $43 all-in per hour. Both deliver the same good output and quality, with no other incremental cost. Which has lower incremental cost, and by how much?",
+          "options": [
+            "A is lower by $900.",
+            "B is lower by $240.",
+            "A is lower by $1,200.",
+            "B is lower by $1,080."
+          ],
+          "correct": 1,
+          "explanation": "A costs 100 \u00d7 $54 = $5,400. B costs 120 \u00d7 $43 = $5,160. B is lower by $240 under the stated assumptions. Higher hourly cost alone does not settle total cost.",
+          "discussion": "What qualification, safety, onboarding and quality risks must you validate before choosing?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Compare total incremental cost, not just the hourly rate."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "A costs 100 \u00d7 $54 = $5,400; B costs 120 \u00d7 $43 = $5,160."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "B is lower by $240."
+            }
+          ]
+        },
+        {
+          "id": "weekly-1-6-v1",
+          "topic": "absorption",
+          "difficulty": "stretch",
+          "questionDurationMs": 60000,
+          "prompt": "Orders fall. A proposal keeps production unchanged to spread fixed plant cost over more units, although the extra units would stay unsold. Which concern should HR raise with Operations and Finance?",
+          "options": [
+            "Lower reported unit cost proves demand has recovered.",
+            "Extra inventory creates cash even without sales.",
+            "Apparent unit-cost improvement may tie up cash and create inventory risk.",
+            "Fixed overhead immediately becomes a variable cost."
+          ],
+          "correct": 2,
+          "explanation": "More production can spread allocated fixed overhead over more units while increasing unsold inventory. That accounting effect does not create demand or cash. Staffing decisions should reflect demand, critical capability and inventory risk.",
+          "discussion": "How would you protect critical skills while aligning production with demand?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Allocated unit cost and cash generation can move differently."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "The extra production is unsold: consider the cash tied up in that inventory."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Apparent unit-cost improvement may tie up cash and create inventory risk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weekly-2-v1",
+      "title": "Week 2 \u00b7 Labor, fringe and good output",
+      "track": "weekly",
+      "story": "Six practical decisions, increasing in difficulty. Fictional practice figures; discuss each answer before advancing.",
+      "questionDurationMs": 45000,
+      "questions": [
+        {
+          "id": "weekly-2-1-v1",
+          "topic": "skills-capacity",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Assembly can build 100 units/day; a required test station can pass 80. Demand is 95. Which staffing move is most likely to improve shipped output, assuming parts and downstream capacity are available?",
+          "options": [
+            "Add assemblers to raise assembly capacity to 110.",
+            "Qualify coverage to raise test capacity toward 95.",
+            "Reduce the test station\u2019s scheduled hours.",
+            "Increase finished-goods storage capacity."
+          ],
+          "correct": 1,
+          "explanation": "The required test station constrains good shipped output at 80. Improving other steps alone does not remove that constraint. Validate whether training or staffing actually raises testing throughput.",
+          "discussion": "Where is qualified coverage constraining your site today?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Find the step limiting good shipped output."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Assembly can supply 100, but required testing only passes 80."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Qualify coverage to raise test capacity toward 95."
+            }
+          ]
+        },
+        {
+          "id": "weekly-2-2-v1",
+          "topic": "benefits",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Production falls 10%. Health-plan premiums are fixed per covered employee this month, and headcount is unchanged. What should happen to this benefit cost per good unit, all else equal?",
+          "options": [
+            "It falls because fewer hours are worked.",
+            "It stays constant because headcount is unchanged.",
+            "It rises because the same cost is spread over fewer units.",
+            "It becomes overtime premium expense."
+          ],
+          "correct": 2,
+          "explanation": "The total premium is unchanged while good-unit output falls. A fixed cost per employee can rise per product unit. Actual benefits include both fixed and variable components.",
+          "discussion": "Which fringe components at your site vary with hours, headcount or payroll?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Is the monthly premium total changing?"
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "The same premium cost is divided by fewer good units."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "It rises because the same cost is spread over fewer units."
+            }
+          ]
+        },
+        {
+          "id": "weekly-2-3-v1",
+          "topic": "product-cost",
+          "difficulty": "intermediate",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: direct labor costs $120,000 in both months. Good output falls from 1,000 to 800 units. How much does direct labor cost per good unit rise?",
+          "options": [
+            "$24",
+            "$30",
+            "$40",
+            "$50"
+          ],
+          "correct": 1,
+          "explanation": "Cost per good unit rises from $120 to $150, an increase of $30 or 25%. A 20% output decline does not imply a 20% unit-cost increase.",
+          "discussion": "Was the output decline caused by demand, downtime, materials or skills?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Calculate labor cost per good unit for each month."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Compare $120,000 \u00f7 1,000 with $120,000 \u00f7 800."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "$30"
+            }
+          ]
+        },
+        {
+          "id": "weekly-2-4-v1",
+          "topic": "product-cost",
+          "difficulty": "intermediate",
+          "questionDurationMs": 60000,
+          "prompt": "Practice figures: loaded direct labor is $2 million; total product cost is $10 million. A feasible change cuts direct labor cost 10% with no effect on output, quality or other costs. How much does total product cost fall?",
+          "options": [
+            "10%",
+            "8%",
+            "2%",
+            "20%"
+          ],
+          "correct": 2,
+          "explanation": "Savings are $200,000, which is 2% of the original $10 million total product cost. The direct-labor share is 20%; a 10% reduction in that component is not a 10% reduction in the whole.",
+          "discussion": "Which other cost categories could this change affect in reality?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Calculate dollar savings, then divide by total product cost."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "10% of $2m is $200,000. Divide that by $10m."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "2%"
+            }
+          ]
+        },
+        {
+          "id": "weekly-2-5-v1",
+          "topic": "benefits",
+          "difficulty": "stretch",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: 100 overtime hours cost $45/hour in wages. Health premiums are unchanged; variable payroll costs are 10% of overtime wages. What is incremental overtime cost, excluding any other costs?",
+          "options": [
+            "$4,500",
+            "$4,950",
+            "$5,850",
+            "$6,750"
+          ],
+          "correct": 1,
+          "explanation": "Wages are $4,500; variable payroll costs add $450. The incremental total is $4,950. Unchanged health premiums are not an incremental cost for this decision.",
+          "discussion": "When would fully allocated cost be useful, and when would incremental cost be useful?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Separate costs that change from premiums that stay fixed."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Overtime wages are $4,500; add 10% of that amount."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "$4,950"
+            }
+          ]
+        },
+        {
+          "id": "weekly-2-6-v1",
+          "topic": "skills-capacity",
+          "difficulty": "stretch",
+          "questionDurationMs": 60000,
+          "prompt": "Two sites have the same wage rate. Site A uses 2.0 labor-hours per good unit; Site B uses 2.5. Before attributing the gap to HR performance, what comparison is most useful?",
+          "options": [
+            "Wage rates alone, because they already match.",
+            "Total headcount alone, regardless of product mix.",
+            "Product complexity, automation, quality losses and comparable process scope.",
+            "Sales growth alone, regardless of production."
+          ],
+          "correct": 2,
+          "explanation": "Hours per good unit depend on product and process mix, capital equipment, quality and operating conditions. Establish a comparable basis before diagnosing workforce performance.",
+          "discussion": "What would a fair cross-site labor comparison look like?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Check whether the sites are making comparable products in comparable processes."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Product mix, automation, rework and process scope can all change hours per good unit."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Product complexity, automation, quality losses and comparable process scope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weekly-3-v1",
+      "title": "Week 3 \u00b7 Profit, cash and working capital",
+      "track": "weekly",
+      "story": "Six practical decisions, increasing in difficulty. Fictional practice figures; discuss each answer before advancing.",
+      "questionDurationMs": 45000,
+      "questions": [
+        {
+          "id": "weekly-3-1-v1",
+          "topic": "cash-conversion",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Operating profit improves, but receivables and inventory both rise sharply. Which interpretation is most useful?",
+          "options": [
+            "Higher profit guarantees stronger cash generation.",
+            "Working-capital growth may absorb cash despite higher profit.",
+            "Inventory growth is always reported as a financing inflow.",
+            "Receivables are already collected customer cash."
+          ],
+          "correct": 1,
+          "explanation": "Profit and cash can diverge because cash is tied up in receivables and inventory. Review the cash-flow statement and working-capital bridge, along with other cash items.",
+          "discussion": "Which site decisions affect inventory or the timing of collection?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Profit and cash are related, but they are different measures."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Receivables and inventory can absorb cash before customers pay."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Working-capital growth may absorb cash despite higher profit."
+            }
+          ]
+        },
+        {
+          "id": "weekly-3-2-v1",
+          "topic": "working-capital",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "A supplier offers a discount for immediate payment instead of 60-day terms. What is the central tradeoff to assess?",
+          "options": [
+            "Lower purchase cost versus paying cash earlier.",
+            "Lower purchase cost versus automatic revenue growth.",
+            "Higher wages versus lower fixed overhead.",
+            "Lower inventory quantities versus higher customer collections."
+          ],
+          "correct": 0,
+          "explanation": "The discount may reduce cost but accelerates the cash outflow. Compare the discount economics, liquidity, financing cost and supplier reliability.",
+          "discussion": "Who should approve a change in payment terms?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Compare purchase savings with the timing of the cash payment."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "The discount saves cost, but cash leaves up to 60 days earlier."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Lower purchase cost versus paying cash earlier."
+            }
+          ]
+        },
+        {
+          "id": "weekly-3-3-v1",
+          "topic": "working-capital",
+          "difficulty": "intermediate",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: inventory days fall from 60 to 50. Annual cost of goods sold is $36.5 million, using 365 days. With sales, receivables and payables unchanged, approximately how much inventory cash is released?",
+          "options": [
+            "$0.5 million",
+            "$1.0 million",
+            "$3.65 million",
+            "$6.0 million"
+          ],
+          "correct": 1,
+          "explanation": "Daily cost of goods sold is $100,000. A 10-day reduction represents $1 million less inventory under these assumptions. Inventory days use cost of goods sold, not sales.",
+          "discussion": "How would you check that the reduction preserves service and production reliability?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Use daily cost of goods sold, then multiply by the days reduced."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Daily cost is $36.5m \u00f7 365 = $100,000. Multiply by 10 days."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "$1.0 million"
+            }
+          ]
+        },
+        {
+          "id": "weekly-3-4-v1",
+          "topic": "cash-conversion",
+          "difficulty": "intermediate",
+          "questionDurationMs": 60000,
+          "prompt": "A practice company defines cash conversion as industrial free cash flow divided by adjusted net income. Free cash flow is $80 million and adjusted net income is $100 million. Which statement is supported?",
+          "options": [
+            "Cash conversion is 125%; profit exceeds cash flow.",
+            "Cash conversion is 80%; this ratio alone does not explain the cash-flow gap.",
+            "Cash conversion is 20%; the remaining profit is inventory.",
+            "Cash conversion is 80%; the gap must be payroll spending."
+          ],
+          "correct": 1,
+          "explanation": "$80m \u00f7 $100m = 80%. The ratio does not identify the cause of the difference. Read the definition and cash-flow bridge; definitions and scopes may vary across companies.",
+          "discussion": "What would you investigate before calling 80% good or bad?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Use the stated numerator and denominator."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Divide $80m by $100m. The ratio does not tell you what caused the difference."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Cash conversion is 80%; this ratio alone does not explain the cash-flow gap."
+            }
+          ]
+        },
+        {
+          "id": "weekly-3-5-v1",
+          "topic": "working-capital",
+          "difficulty": "stretch",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: operating cash flow starts at $30 million. Inventory increases $8 million, receivables decrease $3 million and payables decrease $2 million. Holding everything else constant, what is operating cash flow after these changes?",
+          "options": [
+            "$23 million",
+            "$27 million",
+            "$33 million",
+            "$37 million"
+          ],
+          "correct": 0,
+          "explanation": "$30m \u2212 $8m + $3m \u2212 $2m = $23m. Inventory growth uses cash; collecting receivables releases cash; reducing payables uses cash.",
+          "discussion": "Which change might reflect healthier operations, and which might simply shift timing?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Inventory growth uses cash; receivables collection releases cash."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Start with $30m, subtract $8m, add $3m, then subtract $2m."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "$23 million"
+            }
+          ]
+        },
+        {
+          "id": "weekly-3-6-v1",
+          "topic": "capital-expenditure",
+          "difficulty": "stretch",
+          "questionDurationMs": 60000,
+          "prompt": "A proposed automation project reduces labor hours and improves good output. The business case counts $500,000 in wage savings, but nobody identifies a headcount reduction, avoided hiring or avoided overtime. What should HR challenge?",
+          "options": [
+            "Whether fewer hours automatically equal realized cash savings.",
+            "Whether all productivity improvements are unhelpful.",
+            "Whether equipment purchase cost belongs in revenue.",
+            "Whether benefit premiums always vary directly with hours."
+          ],
+          "correct": 0,
+          "explanation": "Productivity frees capacity, but cash savings need a realizable mechanism such as avoided overtime, avoided hiring or an actual cost reduction. Capacity, quality and safety benefits can still have value and should be stated separately.",
+          "discussion": "What evidence would make the savings achievable rather than theoretical?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Fewer labor hours do not automatically reduce payroll spending."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Look for avoided overtime, avoided hiring or another actual cost reduction."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Whether fewer hours automatically equal realized cash savings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weekly-4-v1",
+      "title": "Week 4 \u00b7 Read the quarter and make the call",
+      "track": "weekly",
+      "story": "Six practical decisions, increasing in difficulty. Fictional practice figures; discuss each answer before advancing.",
+      "questionDurationMs": 45000,
+      "questions": [
+        {
+          "id": "weekly-4-1-v1",
+          "topic": "industry-demand",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Financing rates rise while farm cash income and equipment prices are unchanged. Which is the most direct affordability effect for a farmer considering a financed tractor?",
+          "options": [
+            "Debt-service cost may rise, making replacement less attractive.",
+            "Higher rates automatically increase farm crop revenue.",
+            "Higher rates automatically reduce dealer equipment inventory.",
+            "Debt-service cost falls because tractor prices are unchanged."
+          ],
+          "correct": 0,
+          "explanation": "Higher financing rates can raise borrowing cost and weaken affordability. Contract terms, down payments and other factors matter; the scenario isolates the rate effect.",
+          "discussion": "How might this affect retail demand and subsequent factory schedules?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Think about the cost of borrowing to buy the tractor."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Equipment price is unchanged, but the financing rate is higher."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Debt-service cost may rise, making replacement less attractive."
+            }
+          ]
+        },
+        {
+          "id": "weekly-4-2-v1",
+          "topic": "quarterly-results",
+          "difficulty": "applied",
+          "questionDurationMs": 45000,
+          "prompt": "Practice quarter: revenue grows 5% year over year, but adjusted operating margin falls from 10% to 7%. What is the best first takeaway?",
+          "options": [
+            "Revenue growth alone confirms stronger profitability.",
+            "Sales grew, but the operating-profit outcome needs the margin bridge.",
+            "The margin decline proves cash flow increased.",
+            "The margin decline proves benefits caused the change."
+          ],
+          "correct": 1,
+          "explanation": "Sales growth and profitability are different dimensions. Investigate volume, mix, pricing, product costs and other relevant items rather than attributing the change without evidence.",
+          "discussion": "What follow-up question would you ask the controller?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Look at sales growth and profitability separately."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Revenue grew, but less operating profit is earned per dollar of revenue."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Sales grew, but the operating-profit outcome needs the margin bridge."
+            }
+          ]
+        },
+        {
+          "id": "weekly-4-3-v1",
+          "topic": "profit-margin",
+          "difficulty": "intermediate",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: prior revenue $100 million and operating margin 10%; current revenue $110 million and margin 8%. What happened to operating profit?",
+          "options": [
+            "It rose $1 million.",
+            "It fell $1.2 million.",
+            "It rose $0.8 million.",
+            "It fell $2 million."
+          ],
+          "correct": 1,
+          "explanation": "Prior operating profit was $10m. Current operating profit is $110m \u00d7 8% = $8.8m, a $1.2m decline despite higher revenue.",
+          "discussion": "Which drivers could create this pattern?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Operating profit equals revenue multiplied by operating margin."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Compare $100m \u00d7 10% with $110m \u00d7 8%."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "It fell $1.2 million."
+            }
+          ]
+        },
+        {
+          "id": "weekly-4-4-v1",
+          "topic": "quarterly-results",
+          "difficulty": "intermediate",
+          "questionDurationMs": 60000,
+          "prompt": "Practice figures: actual adjusted profit is $90 million, versus $85 million last year and a comparable expectation of $100 million. Which summary is accurate?",
+          "options": [
+            "Profit improved year over year but missed expectations.",
+            "Profit fell year over year but beat expectations.",
+            "Profit improved year over year and beat expectations.",
+            "Profit missed expectations, so it must have fallen year over year."
+          ],
+          "correct": 0,
+          "explanation": "$90m exceeds last year\u2019s $85m but falls short of the $100m expectation. Keep year-over-year change separate from the expectation comparison, and identify the expectation source and date.",
+          "discussion": "What else would you need to judge the quarter: cash, guidance, margins or market conditions?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "There are two different comparison points."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Actual $90m is above last year\u2019s $85m, but below the $100m expectation."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Profit improved year over year but missed expectations."
+            }
+          ]
+        },
+        {
+          "id": "weekly-4-5-v1",
+          "topic": "competitor-comparison",
+          "difficulty": "stretch",
+          "questionDurationMs": 75000,
+          "prompt": "Practice figures: Company A\u2019s agriculture adjusted operating margin is 5%; Company B\u2019s comparable agriculture margin is 12%. Periods and definitions have been checked. Which claim is supported?",
+          "options": [
+            "B\u2019s margin is 7 percentage points higher; the figures alone do not identify the cause.",
+            "B\u2019s margin is 7% higher; its labor cost must be lower.",
+            "A\u2019s margin is 140 percentage points lower; its benefits must be higher.",
+            "B\u2019s margin is 7 percentage points higher; every B plant is more productive."
+          ],
+          "correct": 0,
+          "explanation": "12% \u2212 5% = 7 percentage points. The relative increase is 140%, but neither comparison attributes the gap to labor, benefits or any individual plant. Mix, scale and other drivers need investigation.",
+          "discussion": "Which cost and product-mix evidence would help explain a competitor margin gap?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Distinguish percentage points from relative percentage change."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Subtract 5% from 12%. A margin gap alone does not explain its cause."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "B\u2019s margin is 7 percentage points higher; the figures alone do not identify the cause."
+            }
+          ]
+        },
+        {
+          "id": "weekly-4-6-v1",
+          "topic": "downcycle",
+          "difficulty": "stretch",
+          "questionDurationMs": 60000,
+          "prompt": "Dealer inventory is high, retail demand is weakening and Finance forecasts lower factory volume. Which HR proposal best connects business economics with capability?",
+          "options": [
+            "Keep hiring against the old volume plan until the quarter ends.",
+            "Apply the same headcount percentage reduction to every site and skill.",
+            "Reforecast staffing with Operations, reduce avoidable overtime and protect validated critical coverage.",
+            "Use shipments to dealers alone as the signal to increase staffing."
+          ],
+          "correct": 2,
+          "explanation": "Match staffing to a validated demand and production plan while preserving essential qualified coverage. Sites, constraints and skill risks differ; a uniform reduction or stale plan may damage capability.",
+          "discussion": "What leading indicators and skill-coverage checks would trigger a different staffing decision?",
+          "basis": "Fictional manufacturing practice scenario; not actual CNH figures.",
+          "hints": [
+            {
+              "afterFraction": 0.5,
+              "kind": "clue",
+              "text": "Connect the demand forecast with qualified capacity and staffing."
+            },
+            {
+              "afterFraction": 0.75,
+              "kind": "setup",
+              "text": "Update the volume plan, avoid unnecessary overtime and preserve essential skill coverage."
+            },
+            {
+              "secondsBeforeDeadline": 5,
+              "kind": "answer",
+              "text": "Reforecast staffing with Operations, reduce avoidable overtime and protect validated critical coverage."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "hintPolicy": {
+    "serverGated": true,
+    "answerRevealSecondsBeforeDeadline": 5,
+    "scoring": "Use elapsed-time scoring; early correct answers earn more. Record the help stage at submission separately.",
+    "analytics": "Separate unassisted, clue, setup and revealed-answer submissions."
+  }
+}

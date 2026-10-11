@@ -1,3 +1,5 @@
+import weeklyBank from './weekly-bank.json' with { type: 'json' };
+import {questionDuration, availableHelp, assistanceStage, weeklyEdition} from './weekly.mjs';
 import beginnerRounds from './beginner.json' with { type: 'json' };
 import leadershipRound from './leadership.json' with { type: 'json' };
 import competitorRound from './competitors.json' with { type: 'json' };
@@ -12,7 +14,7 @@ import { guestIdentity, createGuest } from './guests.mjs';
 import { assets } from './assets.mjs';
 export const QUESTION_MS = 40000;
 export function livePoints(elapsed, correct, durationMs = QUESTION_MS) { return !correct || !Number.isFinite(elapsed) || !Number.isFinite(durationMs) || durationMs <= 0 || elapsed < 0 || elapsed >= durationMs ? 0 : 500 + Math.round(500 * (1 - elapsed / durationMs)); }
-const durationOf = challenge => Number.isFinite(challenge.questionDurationMs) && challenge.questionDurationMs > 0 ? challenge.questionDurationMs : QUESTION_MS;
+const durationOf = (challenge, index = -1) => questionDuration(challenge, index);
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' } });
 const sourceItems = ids => (ids || []).map(id => ({ id, ...businessContext.sources[id] })).filter(s => s.url);
 function identity(request) {
@@ -38,7 +40,7 @@ async function reviewScores(env, code, questions, scores) {
   return scores.map(player => ({ ...player, reviewCorrect: results.find(row=>row.user_id===player.user_id)?.correct || 0, reviewTotal: indexes.length }));
 }
 const randomRoundNumber = () => crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296;
-function phaseOf(room, now, challenge) { return room.phase === 'question' && now >= room.started_at + durationOf(challenge) ? 'reveal' : room.phase; }
+function phaseOf(room, now, challenge) { return room.phase === 'question' && now >= room.started_at + durationOf(challenge, room.question_index) ? 'reveal' : room.phase; }
 async function standings(env, code, beforeQuestion = 999) {
   const { results } = await db(env).prepare('SELECT p.user_id, p.name, p.email, p.participant_type AS participantType, p.joined_at, COALESCE(SUM(a.points), 0) AS score, COALESCE(SUM(a.is_correct), 0) AS correct, COALESCE(SUM(CASE WHEN a.is_correct = 1 THEN a.elapsed_ms ELSE 0 END), 0) AS answer_time FROM players p LEFT JOIN answers a ON a.room_code = p.room_code AND a.user_id = p.user_id AND a.question_index < ? WHERE p.room_code = ? GROUP BY p.user_id ORDER BY score DESC, correct DESC, answer_time ASC, p.joined_at ASC, p.user_id ASC').bind(beforeQuestion, code).all();
   return results.map((p, i) => ({ ...p, rank: i + 1 }));
@@ -46,7 +48,7 @@ async function standings(env, code, beforeQuestion = 999) {
 async function roomState(env, room, user, now) {
   const host = room.host_id === user.id, player = await playerOf(env, room.code, user.id);
   if (!host && !player) return json({ error: 'Join this room to see the round.' }, 403);
-  const challenge = JSON.parse(room.snapshot), durationMs = durationOf(challenge), phase = phaseOf(room, now, challenge);
+  const challenge = JSON.parse(room.snapshot), durationMs = durationOf(challenge, room.question_index), phase = phaseOf(room, now, challenge);
   challenge.questions = challenge.questions.map(q => ({ ...q, valueConnection: resolveValueConnection(q, businessContext.values) }));
   let scores = await standings(env, room.code, phase === 'question' ? room.question_index : 999);
   if (phase === 'finished') scores = await reviewScores(env, room.code, challenge.questions, scores);
@@ -55,7 +57,17 @@ async function roomState(env, room, user, now) {
   const counts = q ? await db(env).prepare('SELECT count(*) AS count FROM answers WHERE room_code = ? AND question_index = ?').bind(room.code, room.question_index).first() : { count: 0 };
   const revealed = phase === 'reveal' || phase === 'finished';
   const safeScores = scores.map(({ user_id, email, joined_at, answer_time, ...p }) => ({ ...p, isYou: user_id === user.id }));
-  return json({ code: room.code, title: challenge.title, story: challenge.story, format: challenge.format || 'current', level: challenge.level || null, weekNumber: challenge.weekNumber || null, reviewCount: challenge.questions.filter(q=>q.reviewOf).length, track:challenge.track || null, sources: challenge.sources || [], factSheet: challenge.factSheet || null, phase, host, serverNow: now, questionDurationMs: durationMs, deadline: room.started_at !== null ? room.started_at + durationMs : null, questionIndex: room.question_index, questionCount: challenge.questions.length, playerCount: scores.length, answeredCount: counts.count, question: q ? { topic: q.topic, stage:q.stage || null, prompt: q.prompt, options: q.options, basis: q.basis, ...(revealed ? { correct: q.correct, explanation: q.explanation, valueConnection: q.valueConnection, learning:q.learning || null, reviewOf: q.reviewOf || null, discussion: q.discussion, sources: q.sources || [] } : {}) } : null, ownAnswer: answer ? { selected: answer.selected, ...(revealed ? { points: answer.points, correct: !!answer.is_correct } : {}) } : null, top3: safeScores.slice(0, 3), you: safeScores.find(p => p.isYou) || null, players: phase === 'lobby' || host && phase === 'finished' ? safeScores : [], ...(phase==='finished' && player ? {learningReview:await learningReview(env,room.code,user.id,challenge.questions)} : {}), ...(host && phase === 'finished' ? { results: scores.map(({ user_id, joined_at, answer_time, ...p }) => p), review: challenge.questions } : {}) });
+  return json({ code: room.code, title: challenge.title, story: challenge.story, format: challenge.format || 'current', level: challenge.level || null, weekNumber: challenge.weekNumber || null, reviewCount: challenge.questions.filter(q=>q.reviewOf).length, track:challenge.track || null, sources: challenge.sources || [], factSheet: challenge.factSheet || null, phase, host, serverNow: now, questionDurationMs: durationMs, timingRange: challenge.track === 'weekly' ? '45–75' : null, deadline: room.started_at !== null ? room.started_at + durationMs : null, questionIndex: room.question_index, questionCount: challenge.questions.length, playerCount: scores.length, answeredCount: counts.count, question: q ? { topic: q.topic, stage:q.stage || null, prompt: q.prompt, options: q.options, basis: q.basis, help: revealed ? [] : availableHelp(q, now - room.started_at, durationMs), ...(revealed ? { correct: q.correct, explanation: q.explanation, valueConnection: q.valueConnection, learning:q.learning || null, reviewOf: q.reviewOf || null, discussion: q.discussion, sources: q.sources || [] } : {}) } : null, ownAnswer: answer ? { selected: answer.selected, ...(revealed ? { points: answer.points, correct: !!answer.is_correct } : {}) } : null, top3: safeScores.slice(0, 3), you: safeScores.find(p => p.isYou) || null, players: phase === 'lobby' || host && phase === 'finished' ? safeScores : [], ...(phase==='finished' && player ? {learningReview:await learningReview(env,room.code,user.id,challenge.questions)} : {}), ...(host && phase === 'finished' ? { results: scores.map(({ user_id, joined_at, answer_time, ...p }) => p), review: challenge.questions, questionAnalytics: await questionAnalytics(env, room.code, challenge, scores.length) } : {}) });
+}
+async function questionAnalytics(env, code, challenge, playerCount) {
+  const {results} = await db(env).prepare('SELECT question_index, selected, is_correct, elapsed_ms FROM answers WHERE room_code = ?').bind(code).all();
+  return challenge.questions.map((q,index)=>{
+    const answers=results.filter(a=>a.question_index===index), times=answers.map(a=>a.elapsed_ms).sort((a,b)=>a-b);
+    const stages={unassisted:0,clue:0,setup:0,answer:0}, stageCorrect={unassisted:0,clue:0,setup:0,answer:0};
+    for(const a of answers) { const stage=assistanceStage(q,a.elapsed_ms,durationOf(challenge,index)); stages[stage]++; if(a.is_correct)stageCorrect[stage]++; }
+    const mid=Math.floor(times.length/2), medianMs=!times.length?null:times.length%2?times[mid]:(times[mid-1]+times[mid])/2;
+    return {index,prompt:q.prompt,submitted:answers.length,unanswered:Math.max(0,playerCount-answers.length),correct:answers.filter(a=>a.is_correct).length,medianMs,stages,stageCorrect,options:q.options.map((text,selected)=>({text,count:answers.filter(a=>a.selected===selected).length,correct:selected===q.correct}))};
+  });
 }
 async function learningReview(env,code,uid,questions) {
   const {results}=await db(env).prepare('SELECT question_index, is_correct FROM answers WHERE room_code = ? AND user_id = ?').bind(code,uid).all();
@@ -69,7 +81,7 @@ export default {
       const canHost=async()=>hostPermission ??= owner || await isApprovedHost(user,env);
       let guestPermission;
       const guest=async()=>guestPermission ??= await guestIdentity(request,env,now);
-      if (path === '/api/session') { const hosting=await canHost(), participant=!user?await guest():null; return json({ user: user ? { name: user.name, email: user.email } : null, guest: participant ? { name: participant.name } : null, isOwner: owner, canHost: hosting, role: owner ? 'owner' : hosting ? 'host' : 'player', beginnerRounds: beginnerRounds.map((r,index)=>({index,title:r.title,story:r.story,questionCount:r.questions.length})), defaultBeginnerRound:0, leadershipRound:{title:leadershipRound.title,story:leadershipRound.story,questionCount:leadershipRound.questions.length,durationMs:durationOf(leadershipRound),period:leadershipRound.period || 'Q2 2026'}, competitorRound:{title:competitorRound.title,story:competitorRound.story,questionCount:competitorRound.questions.length,durationMs:durationOf(competitorRound),period:competitorRound.period || null}, week: weekKey(), verifiedOn: businessContext.verifiedOn, levels, questionSetCount: challenges.length * levels.length, questionCount: challenges.reduce((n,c)=>n+c.questions.length,0) + questionLevels.reduce((n,c)=>n+c.questions.length,0), rounds: challenges.map((c, index) => ({ index, weekNumber: index + 1, title: c.title, story: c.story })), defaultRound: challengeIndex(weekKey(), challenges.length) }); }
+      if (path === '/api/session') { const hosting=await canHost(), participant=!user?await guest():null; return json({ user: user ? { name: user.name, email: user.email } : null, guest: participant ? { name: participant.name } : null, isOwner: owner, canHost: hosting, role: owner ? 'owner' : hosting ? 'host' : 'player', weeklyRound: (()=>{ const r=weeklyEdition(weeklyBank,new Date(now)); return {title:r.title,story:r.story,questionCount:r.questions.length,durationMs:r.questionDurationMs,timingRange:'45–75',bankCount:24,editionCount:4}; })(), beginnerRounds: beginnerRounds.map((r,index)=>({index,title:r.title,story:r.story,questionCount:r.questions.length})), defaultBeginnerRound:0, leadershipRound:{title:leadershipRound.title,story:leadershipRound.story,questionCount:leadershipRound.questions.length,durationMs:durationOf(leadershipRound),period:leadershipRound.period || 'Q2 2026'}, competitorRound:{title:competitorRound.title,story:competitorRound.story,questionCount:competitorRound.questions.length,durationMs:durationOf(competitorRound),period:competitorRound.period || null}, week: weekKey(), verifiedOn: businessContext.verifiedOn, levels, questionSetCount: challenges.length * levels.length, questionCount: challenges.reduce((n,c)=>n+c.questions.length,0) + questionLevels.reduce((n,c)=>n+c.questions.length,0), rounds: challenges.map((c, index) => ({ index, weekNumber: index + 1, title: c.title, story: c.story })), defaultRound: challengeIndex(weekKey(), challenges.length) }); }
       if (path === '/api/competitor-facts' && request.method === 'GET') return json(competitorRound.factSheet);
       if (path === '/api/leadership-facts' && request.method === 'GET') return json(leadershipRound.factSheet);
       if (path === '/api/learning' && request.method === 'GET') return json({topics:beginnerRounds.flatMap(r=>r.questions.map(q=>q.learning)).filter((item,index,all)=>all.findIndex(other=>other.id===item.id)===index)});
@@ -112,14 +124,14 @@ export default {
         if (path === '/api/live/create' && request.method === 'POST') {
           if (!await canHost()) return json({ error: 'Ask the owner to add your ChatGPT email to Host access.' }, 403);
           const beginner=body.track==='beginner' || body.track===undefined && body.round===undefined && body.level===undefined;
-          if(body.track!==undefined && !['beginner','legacy','leadership','competitors'].includes(body.track)) return json({error:'Choose a valid learning track.'},400);
+          if(body.track!==undefined && !['beginner','legacy','leadership','competitors','weekly'].includes(body.track)) return json({error:'Choose a valid learning track.'},400);
           const beginnerIndex=body.beginnerRound ?? 0;
           if(beginner && (!Number.isInteger(beginnerIndex)||!beginnerRounds[beginnerIndex])) return json({error:'Choose a valid beginner round.'},400);
           const index = body.round ?? challengeIndex(weekKey(), challenges.length), level = body.level ?? 'foundation', format = body.format ?? 'current';
           if (!Number.isInteger(index) || index < 0 || index >= challenges.length) return json({ error: 'Choose a valid week.' }, 400);
           if (!levels.some(item=>item.id===level)) return json({ error: 'Choose a valid question level.' }, 400);
           if (!['current','mixed','replay'].includes(format)) return json({ error: 'Choose a valid round format.' }, 400);
-          if (['leadership','competitors'].includes(body.track) && format === 'mixed') return json({error:'This round uses its own financial fact sheet. Choose a current round or replay.'},400);
+          if (['leadership','competitors','weekly'].includes(body.track) && format === 'mixed') return json({error:body.track==='weekly'?'The weekly track keeps its own question set. Choose a current round or replay.':'This round uses its own financial fact sheet. Choose a current round or replay.'},400);
           let sourceRoom, saved;
           if (format !== 'current') {
             const sourceCode = codeValue(body.sourceCode);
@@ -128,13 +140,13 @@ export default {
             if (!sourceRoom || sourceRoom.host_id !== user.id) return json({ error: 'Choose one of your own saved rounds.' }, 403);
             if (sourceRoom.phase !== 'finished') return json({ error: 'Complete the earlier round before reusing its questions.' }, 409);
             saved = JSON.parse(sourceRoom.snapshot);
-            if (format === 'mixed' && ['leadership','competitors'].includes(saved.track)) return json({error:'This saved round uses its own financial fact sheet and cannot be mixed into another round. Choose replay.'},400);
-            if (![5,8].includes(saved.questions.length)) return json({ error: 'Choose a saved round with five or eight questions.' }, 400);
+            if (format === 'mixed' && ['leadership','competitors','weekly'].includes(saved.track)) return json({error:saved.track==='weekly'?'This saved weekly set cannot be mixed into another round. Choose replay.':'This saved round uses its own financial fact sheet and cannot be mixed into another round. Choose replay.'},400);
+            if (![5,6,8].includes(saved.questions.length)) return json({ error: 'Choose a saved round with five, six or eight questions.' }, 400);
           }
           let challenge;
           if (format === 'replay') challenge = replayRound(saved, sourceRoom);
           else {
-            challenge = body.track === 'competitors' ? structuredClone(competitorRound) : body.track === 'leadership' ? structuredClone(leadershipRound) : beginner ? structuredClone(beginnerRounds[beginnerIndex]) : roundForLevel(challenges, questionLevels, index, level);
+            challenge = body.track === 'weekly' ? weeklyEdition(weeklyBank, new Date(now)) : body.track === 'competitors' ? structuredClone(competitorRound) : body.track === 'leadership' ? structuredClone(leadershipRound) : beginner ? structuredClone(beginnerRounds[beginnerIndex]) : roundForLevel(challenges, questionLevels, index, level);
             challenge.sources ??= sourceItems(challenge.sourceIds);
             challenge.questions = challenge.questions.map(q=>({ ...q, sources: q.sources ?? sourceItems(q.sourceIds) }));
             if (format === 'mixed') {
@@ -204,8 +216,8 @@ export default {
           const previous = await db(env).prepare('SELECT selected FROM answers WHERE room_code = ? AND user_id = ? AND question_index = ?').bind(code, participant.id, room.question_index).first();
           if (previous) return json({ accepted: true, selected: previous.selected });
           const receivedAt = answeredAt, elapsed = receivedAt - room.started_at;
-          if (room.phase !== 'question' || elapsed < 0 || elapsed >= durationOf(challenge)) return json({ error: 'Time is up. Your answer arrived after the deadline.' }, 409);
-          const correct = body.selected === q.correct, points = livePoints(elapsed, correct, durationOf(challenge));
+          if (room.phase !== 'question' || elapsed < 0 || elapsed >= durationOf(challenge, room.question_index)) return json({ error: 'Time is up. Your answer arrived after the deadline.' }, 409);
+          const correct = body.selected === q.correct, points = livePoints(elapsed, correct, durationOf(challenge, room.question_index));
           await db(env).prepare('INSERT INTO answers (id, room_code, user_id, question_index, selected, is_correct, points, elapsed_ms, submitted_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(room_code, user_id, question_index) DO NOTHING').bind(crypto.randomUUID(), code, participant.id, room.question_index, body.selected, correct ? 1 : 0, points, elapsed, new Date(receivedAt).toISOString()).run();
           const saved = await db(env).prepare('SELECT selected FROM answers WHERE room_code = ? AND user_id = ? AND question_index = ?').bind(code, participant.id, room.question_index).first(); return json({ accepted: true, selected: saved.selected });
         }
