@@ -1,0 +1,945 @@
+{
+  "title": "CNH vs John Deere · Read the gap",
+  "story": "Compare CNH with John Deere only. Read the detailed numbers, explain what they mean, and connect the reported drivers to business decisions.",
+  "track": "competitors",
+  "level": "leadership",
+  "weekNumber": null,
+  "format": "current",
+  "setId": "competitors-2026-10-deere-v2",
+  "period": "October 2026",
+  "questionDurationMs": 25000,
+  "factual": true,
+  "difficulty": "Leadership · compare, interpret, discuss",
+  "sourceIds": [
+    "cnh-q2",
+    "cnh-deck",
+    "deere-q3",
+    "cnh-annual",
+    "deere-annual",
+    "stock-CNH",
+    "year-CNH",
+    "stock-DE",
+    "year-DE"
+  ],
+  "sources": [
+    {
+      "id": "cnh-q2",
+      "title": "CNH Q2 2026 results",
+      "published": "2026-08-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/ex991q226.htm"
+    },
+    {
+      "id": "cnh-deck",
+      "title": "CNH Q2 2026 presentation · margins by segment",
+      "published": "2026-08-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+    },
+    {
+      "id": "deere-q3",
+      "title": "Deere FY2026 Q3 results · Equipment Operations and segment statements",
+      "published": "2026-08-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820xex99d1.htm"
+    },
+    {
+      "id": "cnh-annual",
+      "title": "CNH FY2025 annual report · employees and competition",
+      "url": "https://s205.q4cdn.com/962820841/files/doc_downloads/annual-general-meeting/2026/03/2025-CNH-Annual-Report.pdf"
+    },
+    {
+      "id": "deere-annual",
+      "title": "Deere FY2025 annual report · worldwide employees",
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/ar/2025-Deere-Company-Annual-Report.pdf"
+    },
+    {
+      "id": "stock-CNH",
+      "title": "CNH closing prices · recent dates",
+      "url": "https://stockanalysis.com/stocks/cnh/history/"
+    },
+    {
+      "id": "year-CNH",
+      "title": "CNH historical prices · year baseline",
+      "url": "https://www.quiverquant.com/stock/CNH/historical-prices/"
+    },
+    {
+      "id": "stock-DE",
+      "title": "Deere closing prices · recent dates",
+      "url": "https://stockanalysis.com/stocks/de/history/"
+    },
+    {
+      "id": "year-DE",
+      "title": "Deere historical prices · year baseline",
+      "url": "https://www.quiverquant.com/stock/DE/historical-prices/"
+    }
+  ],
+  "factSheet": {
+    "kind": "competitors",
+    "title": "CNH vs John Deere",
+    "period": "October 2026",
+    "verifiedOn": "2026-10-10",
+    "intro": "Latest public results verified October 10, 2026. Start with the takeaway, then read the detailed numbers and the reasons behind them. All dollar amounts are USD; quarterly results are global.",
+    "industries": [
+      {
+        "id": "agriculture",
+        "title": "Agriculture",
+        "description": "CNH Agriculture overlaps with two John Deere segments. Small Agriculture & Turf also includes turf products.",
+        "peers": [
+          {
+            "name": "John Deere",
+            "focus": "Production & Precision Agriculture; Small Agriculture & Turf"
+          }
+        ]
+      },
+      {
+        "id": "construction",
+        "title": "Construction",
+        "description": "CNH Construction overlaps with Deere Construction & Forestry, which also includes forestry and roadbuilding.",
+        "peers": [
+          {
+            "name": "John Deere",
+            "focus": "Construction & Forestry"
+          }
+        ]
+      }
+    ],
+    "headcount": [
+      {
+        "company": "CNH",
+        "ticker": "CNH",
+        "count": 34197,
+        "asOf": "2025-12-31",
+        "definition": "Worldwide employees at year-end; all company businesses.",
+        "sourceId": "cnh-annual"
+      },
+      {
+        "company": "Deere",
+        "ticker": "DE",
+        "count": 73146,
+        "asOf": "2025-11-02",
+        "definition": "Worldwide employees at fiscal year-end; all company businesses.",
+        "sourceId": "deere-annual"
+      }
+    ],
+    "operating": [
+      {
+        "company": "CNH",
+        "segment": "Agriculture",
+        "industry": "agriculture",
+        "period": "Q2 2026",
+        "periodEnd": "2026-06-30",
+        "revenueMillion": 3277,
+        "currency": "USD",
+        "profitMillion": 170,
+        "margin": 5.2,
+        "metric": "Adjusted EBIT margin",
+        "scopeNote": "CNH non-GAAP measure. Excludes Financial Services and Construction.",
+        "sourceId": "cnh-q2"
+      },
+      {
+        "company": "Deere",
+        "segment": "Production & Precision Agriculture",
+        "industry": "agriculture",
+        "period": "FY2026 Q3",
+        "periodEnd": "2026-08-02",
+        "revenueMillion": 3998,
+        "currency": "USD",
+        "profitMillion": 527,
+        "margin": 13.2,
+        "metric": "Segment operating margin",
+        "scopeNote": "One of two agriculture segments. Deere’s quarter ends later; segment exclusions differ from CNH.",
+        "sourceId": "deere-q3"
+      },
+      {
+        "company": "Deere",
+        "segment": "Small Agriculture & Turf",
+        "industry": "agriculture",
+        "period": "FY2026 Q3",
+        "periodEnd": "2026-08-02",
+        "revenueMillion": 3383,
+        "currency": "USD",
+        "profitMillion": 622,
+        "margin": 18.4,
+        "metric": "Segment operating margin",
+        "scopeNote": "Includes turf. This is a separate Deere segment, not an additional company.",
+        "sourceId": "deere-q3"
+      },
+      {
+        "company": "CNH",
+        "segment": "Construction",
+        "industry": "construction",
+        "period": "Q2 2026",
+        "periodEnd": "2026-06-30",
+        "revenueMillion": 866,
+        "currency": "USD",
+        "profitMillion": 15,
+        "margin": 1.7,
+        "metric": "Adjusted EBIT margin",
+        "scopeNote": "Global Construction business; CNH non-GAAP measure.",
+        "sourceId": "cnh-q2"
+      }
+    ],
+    "grossMargins": [
+      {
+        "company": "CNH",
+        "scope": "Industrial Activities",
+        "period": "Q2 2026 · ended June 30",
+        "margin": 18,
+        "note": "Reported. $747m gross profit / $4,143m net sales. Agriculture + Construction; excludes Financial Services.",
+        "sourceId": "cnh-deck"
+      },
+      {
+        "company": "Deere",
+        "scope": "Equipment Operations",
+        "period": "FY2026 Q3 · ended August 2",
+        "margin": 27.72,
+        "note": "Calculated: ($10,999m net sales − $7,950m matching equipment COGS) / $10,999m. Includes agriculture, turf, construction, and forestry; excludes Financial Services.",
+        "sourceId": "deere-q3"
+      }
+    ],
+    "stock": {
+      "asOf": "2026-10-09",
+      "currency": "USD",
+      "basis": "Closing-price return, excluding dividends",
+      "periods": {
+        "week": {
+          "start": "2026-10-02",
+          "end": "2026-10-09"
+        },
+        "month": {
+          "start": "2026-09-09",
+          "end": "2026-10-09"
+        },
+        "year": {
+          "start": "2025-10-09",
+          "end": "2026-10-09"
+        }
+      },
+      "companies": [
+        {
+          "company": "CNH",
+          "ticker": "CNH",
+          "closes": {
+            "2026-10-09": 11.39,
+            "2026-10-02": 13.47,
+            "2026-09-09": 13.9,
+            "2025-10-09": 10.49
+          },
+          "recentPriceSource": "https://stockanalysis.com/stocks/cnh/history/",
+          "yearBaselineSource": "https://www.quiverquant.com/stock/CNH/historical-prices/"
+        },
+        {
+          "company": "Deere",
+          "ticker": "DE",
+          "closes": {
+            "2026-10-09": 620.93,
+            "2026-10-02": 687,
+            "2026-09-09": 677.21,
+            "2025-10-09": 456.22
+          },
+          "recentPriceSource": "https://stockanalysis.com/stocks/de/history/",
+          "yearBaselineSource": "https://www.quiverquant.com/stock/DE/historical-prices/"
+        }
+      ],
+      "note": "CNH and Deere trade on NYSE in USD. Fixed regular-session closing-price snapshot; dividends are excluded. Compare matching-date percentage returns, not dollar share prices."
+    },
+    "methodology": [
+      "Latest available quarters: CNH Q2 ended June 30, 2026; Deere fiscal Q3 ended August 2, 2026. They overlap but are not the same calendar period. Each year-over-year change uses the same company’s prior-year quarter.",
+      "Equipment scopes differ: CNH Industrial Activities includes Agriculture and Construction; Deere Equipment Operations also includes turf and forestry. Gross profit uses the matching equipment net sales and cost of sales.",
+      "CNH adjusted EBIT is non-GAAP. Deere segment operating profit excludes corporate expenses and certain financing and other items. Summed Deere segment profit is calculated, not company net income or a normalized CNH EBIT measure.",
+      "Company net-income comparisons use income attributable to the parent in both columns. CNH’s separately reported consolidated net income is $141m versus $217m; the attributable amounts shown here are $138m versus $213m.",
+      "Deere Q3 2026 included $110m tariff recoveries; Q3 2025 included $61m equipment impairment expense. CNH Q2 2026 included $27m restructuring and transformation expense versus $5m in Q2 2025. Reported profit changes include these effects.",
+      "Headcounts are annual global employee totals at the stated dates, not current North America staffing or comparable average FTEs. Stock returns use matching dates and exclude dividends. Neither establishes workforce productivity or the cause of a share-price move."
+    ],
+    "refresh": {
+      "cadence": "Monthly",
+      "note": "A new edition is scheduled for the first day of each month at 9 a.m. America/New_York. Only verified public data is published; source periods remain visible. Saved rounds retain their original facts and questions."
+    },
+    "sources": [
+      {
+        "id": "cnh-q2",
+        "title": "CNH Q2 2026 results",
+        "published": "2026-08-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/ex991q226.htm"
+      },
+      {
+        "id": "cnh-deck",
+        "title": "CNH Q2 2026 presentation · margins by segment",
+        "published": "2026-08-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+      },
+      {
+        "id": "deere-q3",
+        "title": "Deere FY2026 Q3 results · Equipment Operations and segment statements",
+        "published": "2026-08-20",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820xex99d1.htm"
+      },
+      {
+        "id": "cnh-annual",
+        "title": "CNH FY2025 annual report · employees and competition",
+        "url": "https://s205.q4cdn.com/962820841/files/doc_downloads/annual-general-meeting/2026/03/2025-CNH-Annual-Report.pdf"
+      },
+      {
+        "id": "deere-annual",
+        "title": "Deere FY2025 annual report · worldwide employees",
+        "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/ar/2025-Deere-Company-Annual-Report.pdf"
+      },
+      {
+        "id": "stock-CNH",
+        "title": "CNH closing prices · recent dates",
+        "url": "https://stockanalysis.com/stocks/cnh/history/"
+      },
+      {
+        "id": "year-CNH",
+        "title": "CNH historical prices · year baseline",
+        "url": "https://www.quiverquant.com/stock/CNH/historical-prices/"
+      },
+      {
+        "id": "stock-DE",
+        "title": "Deere closing prices · recent dates",
+        "url": "https://stockanalysis.com/stocks/de/history/"
+      },
+      {
+        "id": "year-DE",
+        "title": "Deere historical prices · year baseline",
+        "url": "https://www.quiverquant.com/stock/DE/historical-prices/"
+      }
+    ],
+    "comparisonScope": "CNH and John Deere only",
+    "comparison": {
+      "periods": {
+        "cnh": {
+          "label": "Q2 2026",
+          "priorLabel": "Q2 2025",
+          "periodEnd": "2026-06-30",
+          "sourceId": "cnh-q2"
+        },
+        "deere": {
+          "label": "FY2026 Q3",
+          "priorLabel": "FY2025 Q3",
+          "periodEnd": "2026-08-02",
+          "sourceId": "deere-q3"
+        }
+      },
+      "periodNote": "Latest available quarters, with different end dates: CNH June 30; John Deere August 2. Changes compare each company with its own prior-year quarter. These are global results.",
+      "highlights": [
+        {
+          "title": "Sales grew at both companies",
+          "figures": "Equipment sales: CNH +3.0% · John Deere +6.2%",
+          "meaning": "Both sold more in dollar terms than a year earlier. Sales growth alone does not show how much profit remained.",
+          "why": "Pricing, currency and product mix can lift sales even when unit demand stays weak. Read margins alongside revenue.",
+          "sourceIds": [
+            "cnh-q2",
+            "deere-q3"
+          ]
+        },
+        {
+          "title": "CNH kept less of each sales dollar",
+          "figures": "Equipment gross margin: CNH 18.0% · John Deere 27.72%",
+          "meaning": "For every $100 of equipment sales, about $18 remained at CNH after product costs, versus $27.72 at Deere, before other business expenses.",
+          "why": "A thinner margin leaves less room to fund development, overhead and future investment. Different products and quarter dates affect this comparison.",
+          "sourceIds": [
+            "cnh-deck",
+            "deere-q3"
+          ]
+        },
+        {
+          "title": "Our profit trend was weaker",
+          "figures": "Parent net income: CNH −35.2% · John Deere +7.0%",
+          "meaning": "CNH’s attributable profit fell to $138m; Deere’s rose to $1,379m. Deere’s large-ag segment still had lower sales and profit.",
+          "why": "Focus on what we can improve: quality, cost and execution, while planning capacity around demand. Deere’s other businesses helped its overall result.",
+          "sourceIds": [
+            "cnh-q2",
+            "deere-q3"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "revenue",
+          "label": "Total company revenue",
+          "unit": "million",
+          "cnh": {
+            "current": 4803,
+            "prior": 4711,
+            "scope": "Consolidated revenues",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 12608,
+            "prior": 12018,
+            "scope": "Net sales and revenues",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "Money earned from equipment, financing and other activities before expenses. Deere’s larger total shows company scale.",
+          "why": "Revenue growth can come from price, currency or mix as well as units sold. It is not a market-share calculation.",
+          "scopeNote": ""
+        },
+        {
+          "id": "equipment-sales",
+          "label": "Equipment net sales",
+          "unit": "million",
+          "cnh": {
+            "current": 4143,
+            "prior": 4021,
+            "scope": "Industrial Activities",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 10999,
+            "prior": 10357,
+            "scope": "Equipment Operations",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "Equipment revenue excludes Financial Services. CNH grew 3.0%; Deere grew 6.2% from the rounded figures.",
+          "why": "Comparing growth with the same prior-year quarter gives context for demand and execution. Product coverage still differs.",
+          "scopeNote": ""
+        },
+        {
+          "id": "equipment-cogs",
+          "label": "Equipment cost of sales",
+          "unit": "million",
+          "cnh": {
+            "current": 3396,
+            "prior": 3192,
+            "scope": "Industrial Activities COGS",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 7950,
+            "prior": 7578,
+            "scope": "Equipment Operations cost of sales",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "The product costs associated with equipment sales. CNH’s costs rose faster than its sales.",
+          "why": "When product costs consume more of each sales dollar, gross margin falls. This is not total company spending.",
+          "scopeNote": "Deere uses equipment cost of sales, not consolidated cost of sales ($7,939m)."
+        },
+        {
+          "id": "gross-profit",
+          "label": "Equipment gross profit",
+          "unit": "million",
+          "cnh": {
+            "current": 747,
+            "prior": 829,
+            "scope": "Reported gross profit",
+            "sourceId": "cnh-deck"
+          },
+          "deere": {
+            "current": 3049,
+            "prior": 2779,
+            "scope": "Calculated: net sales − equipment cost of sales",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "Revenue remaining after product costs: CNH fell $82m; Deere rose $270m.",
+          "why": "This pool must still fund overhead, development, financing costs and taxes. It is not net income.",
+          "scopeNote": ""
+        },
+        {
+          "id": "gross-margin",
+          "label": "Equipment gross margin",
+          "unit": "percent",
+          "cnh": {
+            "current": 18,
+            "prior": 20.6,
+            "scope": "Reported Industrial gross margin",
+            "sourceId": "cnh-deck"
+          },
+          "deere": {
+            "current": 27.72,
+            "prior": 26.83,
+            "scope": "Calculated Equipment Operations gross margin",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "CNH fell 2.6 percentage points while Deere improved about 0.89 points. The current reported gap is 9.72 points.",
+          "why": "Margin translates different company sizes into dollars retained per $100 of sales. It still reflects business mix and accounting scope.",
+          "scopeNote": "Deere: (10,999 − 7,950) ÷ 10,999 × 100 = 27.72%. Prior: (10,357 − 7,578) ÷ 10,357 × 100 = 26.83%."
+        },
+        {
+          "id": "equipment-op",
+          "label": "Equipment operating profit",
+          "unit": "million",
+          "cnh": {
+            "current": 167,
+            "prior": 224,
+            "scope": "Adjusted Industrial EBIT · non-GAAP",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 1585,
+            "prior": 1302,
+            "scope": "Calculated sum of three segment operating profits",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "CNH’s adjusted equipment profit fell $57m. Deere’s three equipment segments together rose $283m.",
+          "why": "This helps locate the operating-profit trend before financing and tax; the measures have different exclusions.",
+          "scopeNote": "CNH includes unallocated/elimination items of −$18m (prior −$74m). Deere sums 527 + 622 + 436 = 1,585 (prior 580 + 485 + 237 = 1,302) and excludes corporate expenses. Different exclusions prevent a normalized EBIT comparison."
+        },
+        {
+          "id": "equipment-op-margin",
+          "label": "Equipment operating margin",
+          "unit": "percent",
+          "cnh": {
+            "current": 4,
+            "prior": 5.6,
+            "scope": "Reported adjusted Industrial EBIT margin",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 14.41,
+            "prior": 12.57,
+            "scope": "Calculated sum of segment profit ÷ equipment net sales",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "CNH retained about $4 per $100 at this stage; Deere’s segment measure retained about $14.41.",
+          "why": "Read the segment detail to see where profits improved or weakened. The gap cannot be assigned directly to staffing or efficiency.",
+          "scopeNote": "Deere: 1,585 ÷ 10,999 × 100 = 14.41%; prior 1,302 ÷ 10,357 = 12.57%. Company-specific profit definitions differ."
+        },
+        {
+          "id": "net-income",
+          "label": "Net income attributable to the parent",
+          "unit": "million",
+          "cnh": {
+            "current": 138,
+            "prior": 213,
+            "scope": "CNH Industrial N.V. attributable net income",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 1379,
+            "prior": 1289,
+            "scope": "Deere & Company attributable net income",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "Profit for the parent’s shareholders after expenses and taxes. CNH fell 35.2%; Deere rose 7.0%.",
+          "why": "This is the company-wide earnings outcome. It includes Financial Services and items outside factory performance.",
+          "scopeNote": "CNH’s headline consolidated net income ($141m) includes $3m attributable to noncontrolling interests."
+        },
+        {
+          "id": "eps",
+          "label": "Diluted earnings per share",
+          "unit": "perShare",
+          "cnh": {
+            "current": 0.11,
+            "prior": 0.17,
+            "scope": "Reported diluted EPS",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 5.1,
+            "prior": 4.75,
+            "scope": "Reported diluted EPS",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "Earnings divided by diluted share count. Read each company’s year-over-year movement.",
+          "why": "The dollar EPS level is affected by share count; a higher EPS alone does not establish a better business or investment.",
+          "scopeNote": ""
+        },
+        {
+          "id": "financing-profit",
+          "label": "Financial Services net income",
+          "unit": "million",
+          "cnh": {
+            "current": 71,
+            "prior": 87,
+            "scope": "Financial Services",
+            "sourceId": "cnh-q2"
+          },
+          "deere": {
+            "current": 219,
+            "prior": 205,
+            "scope": "Financial Services",
+            "sourceId": "deere-q3"
+          },
+          "meaning": "CNH financing profit fell $16m; Deere financing profit rose $14m.",
+          "why": "Financing is a separate earnings engine from making equipment. Do not mix this net-income figure with equipment operating profit.",
+          "scopeNote": ""
+        }
+      ],
+      "drivers": [
+        {
+          "title": "Agriculture: where the gap comes from",
+          "rows": [
+            {
+              "company": "CNH",
+              "segment": "Agriculture",
+              "revenueMillion": 3277,
+              "priorRevenueMillion": 3248,
+              "profitMillion": 170,
+              "priorProfitMillion": 263,
+              "margin": 5.2,
+              "priorMargin": 8.1,
+              "metric": "Adjusted EBIT · non-GAAP",
+              "meaning": "Nearly flat sales produced $93m less profit. The margin fell 2.9 percentage points.",
+              "why": "CNH cites lower South America volumes, unfavorable North America/EMEA mix, tariffs, higher SG&A/R&D and lower joint-venture results.",
+              "sourceId": "cnh-q2"
+            },
+            {
+              "company": "John Deere",
+              "segment": "Production & Precision Agriculture",
+              "revenueMillion": 3998,
+              "priorRevenueMillion": 4273,
+              "profitMillion": 527,
+              "priorProfitMillion": 580,
+              "margin": 13.2,
+              "priorMargin": 13.6,
+              "metric": "Segment operating profit",
+              "meaning": "Large-ag sales and profit declined, but its reported margin was 8.0 points above CNH Agriculture.",
+              "why": "Deere cites lower shipments and higher production costs, partly offset by pricing and currency.",
+              "sourceId": "deere-q3"
+            },
+            {
+              "company": "John Deere",
+              "segment": "Small Agriculture & Turf",
+              "revenueMillion": 3383,
+              "priorRevenueMillion": 3025,
+              "profitMillion": 622,
+              "priorProfitMillion": 485,
+              "margin": 18.4,
+              "priorMargin": 16,
+              "metric": "Segment operating profit",
+              "meaning": "This separate business grew sales and profit and helped lift Deere’s overall result.",
+              "why": "Deere cites higher shipments and favorable mix/pricing, partly offset by higher production costs.",
+              "sourceId": "deere-q3"
+            }
+          ],
+          "takeaway": "Interpretation: Deere’s agriculture businesses were not moving in the same direction. Combining them into one headline would hide the large-ag decline.",
+          "scopeNote": "CNH has one Agriculture segment; Deere has two, including turf. Its segment operating profit and CNH adjusted EBIT have different exclusions. Periods also differ."
+        },
+        {
+          "title": "Construction: more sales did not mean more CNH profit",
+          "rows": [
+            {
+              "company": "CNH",
+              "segment": "Construction",
+              "revenueMillion": 866,
+              "priorRevenueMillion": 773,
+              "profitMillion": 15,
+              "priorProfitMillion": 35,
+              "margin": 1.7,
+              "priorMargin": 4.5,
+              "metric": "Adjusted EBIT · non-GAAP",
+              "meaning": "Sales grew 12.0%, but profit fell $20m and margin fell 2.8 points.",
+              "why": "CNH cites tariffs and higher R&D, partly offset by more volume and lower SG&A. Sales included shipments delayed from Q1.",
+              "sourceId": "cnh-q2"
+            },
+            {
+              "company": "John Deere",
+              "segment": "Construction & Forestry",
+              "revenueMillion": 3618,
+              "priorRevenueMillion": 3059,
+              "profitMillion": 436,
+              "priorProfitMillion": 237,
+              "margin": 12.1,
+              "priorMargin": 7.7,
+              "metric": "Segment operating profit",
+              "meaning": "Sales and profit both grew. The reported margin was 10.4 points above CNH Construction.",
+              "why": "Deere cites higher volume and pricing for sales; favorable pricing drove profit growth, partly offset by higher SG&A/R&D.",
+              "sourceId": "deere-q3"
+            }
+          ],
+          "takeaway": "Interpretation: CNH sold more while earning less. The immediate question is how pricing and execution can cover product and development costs.",
+          "scopeNote": "Deere also includes forestry and roadbuilding. Reported margins are directional context, not a like-for-like staffing or efficiency target."
+        }
+      ],
+      "stockMeaning": {
+        "meaning": "CNH trailed John Deere over all three shown windows. One-month returns were −18.06% and −8.31%; CNH lagged by 9.75 percentage points. Over one year both rose, with Deere rising more.",
+        "why": "Prices reflect investor expectations as well as results. These closes establish the return gap; they do not establish its cause or measure plant performance."
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "competitors-2026-10-deere-v2-01",
+      "topic": "sales-versus-profit",
+      "stage": "Read the headline",
+      "prompt": "CNH equipment sales grew 3.03%; parent net income fell 35.21%. What does this tell us?",
+      "options": [
+        "Sales growth alone does not guarantee profit growth.",
+        "More revenue always creates more profit.",
+        "The sales figure includes only financing income.",
+        "Net income is the same as gross profit."
+      ],
+      "correct": 0,
+      "explanation": "CNH equipment sales rose from $4,021m to $4,143m, while attributable net income fell from $213m to $138m. Revenue is before expenses; net income is after them. Read the cost and margin changes to explain the result.",
+      "discussion": "Which costs, pricing and product-mix changes matter most for our decisions?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "cnh-q2"
+      ],
+      "sources": [
+        {
+          "id": "cnh-q2",
+          "title": "CNH Q2 2026 results",
+          "published": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/ex991q226.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-02",
+      "topic": "peer-gross-margin",
+      "stage": "Explain a sales dollar",
+      "prompt": "CNH equipment gross margin is 18%. Roughly how much remains from $100 of equipment sales after product costs?",
+      "options": [
+        "$5.2",
+        "$18",
+        "$27.72",
+        "$4"
+      ],
+      "correct": 1,
+      "explanation": "About $18 remains. CNH gross profit was $747m on $4,143m equipment sales. This still has to cover overhead, development and other expenses. Deere’s equipment gross margin is 27.72%, with different products and quarter dates.",
+      "discussion": "What would better quality, less scrap and stronger pricing do to the dollars retained?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "cnh-deck",
+        "deere-q3"
+      ],
+      "sources": [
+        {
+          "id": "cnh-deck",
+          "title": "CNH Q2 2026 presentation · margins by segment",
+          "published": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+        },
+        {
+          "id": "deere-q3",
+          "title": "Deere FY2026 Q3 results · Equipment Operations and segment statements",
+          "published": "2026-08-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820xex99d1.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-03",
+      "topic": "peer-operating-margin",
+      "stage": "Read the margin gap",
+      "prompt": "CNH Agriculture: 5.2%. Deere Production & Precision Ag: 13.2%. What is the reported margin gap?",
+      "options": [
+        "8 percentage points, Deere higher.",
+        "80 percentage points, Deere higher.",
+        "8 percentage points, CNH higher.",
+        "Both margins are the same."
+      ],
+      "correct": 0,
+      "explanation": "The displayed gap is 8 percentage points. CNH uses adjusted EBIT; Deere uses segment operating profit. Deere’s quarter ends later and its business scope differs. The gap is context to investigate, not a staffing or workforce-efficiency target.",
+      "discussion": "What scope, mix and accounting differences would Finance reconcile before setting a target?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "cnh-q2",
+        "deere-q3"
+      ],
+      "sources": [
+        {
+          "id": "cnh-q2",
+          "title": "CNH Q2 2026 results",
+          "published": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/ex991q226.htm"
+        },
+        {
+          "id": "deere-q3",
+          "title": "Deere FY2026 Q3 results · Equipment Operations and segment statements",
+          "published": "2026-08-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820xex99d1.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "win-as-one",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-04",
+      "topic": "construction-costs",
+      "stage": "Explain the outcome",
+      "prompt": "CNH Construction sales rose to $866m, but profit fell to $15m. What is the best reading?",
+      "options": [
+        "Higher sales prove that margins improved.",
+        "Profit is unrelated to product costs.",
+        "More sales were outweighed by pressures on profit.",
+        "The result proves that headcount must be cut."
+      ],
+      "correct": 2,
+      "explanation": "Sales rose from $773m; adjusted EBIT fell from $35m. CNH cited tariffs and higher R&D, partly offset by volume and lower SG&A. Selling more is helpful, but the remaining profit depends on costs and price.",
+      "discussion": "Which cost, quality or pricing actions could improve the result while protecting needed capability?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "cnh-q2"
+      ],
+      "sources": [
+        {
+          "id": "cnh-q2",
+          "title": "CNH Q2 2026 results",
+          "published": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/ex991q226.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "we-go-beyond",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-05",
+      "topic": "peer-workforce",
+      "stage": "Understand company scale",
+      "prompt": "John Deere disclosed 73,146 worldwide employees. What does this establish?",
+      "options": [
+        "Deere is more productive per worker.",
+        "CNH should use the same staffing ratio.",
+        "This is Deere’s current North America headcount.",
+        "Deere’s global workforce size at the disclosed annual date."
+      ],
+      "correct": 3,
+      "explanation": "The count is 73,146 at 2025-11-02; CNH’s disclosed count is 34,197 at its separately stated year-end. Counts establish scale, not productivity. Compare output, hours, business mix and outsourcing before drawing a staffing conclusion.",
+      "discussion": "What evidence would allow a fair comparison of workforce productivity?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "cnh-annual",
+        "deere-annual"
+      ],
+      "sources": [
+        {
+          "id": "cnh-annual",
+          "title": "CNH FY2025 annual report · employees and competition",
+          "url": "https://s205.q4cdn.com/962820841/files/doc_downloads/annual-general-meeting/2026/03/2025-CNH-Annual-Report.pdf"
+        },
+        {
+          "id": "deere-annual",
+          "title": "Deere FY2025 annual report · worldwide employees",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/ar/2025-Deere-Company-Annual-Report.pdf"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "you-matter",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-06",
+      "topic": "peer-stock-week",
+      "stage": "Read one week",
+      "prompt": "Which stock had the stronger price return over this edition’s one-week window?",
+      "options": [
+        "CNH: −15.44%",
+        "John Deere: −9.62%",
+        "The two returns were equal.",
+        "Dollar share prices are needed to compare returns."
+      ],
+      "correct": 1,
+      "explanation": "John Deere had the stronger price return from 2026-10-02 to 2026-10-09. CNH −15.44%; Deere −9.62%. A smaller decline is relative outperformance when both stocks fall. Dividends are excluded.",
+      "discussion": "What facts can we report from the prices, and what additional evidence would explain the move?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "stock-CNH",
+        "stock-DE"
+      ],
+      "sources": [
+        {
+          "id": "stock-CNH",
+          "title": "CNH closing prices · recent dates",
+          "url": "https://stockanalysis.com/stocks/cnh/history/"
+        },
+        {
+          "id": "stock-DE",
+          "title": "Deere closing prices · recent dates",
+          "url": "https://stockanalysis.com/stocks/de/history/"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-07",
+      "topic": "peer-stock-month",
+      "stage": "Compare one month",
+      "prompt": "One month: CNH −18.06%, John Deere −8.31%. Which performed better?",
+      "options": [
+        "CNH by 9.75 percentage points.",
+        "John Deere by 9.75 percentage points.",
+        "Dollar share prices establish the better return.",
+        "They delivered the same price return."
+      ],
+      "correct": 1,
+      "explanation": "John Deere outperformed by 9.75 percentage points from 2026-09-09 to 2026-10-09. Relative performance and a positive absolute return are different claims.",
+      "discussion": "How can we describe relative performance alongside each stock’s absolute return?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "stock-CNH",
+        "stock-DE"
+      ],
+      "sources": [
+        {
+          "id": "stock-CNH",
+          "title": "CNH closing prices · recent dates",
+          "url": "https://stockanalysis.com/stocks/cnh/history/"
+        },
+        {
+          "id": "stock-DE",
+          "title": "Deere closing prices · recent dates",
+          "url": "https://stockanalysis.com/stocks/de/history/"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    },
+    {
+      "id": "competitors-2026-10-deere-v2-08",
+      "topic": "peer-stock-year",
+      "stage": "Take the longer view",
+      "prompt": "One year: CNH +8.58%, John Deere +36.1%. What is the accurate conclusion?",
+      "options": [
+        "Both rose; John Deere rose more.",
+        "Their price returns were equal.",
+        "The share-price gap proves a workforce-efficiency gap.",
+        "These returns include dividends."
+      ],
+      "correct": 0,
+      "explanation": "From 2025-10-09 to 2026-10-09, CNH returned +8.58% and Deere +36.1%. CNH minus Deere is -27.52 percentage points. These are price returns excluding dividends; neither explains the cause of the gap.",
+      "discussion": "What would sustained progress look like across margins, cash, customer outcomes and capability?",
+      "basis": "October 2026 · CNH vs John Deere · actual source periods on the reference",
+      "sourceIds": [
+        "stock-CNH",
+        "stock-DE",
+        "year-CNH",
+        "year-DE"
+      ],
+      "sources": [
+        {
+          "id": "stock-CNH",
+          "title": "CNH closing prices · recent dates",
+          "url": "https://stockanalysis.com/stocks/cnh/history/"
+        },
+        {
+          "id": "stock-DE",
+          "title": "Deere closing prices · recent dates",
+          "url": "https://stockanalysis.com/stocks/de/history/"
+        },
+        {
+          "id": "year-CNH",
+          "title": "CNH historical prices · year baseline",
+          "url": "https://www.quiverquant.com/stock/CNH/historical-prices/"
+        },
+        {
+          "id": "year-DE",
+          "title": "Deere historical prices · year baseline",
+          "url": "https://www.quiverquant.com/stock/DE/historical-prices/"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "we-go-beyond",
+        "why": "Use the financial evidence and its scope to make a clear operating decision."
+      }
+    }
+  ]
+}

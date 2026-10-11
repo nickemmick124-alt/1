@@ -1,0 +1,541 @@
+{
+  "title": "Leadership · Read the business",
+  "story": "Use the financial fact sheet to explain CNH’s revenue, profit, gross margin, and cash; quantify North America’s equipment-sales contribution; and distinguish published global personnel expense from the regional workforce costs needed for a decision. Built for North America HR leadership.",
+  "track": "leadership",
+  "level": "leadership",
+  "weekNumber": null,
+  "format": "current",
+  "setId": "leadership-q2-2026-v3",
+  "period": "Q2 2026",
+  "questionDurationMs": 25000,
+  "factual": true,
+  "difficulty": "Leadership · company economics and North America contribution",
+  "sourceIds": [
+    "q2-release",
+    "q2-deck",
+    "q2-2026-10q",
+    "fy2025-ifrs-annual",
+    "stock-history",
+    "cnh-2026-proxy"
+  ],
+  "sources": [
+    {
+      "id": "q2-release",
+      "title": "CNH Q2 2026 results",
+      "publisher": "CNH Investor Relations",
+      "published": "2026-08-03",
+      "url": "https://investors.cnh.com/news/news-details/2026/CNH-Industrial-N-V--Reports-Second-Quarter-2026-Results/default.aspx"
+    },
+    {
+      "id": "q2-deck",
+      "title": "CNH Q2 2026 presentation · Industrial gross margin and regional sales",
+      "publisher": "CNH / SEC filing",
+      "published": "2026-08-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+    },
+    {
+      "id": "q2-2026-10q",
+      "title": "CNH Q2 2026 Form 10-Q · regional sales and expense disclosures",
+      "publisher": "CNH / SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000018/cnhi-20260630.htm"
+    },
+    {
+      "id": "fy2025-ifrs-annual",
+      "title": "CNH 2025 IFRS annual report · consolidated personnel costs, note 11",
+      "publisher": "CNH",
+      "url": "https://www.cnh.com/-/media/CNHi/cnhicorporate/Investor-relation/financial_information/annual_reports/2025/CNH_IFRS_Annual_Report_2025---Final-version.pdf#page=142"
+    },
+    {
+      "id": "stock-history",
+      "title": "CNH historical share price · October 9, 2026 close",
+      "publisher": "Stock Analysis",
+      "published": "2026-10-09",
+      "url": "https://stockanalysis.com/stocks/cnh/history/"
+    },
+    {
+      "id": "cnh-2026-proxy",
+      "title": "CNH 2026 proxy · 2025 IFRS personnel costs and compensation cash-conversion definition",
+      "publisher": "CNH / SEC filing",
+      "published": "2026-03-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000119312526124227/cnh-20260325.htm"
+    }
+  ],
+  "factSheet": {
+    "title": "CNH leadership financial fact sheet",
+    "period": "Q2 2026",
+    "verifiedOn": "2026-10-10",
+    "intro": "Q2 2026 is the latest publicly reported quarter verified on October 10, 2026. The quarter ended June 30; results were published August 3. Keep this sheet open while answering. The personnel-cost row is separately dated FY 2025 and uses IFRS; it is not a Q2 2026 workforce-cost figure. Dollar amounts are USD millions unless marked otherwise. Consolidated results include Financial Services; Industrial Activities excludes Financial Services. Industrial gross margin and adjusted EBIT margin measure different levels of profit. Adjusted profit and Industrial free cash flow are non-GAAP measures; read the company’s reconciliations for their definitions.",
+    "stock": {
+      "ticker": "CNH",
+      "exchange": "NYSE",
+      "currency": "USD",
+      "close": 11.39,
+      "asOf": "2026-10-09",
+      "asOfTime": "16:00 EDT",
+      "note": "Fixed closing-price snapshot from Friday, October 9. This is a price per share, not a live quote or a quarterly financial result.",
+      "sourceUrl": "https://stockanalysis.com/stocks/cnh/history/"
+    },
+    "metrics": [
+      {
+        "label": "Revenue",
+        "scope": "Consolidated",
+        "unit": "USD million",
+        "current": 4803,
+        "prior": 4711,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Net income",
+        "scope": "Consolidated · reported GAAP",
+        "unit": "USD million",
+        "current": 141,
+        "prior": 217,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Adjusted net income",
+        "scope": "Consolidated · non-GAAP",
+        "unit": "USD million",
+        "current": 161,
+        "prior": 216,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Net sales",
+        "scope": "Industrial Activities",
+        "unit": "USD million",
+        "current": 4143,
+        "prior": 4021,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Gross profit",
+        "scope": "Industrial Activities",
+        "unit": "USD million",
+        "current": 747,
+        "prior": 829,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025",
+        "note": "Industrial net sales less cost of goods sold; not consolidated gross profit."
+      },
+      {
+        "label": "Gross margin",
+        "scope": "Industrial Activities",
+        "unit": "%",
+        "current": 18.0,
+        "prior": 20.6,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025",
+        "note": "Published rounded Industrial gross margin; distinct from adjusted EBIT margin."
+      },
+      {
+        "label": "Adjusted EBIT",
+        "scope": "Industrial Activities",
+        "unit": "USD million",
+        "current": 167,
+        "prior": 224,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Adjusted EBIT margin",
+        "scope": "Industrial Activities",
+        "unit": "%",
+        "current": 4.0,
+        "prior": 5.6,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Equipment net sales",
+        "scope": "North America · Agriculture + Construction",
+        "unit": "USD million",
+        "current": 1697,
+        "prior": 1497,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025",
+        "note": "Calculated sums: 2026 $1,229m + $468m; 2025 $1,118m + $379m. Includes US, Canada, and Mexico; excludes Financial Services."
+      },
+      {
+        "label": "Share of Industrial net sales",
+        "scope": "North America · equipment",
+        "unit": "%",
+        "current": 41,
+        "prior": 37,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025",
+        "note": "Rounded shares: $1,697m ÷ $4,143m in 2026; $1,497m ÷ $4,021m in 2025. This is sales contribution, not profit or payroll contribution."
+      },
+      {
+        "label": "Free cash flow",
+        "scope": "Industrial Activities",
+        "unit": "USD million",
+        "current": 150,
+        "prior": 451,
+        "period": "Q2 2026",
+        "comparison": "Q2 2025"
+      },
+      {
+        "label": "Free cash flow",
+        "scope": "Industrial Activities",
+        "unit": "USD million",
+        "current": -439,
+        "prior": -116,
+        "period": "H1 2026",
+        "comparison": "H1 2025"
+      },
+      {
+        "label": "Personnel costs",
+        "scope": "Consolidated · IFRS · global annual expense",
+        "unit": "USD million",
+        "current": 2827,
+        "prior": 2929,
+        "period": "FY 2025",
+        "comparison": "FY 2024",
+        "note": "Annual personnel expense in the consolidated IFRS income statement, note 11. Not a Q2 figure, North America subtotal, or cash-payroll measure."
+      }
+    ],
+    "cashConversion": {
+      "definition": "Cash conversion (%) = Industrial Activities free cash flow ÷ adjusted net income × 100, using the same reporting period.",
+      "meaning": "It shows how much cash the equipment business generates relative to CNH’s adjusted earnings. Profit and cash can differ because of working-capital movements and investment spending.",
+      "example": "Teaching example: an 80% ratio means $80 of Industrial free cash flow for every $100 of adjusted net income in the same period. These are illustrative figures, not a reported CNH result.",
+      "note": "This is CNH’s public 2025 compensation definition, disclosed in the 2026 proxy. Use the company’s stated scopes and adjustments; the example does not represent an official quarterly cash-conversion result.",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1567094/000119312526124227/cnh-20260325.htm"
+    },
+    "sources": [
+      {
+        "id": "q2-release",
+        "title": "CNH Q2 2026 results",
+        "publisher": "CNH Investor Relations",
+        "published": "2026-08-03",
+        "url": "https://investors.cnh.com/news/news-details/2026/CNH-Industrial-N-V--Reports-Second-Quarter-2026-Results/default.aspx"
+      },
+      {
+        "id": "q2-deck",
+        "title": "CNH Q2 2026 presentation · Industrial gross margin and regional sales",
+        "publisher": "CNH / SEC filing",
+        "published": "2026-08-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+      },
+      {
+        "id": "q2-2026-10q",
+        "title": "CNH Q2 2026 Form 10-Q · regional sales and expense disclosures",
+        "publisher": "CNH / SEC filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000018/cnhi-20260630.htm"
+      },
+      {
+        "id": "fy2025-ifrs-annual",
+        "title": "CNH 2025 IFRS annual report · consolidated personnel costs, note 11",
+        "publisher": "CNH",
+        "url": "https://www.cnh.com/-/media/CNHi/cnhicorporate/Investor-relation/financial_information/annual_reports/2025/CNH_IFRS_Annual_Report_2025---Final-version.pdf#page=142"
+      },
+      {
+        "id": "stock-history",
+        "title": "CNH historical share price · October 9, 2026 close",
+        "publisher": "Stock Analysis",
+        "published": "2026-10-09",
+        "url": "https://stockanalysis.com/stocks/cnh/history/"
+      },
+      {
+        "id": "cnh-2026-proxy",
+        "title": "CNH 2026 proxy · 2025 IFRS personnel costs and compensation cash-conversion definition",
+        "publisher": "CNH / SEC filing",
+        "published": "2026-03-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/1567094/000119312526124227/cnh-20260325.htm"
+      }
+    ],
+    "coverage": {
+      "title": "North America: what the public figures show",
+      "text": "North America includes the United States, Canada, and Mexico. Q2 2026 Agriculture net sales of $1,229m plus Construction net sales of $468m total $1,697m, about 41% of Industrial net sales. This equipment-sales scope excludes Financial Services. The public disclosures reviewed do not provide a complete North America gross-profit, gross-margin, total-spending, or labor-cost figure. Sales share does not establish profit or payroll share. Use a North America profit-and-cost report with a consistent period and definition before making those claims; the global FY 2025 personnel-cost figure cannot fill that gap."
+    }
+  },
+  "questions": [
+    {
+      "id": "leadership-q2-2026-01-v3",
+      "topic": "industrial-activities",
+      "stage": "Read the scope",
+      "prompt": "Which pair correctly names CNH’s Q2 2026 consolidated revenue and Industrial net sales?",
+      "options": [
+        "Consolidated revenue: $4,143m. Industrial net sales: $4,803m.",
+        "Consolidated revenue: $4,803m. Industrial net sales: $4,143m.",
+        "Consolidated revenue: $4,711m. Industrial net sales: $4,021m.",
+        "Consolidated revenue: $4,803m. Industrial net sales: $3,277m."
+      ],
+      "correct": 1,
+      "explanation": "Industrial Activities recorded $4,143m in net sales and $167m in adjusted EBIT, giving approximately 4.0% margin. The $4,803m revenue figure is consolidated and includes Financial Services. Match the business scope before calculating a margin.",
+      "discussion": "Which financial scope should we use for a plant proposal, a corporate-function proposal, or a Financial Services proposal?",
+      "basis": "Reported CNH Q2 2026 results · calculations use the stated figures",
+      "sourceIds": [
+        "q2-release"
+      ],
+      "sources": [
+        {
+          "id": "q2-release",
+          "title": "CNH Q2 2026 results",
+          "publisher": "CNH Investor Relations",
+          "published": "2026-08-03",
+          "url": "https://investors.cnh.com/news/news-details/2026/CNH-Industrial-N-V--Reports-Second-Quarter-2026-Results/default.aspx"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Naming the measure and business scope gives HR and Finance a consistent basis for discussion."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-02-v3",
+      "topic": "revenue-profit",
+      "stage": "Explain the divergence",
+      "prompt": "CNH’s Q2 revenue rose to $4,803m from $4,711m. What happened to reported net income?",
+      "options": [
+        "It fell to $161m from $216m, despite higher revenue.",
+        "It rose to $217m from $141m, alongside higher revenue.",
+        "It fell to $167m from $224m, despite higher revenue.",
+        "It fell to $141m from $217m, despite higher revenue."
+      ],
+      "correct": 3,
+      "explanation": "Revenue grew by $92m ÷ $4,711m, or about 2%. Net income declined by $76m ÷ $217m, or about 35%. Sales growth and profit growth diverged. Those totals do not isolate labor, pricing, mix, or other causes; use the detailed profit bridge before assigning a response.",
+      "discussion": "What evidence would help us separate an HR-influenced cost gap from pricing, mix, materials, or other profit drivers?",
+      "basis": "Reported CNH Q2 2026 results · calculations use the stated figures",
+      "sourceIds": [
+        "q2-release"
+      ],
+      "sources": [
+        {
+          "id": "q2-release",
+          "title": "CNH Q2 2026 results",
+          "publisher": "CNH Investor Relations",
+          "published": "2026-08-03",
+          "url": "https://investors.cnh.com/news/news-details/2026/CNH-Industrial-N-V--Reports-Second-Quarter-2026-Results/default.aspx"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "win-as-one",
+        "why": "A shared explanation of the profit change helps functions address the right causes together."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-03-v3",
+      "topic": "industrial-gross-margin",
+      "stage": "Separate the profit measures",
+      "prompt": "Which pair correctly identifies CNH’s Q2 2026 Industrial gross margin and adjusted EBIT margin?",
+      "options": [
+        "Gross margin: 18.0%. Adjusted EBIT margin: 4.0%.",
+        "Gross margin: 4.0%. Adjusted EBIT margin: 18.0%.",
+        "Gross margin: 20.6%. Adjusted EBIT margin: 5.6%.",
+        "Gross margin: 15.6%. Adjusted EBIT margin: 3.5%."
+      ],
+      "correct": 0,
+      "explanation": "Industrial gross profit is $747m: $4,143m of net sales less $3,396m of cost of goods sold. Dividing $747m by $4,143m gives about 18.0%. Adjusted EBIT of $167m gives a separate margin of about 4.0%. The prior-year Industrial gross margin was 20.6%. These Industrial measures do not establish a consolidated gross margin.",
+      "discussion": "Which workforce costs affect cost of goods sold, and which sit in SG&A or R&D? How would that change the profit measure used to assess a proposal?",
+      "basis": "Reported CNH Q2 2026 Industrial results · gross profit and gross margin, presentation slide 23",
+      "sourceIds": [
+        "q2-deck",
+        "q2-2026-10q"
+      ],
+      "sources": [
+        {
+          "id": "q2-deck",
+          "title": "CNH Q2 2026 presentation · Industrial gross margin and regional sales",
+          "publisher": "CNH / SEC filing",
+          "published": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+        },
+        {
+          "id": "q2-2026-10q",
+          "title": "CNH Q2 2026 Form 10-Q · regional sales and expense disclosures",
+          "publisher": "CNH / SEC filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000018/cnhi-20260630.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Separating gross profit from adjusted EBIT makes the economics of a workforce proposal easier to explain."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-04-v3",
+      "topic": "north-america-sales",
+      "stage": "Quantify the regional contribution",
+      "prompt": "North America equipment sales were $1,697m; worldwide Industrial net sales were $4,143m. What was North America’s approximate Q2 contribution?",
+      "options": [
+        "35% of Industrial net sales, excluding Financial Services.",
+        "30% of Industrial net sales, excluding Financial Services.",
+        "41% of Industrial net sales, excluding Financial Services.",
+        "41% of consolidated revenue, including Financial Services."
+      ],
+      "correct": 2,
+      "explanation": "Add the two regional equipment-sales figures: $1,229m + $468m = $1,697m. Divide by matching worldwide Industrial net sales: $1,697m ÷ $4,143m ≈ 41%. North America covers the US, Canada, and Mexico. This is regional equipment-sales contribution; it excludes Financial Services and does not measure production by North American factories.",
+      "discussion": "How does a region contributing about 41% of equipment sales shape our business questions without automatically dictating its share of headcount or investment?",
+      "basis": "Reported CNH Q2 2026 regional equipment sales · regional totals and contribution calculated from matching scopes",
+      "sourceIds": [
+        "q2-2026-10q",
+        "q2-deck"
+      ],
+      "sources": [
+        {
+          "id": "q2-2026-10q",
+          "title": "CNH Q2 2026 Form 10-Q · regional sales and expense disclosures",
+          "publisher": "CNH / SEC filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000018/cnhi-20260630.htm"
+        },
+        {
+          "id": "q2-deck",
+          "title": "CNH Q2 2026 presentation · Industrial gross margin and regional sales",
+          "publisher": "CNH / SEC filing",
+          "published": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "win-as-one",
+        "why": "A shared view of North America’s sales contribution helps regional and global teams discuss priorities using the same scope."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-05-v3",
+      "topic": "cash-conversion",
+      "stage": "Connect profit to cash",
+      "prompt": "Teaching example: under CNH’s public definition, what does 80% cash conversion mean for the same period?",
+      "options": [
+        "$80 of revenue for every $100 of Industrial free cash flow.",
+        "$80 of Industrial free cash flow for every $100 of adjusted net income.",
+        "$80 of adjusted net income for every $100 of Industrial free cash flow.",
+        "$80 of customer cash collected for every $100 of sales invoiced."
+      ],
+      "correct": 1,
+      "explanation": "CNH’s published 2025 compensation definition divides Industrial Activities free cash flow by adjusted net income. In this teaching example, $80 ÷ $100 × 100 = 80%. It relates Industrial cash generation to adjusted earnings, not cash collected as a share of revenue or the cash balance. Both figures must cover the same period. As general cash-flow drivers, inventory growth or slower customer collections can absorb operating cash, while capital expenditure reduces free cash flow. CNH links the measure to working-capital management and informed capital-investment decisions. The example is not a reported CNH result.",
+      "discussion": "How could inventory, customer-payment timing, or capital investment make cash conversion change even when profit holds steady? Which operational decisions could our team help improve?",
+      "basis": "CNH public 2025 compensation definition · 2026 proxy, pages 25–26 · 80% is a teaching example",
+      "sourceIds": [
+        "cnh-2026-proxy"
+      ],
+      "sources": [
+        {
+          "id": "cnh-2026-proxy",
+          "title": "CNH 2026 proxy · 2025 IFRS personnel costs and compensation cash-conversion definition",
+          "publisher": "CNH / SEC filing",
+          "published": "2026-03-25",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000119312526124227/cnh-20260325.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Expressing cash conversion as cash per dollar of adjusted earnings makes the link between profit and cash easier to discuss."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-06-v3",
+      "topic": "north-america-cost-evidence",
+      "stage": "Challenge a regional allocation",
+      "prompt": "North America contributed about 41% of Q2 equipment sales. What does that establish about its profit and workforce costs?",
+      "options": [
+        "It establishes a 41% gross-profit share; workforce costs need separate regional figures.",
+        "It establishes a 41% workforce-cost share; gross profit needs separate regional figures.",
+        "It establishes 41% shares of both gross profit and workforce costs.",
+        "Neither share is established; profit and workforce costs need separate regional figures."
+      ],
+      "correct": 3,
+      "explanation": "A sales share does not establish a profit or cost share. Product mix, pricing, cost structures, and where work occurs can differ by region. The public figures reviewed do not supply complete North America gross profit, total spending, or labor costs. The personnel figure is also global FY 2025 IFRS expense, while the sales share is Q2 2026 equipment revenue.",
+      "discussion": "Which North America profit-and-cost report would we request before deciding where to invest, and how would we define labor cost consistently across teams?",
+      "basis": "Evidence interpretation · public regional sales and global personnel disclosures do not establish a regional profit or cost allocation",
+      "sourceIds": [
+        "q2-2026-10q",
+        "fy2025-ifrs-annual"
+      ],
+      "sources": [
+        {
+          "id": "q2-2026-10q",
+          "title": "CNH Q2 2026 Form 10-Q · regional sales and expense disclosures",
+          "publisher": "CNH / SEC filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000018/cnhi-20260630.htm"
+        },
+        {
+          "id": "fy2025-ifrs-annual",
+          "title": "CNH 2025 IFRS annual report · consolidated personnel costs, note 11",
+          "publisher": "CNH",
+          "url": "https://www.cnh.com/-/media/CNHi/cnhicorporate/Investor-relation/financial_information/annual_reports/2025/CNH_IFRS_Annual_Report_2025---Final-version.pdf#page=142"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "win-as-one",
+        "why": "Agreeing on scope and evidence lets HR, Finance, and business leaders assess regional decisions together."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-07-v3",
+      "topic": "stock-price",
+      "stage": "Use a dated market signal",
+      "prompt": "What does the fact sheet’s $11.39 CNH stock price represent?",
+      "options": [
+        "The October 9 NYSE close in USD per share; a dated snapshot.",
+        "The October 12 live NYSE price in USD per share; a current quote.",
+        "The June 30 NYSE close in USD per share; the quarter-end price.",
+        "CNH’s Q2 earnings in USD per share; a quarterly profitability measure."
+      ],
+      "correct": 0,
+      "explanation": "The sheet records the October 9, 2026 close of US$11.39 per CNH share on the NYSE, at 16:00 EDT. It is fixed to that date, not a live feed. A share-price observation also does not establish why investors traded at that price; quarterly earnings cover a different period.",
+      "discussion": "How would we explain what the stock price adds to a business conversation, and what it cannot tell us about an individual people decision?",
+      "basis": "Dated external market snapshot · October 9, 2026 NYSE close",
+      "sourceIds": [
+        "stock-history"
+      ],
+      "sources": [
+        {
+          "id": "stock-history",
+          "title": "CNH historical share price · October 9, 2026 close",
+          "publisher": "Stock Analysis",
+          "published": "2026-10-09",
+          "url": "https://stockanalysis.com/stocks/cnh/history/"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "Stating the date, exchange, and currency makes a market reference usable and avoids false precision."
+      }
+    },
+    {
+      "id": "leadership-q2-2026-08-v3",
+      "topic": "personnel-cost-scope",
+      "stage": "Read the workforce-cost figure",
+      "prompt": "What does CNH’s published $2.827bn personnel-cost figure represent?",
+      "options": [
+        "Global cash payroll paid during FY 2025, measured by the consolidated cash-flow statement.",
+        "North America personnel expense for FY 2025, measured under IFRS.",
+        "Global consolidated personnel expense for FY 2025, measured under IFRS.",
+        "Global consolidated personnel expense for Q2 2026, measured under US GAAP."
+      ],
+      "correct": 2,
+      "explanation": "The published amount is $2.827bn of global consolidated IFRS personnel expense for the year ended December 31, 2025. The decline is $102m ÷ $2,929m ≈ 3.5%. It is neither a North America subtotal nor a Q2 2026 measure. An income-statement expense is not itself cash payroll; current regional costs need a separately defined report.",
+      "discussion": "For our North America decisions, should the workforce-cost view include overtime, benefits, variable compensation, temporary labor, and severance? Which period and accounting basis would Finance use?",
+      "basis": "Reported CNH FY 2025 consolidated IFRS personnel expense · annual report note 11 and 2026 proxy",
+      "sourceIds": [
+        "fy2025-ifrs-annual",
+        "cnh-2026-proxy"
+      ],
+      "sources": [
+        {
+          "id": "fy2025-ifrs-annual",
+          "title": "CNH 2025 IFRS annual report · consolidated personnel costs, note 11",
+          "publisher": "CNH",
+          "url": "https://www.cnh.com/-/media/CNHi/cnhicorporate/Investor-relation/financial_information/annual_reports/2025/CNH_IFRS_Annual_Report_2025---Final-version.pdf#page=142"
+        },
+        {
+          "id": "cnh-2026-proxy",
+          "title": "CNH 2026 proxy · 2025 IFRS personnel costs and compensation cash-conversion definition",
+          "publisher": "CNH / SEC filing",
+          "published": "2026-03-25",
+          "url": "https://www.sec.gov/Archives/edgar/data/1567094/000119312526124227/cnh-20260325.htm"
+        }
+      ],
+      "valueConnection": {
+        "valueId": "make-it-simple",
+        "why": "A clear period, accounting basis, and workforce-cost definition make financial claims more useful in people decisions."
+      }
+    }
+  ]
+}

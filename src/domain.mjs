@@ -21,8 +21,9 @@ export function challengeForWeek(bank, week) {
   const count = Math.floor((new Date(week + 'T00:00:00Z') - new Date('2026-09-28T00:00:00Z')) / 604800000);
   const cycle = Math.floor(count / bank.length);
   const factor = 1 + (((cycle % 40) + 40) % 40) / 10;
-  const scale = value => value.replace(/\$([\d,]+)(?![\d,])/g, (_, amount) => '$' + Math.round(Number(amount.replaceAll(',', '')) * factor).toLocaleString('en-US'));
   const original = bank[index];
+  // Published results and source-based content must never be inflated by a weekly variant.
+  const scale = original.factual ? value => value : value => value.replace(/\$([\d,]+)(?![\d,])/g, (_, amount) => '$' + Math.round(Number(amount.replaceAll(',', '')) * factor).toLocaleString('en-US'));
   const result = { ...original, story: scale(original.story), facts: original.facts.map(f => ({ label: f.label, value: scale(f.value) })), questions: original.questions.map((q, i) => {
     const rotation = ((count + i) % q.options.length + q.options.length) % q.options.length;
     const options = q.options.map(scale);
@@ -31,7 +32,7 @@ export function challengeForWeek(bank, week) {
   return result;
 }
 export function publicChallenge(challenge) {
-  return { ...challenge, questions: challenge.questions.map(({ correct, explanation, ...q }) => q) };
+  return { ...challenge, questions: challenge.questions.map(({ correct, explanation, valueConnection, ...q }) => q) };
 }
 export function scoreAnswers(challenge, answers) {
   if (!Array.isArray(answers) || answers.length !== challenge.questions.length || answers.some((a, i) => !Number.isInteger(a) || a < 0 || a >= challenge.questions[i].options.length)) throw new Error('Choose an answer for all five decisions.');

@@ -1,0 +1,208 @@
+.competitor-sheet{color:var(--ink,#17344d);min-width:0}
+.competitor-sheet-intro{max-width:900px;margin:0 0 26px}
+.competitor-sheet-intro>p{font-size:16px;line-height:1.65;color:#496274}
+.competitor-sheet-intro .competitor-dateline{font-size:12px;letter-spacing:.8px;text-transform:uppercase;font-weight:650;color:#2c5d80;margin-bottom:12px}
+.competitor-section{margin:28px 0;min-width:0}
+.competitor-section-title{margin-bottom:18px;max-width:940px}
+.competitor-section h2{font-size:25px;line-height:1.3;letter-spacing:-.5px;margin:0 0 10px}
+.competitor-section-title>p{font-size:14px;line-height:1.65;color:#526c7f;margin:0}
+.competitor-industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px}
+.competitor-industry-card{border:1px solid #b9ccdc;border-radius:13px;padding:24px;background:#fff}
+.competitor-industry-card h3{font-size:21px;color:#174c73;margin:0 0 10px}
+.competitor-industry-card>p{font-size:14px;line-height:1.6;color:#4f697e;margin:0 0 16px}
+.competitor-industry-card ul{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.competitor-industry-card li{padding:11px 0;border-top:1px solid #e1e9f0;font-size:14px;display:grid;grid-template-columns:minmax(100px,.65fr) 1.35fr;gap:14px}
+.competitor-industry-card li>strong{color:#1a3e59;font-weight:650}
+.competitor-industry-card li>span{color:#506b7f}
+.competitor-table-wrap{position:relative;max-width:100%;overflow:auto;border:1px solid #ccdbe5;border-radius:11px;background:#fff;scrollbar-gutter:stable;overscroll-behavior-x:contain}
+.competitor-table-wrap:focus-visible{outline:3px solid #0a6eb6;outline-offset:3px}
+.competitor-table{width:100%;min-width:600px;border-collapse:collapse;font-size:14px;text-align:left}
+.competitor-table th,.competitor-table td{padding:17px 18px;vertical-align:top;border-top:1px solid #dde6ed;letter-spacing:0;text-transform:none}
+.competitor-table thead th{background:#eaf2f8;color:#3d5a70;font-size:12px;font-weight:650;border-top:0;line-height:1.5}
+.competitor-table tbody th{font-size:14px;font-weight:650;line-height:1.45;color:#1e405b;min-width:140px;background:#fff}
+.competitor-table caption{padding:12px 18px;text-align:left;font-size:13px;color:#4c677c;background:#f4f8fb}
+.competitor-table caption.sr-only{padding:0}
+.competitor-table .numeric{text-align:right;font-variant-numeric:tabular-nums}
+.competitor-value{font-weight:700;font-size:16px;white-space:nowrap}
+.competitor-subtext{display:block;font-size:12px;font-weight:400;line-height:1.6;color:#557084;margin-top:5px}
+.competitor-period{font-size:12px;line-height:1.6;font-weight:600}
+.competitor-source{display:block;font-size:12px;line-height:1.6;margin-top:6px}
+.competitor-source a,.competitor-sheet a{text-underline-offset:3px}
+.competitor-currency{display:block;font-size:11px;color:#567085;margin-top:3px}
+.competitor-operating-group{margin-top:22px}
+.competitor-operating-group>h3{font-size:18px;line-height:1.4;color:#214f72;margin:0 0 12px}
+.operating-comparison{min-width:790px}
+.operating-comparison td:last-child{min-width:270px;max-width:420px}
+.competitor-stock-section{background:white;border:1px solid #b9cfdf;border-radius:15px;padding:26px}
+.competitor-section-title>.competitor-stock-asof{font-size:12px;color:#557086;margin-top:10px;line-height:1.6}
+.stock-period-controls{display:flex;gap:8px;flex-wrap:wrap;padding:5px;border-radius:10px;border:1px solid #c8d9e7;background:#f0f5f9;width:fit-content;margin:22px 0}
+.stock-period-controls button{font-size:14px;font-weight:650;padding:10px 22px;min-height:44px;border:1px solid transparent;border-radius:7px;background:transparent;color:#38586f}
+.stock-period-controls button[aria-pressed="true"]{background:#123752;color:white;border-color:#123752}
+.stock-period-controls button:focus-visible{outline:3px solid #0a78c9;outline-offset:3px}
+.stock-period-description{font-size:14px;line-height:1.65;color:#48657b;margin:0 0 18px}
+.stock-return-chart{border-top:1px solid #dce6ee;border-bottom:1px solid #dce6ee;padding:15px 0;margin-bottom:24px}
+.stock-chart-key{font-size:12px;color:#60798b;margin:0 0 12px;text-align:right}
+.stock-return-row{display:grid;grid-template-columns:minmax(120px,.7fr) minmax(140px,1.7fr) minmax(75px,.4fr);gap:22px;align-items:center;min-height:57px;padding:7px 0}
+.stock-company strong{display:block;font-size:14px;line-height:1.45}
+.stock-company>span{display:block;font-size:11px;color:#597589;margin-top:2px}
+.stock-return-track{position:relative;height:25px;border-radius:3px;background:#f0f5f8;overflow:hidden}
+.stock-zero{position:absolute;left:50%;top:0;bottom:0;width:1px;background:#7793a7;z-index:1}
+.stock-return-bar{position:absolute;top:4px;bottom:4px;border-radius:2px;background:#0874bd;min-width:0}
+.stock-return-bar.negative{background:#a35647}
+.stock-return-value{text-align:right;font-size:16px;font-variant-numeric:tabular-nums;line-height:1.4}
+.stock-formula{font-size:12px;line-height:1.65;color:#587387;margin:16px 0 0}
+.stock-closes-table{min-width:660px}
+.stock-closes-table td.competitor-source{display:table-cell;margin-top:0}
+.competitor-methodology-card{padding:24px;background:#eaf2f8;border:1px solid #cfdee9;border-radius:12px}
+.competitor-methodology-card h2{font-size:20px}
+.competitor-methodology-card ul,.competitor-methodology ul{padding-left:20px;font-size:14px;line-height:1.7;color:#49667d;margin:12px 0}
+.competitor-methodology-card li+li,.competitor-methodology li+li{margin-top:8px}
+.competitor-refresh{font-size:13px;line-height:1.65;color:#46637a;margin:14px 0 0}
+.competitor-all-sources{border-top:1px solid #d3e0e9;padding-top:22px}
+.competitor-all-sources h2{font-size:18px}
+.competitor-all-sources ul{padding-left:20px;display:grid;gap:12px;margin:16px 0 0}
+.competitor-all-sources li{font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.competitor-all-sources li>span{display:block;font-size:12px;color:#5a7488}
+.competitor-methodology{border:1px solid #c6d8e5;border-radius:9px;padding:14px;background:#f3f7fa;margin:18px 0}
+.competitor-methodology>summary{font-size:13px;line-height:1.6;font-weight:650;cursor:pointer;color:#245577}
+.competitor-methodology>summary:focus-visible{outline:3px solid #0a78c9;outline-offset:3px}
+.compact-stock-dates{display:grid;gap:6px;margin:12px 0;font-size:11px;color:#526f83}
+.compact-stock-dates>div{display:grid;grid-template-columns:52px 1fr;gap:8px}
+.compact-stock-dates dt{font-weight:650}
+.compact-stock-dates dd{margin:0}
+.compact-close-period{margin-top:16px}
+.compact-close-period h3{font-size:13px;margin-bottom:8px}
+.compact-stock-sources{font-size:12px;line-height:1.6;padding-left:17px}
+.compact-competitors .competitor-sheet-intro{margin-bottom:16px}
+.compact-competitors .competitor-sheet-intro>p{font-size:12px;line-height:1.6;margin-bottom:9px}
+.compact-competitors .competitor-sheet-intro .competitor-dateline{font-size:11px;letter-spacing:.3px}
+.compact-competitors .competitor-section{margin:20px 0}
+.compact-competitors .competitor-section h2{font-size:17px;letter-spacing:-.2px;margin-bottom:8px}
+.compact-competitors .competitor-section-title{margin-bottom:12px}
+.compact-competitors .competitor-section-title>p{font-size:12px;line-height:1.6}
+.compact-competitors .competitor-industry-grid{grid-template-columns:1fr;gap:10px}
+.compact-competitors .competitor-industry-card{padding:14px;border-radius:9px}
+.compact-competitors .competitor-industry-card h3{font-size:15px;margin-bottom:7px}
+.compact-competitors .competitor-industry-card li{grid-template-columns:minmax(75px,.8fr) 1.2fr;gap:9px;font-size:12px;padding:8px 0}
+.compact-competitors .competitor-table{font-size:12px;min-width:420px}
+.compact-competitors .competitor-table th,.compact-competitors .competitor-table td{padding:10px}
+.compact-competitors .competitor-table thead th{font-size:11px}
+.compact-competitors .competitor-table tbody th{font-size:12px;min-width:100px}
+.compact-competitors .competitor-value{font-size:13px}
+.compact-competitors .competitor-subtext,.compact-competitors .competitor-period,.compact-competitors .competitor-source{font-size:11px}
+.compact-competitors .operating-comparison{min-width:650px}
+.compact-competitors .operating-comparison td:last-child{min-width:230px}
+.compact-competitors .competitor-stock-section{padding:0;border:0;background:transparent;border-radius:0}
+.compact-competitors .compact-return-table{min-width:0;table-layout:fixed;width:100%}
+.compact-competitors .compact-return-table th,.compact-competitors .compact-return-table td{padding:9px 5px;overflow-wrap:anywhere}
+.compact-competitors .compact-return-table th:first-child{width:34%;min-width:0}
+.compact-competitors .compact-return-table .numeric{font-size:11px;white-space:normal}
+.compact-competitors .compact-return-table .competitor-subtext{font-size:10px}
+.compact-competitors .compact-close-period .competitor-table{min-width:0;table-layout:fixed}
+.compact-competitors .compact-close-period .competitor-table tbody th{min-width:0}
+.compact-competitors .compact-close-period .competitor-table th,.compact-competitors .compact-close-period .competitor-table td{padding:8px 5px;font-size:11px;overflow-wrap:anywhere}
+.compact-competitors .competitor-all-sources li{font-size:12px}
+.compact-competitors .competitor-all-sources li>span{font-size:11px}
+@media(max-width:700px){.competitor-industry-grid{grid-template-columns:1fr;gap:14px}.competitor-industry-card{padding:20px}.competitor-section h2{font-size:22px}.competitor-stock-section{padding:19px 15px}.stock-period-controls{width:100%;gap:4px}.stock-period-controls button{flex:1;padding:9px 10px}.stock-return-row{grid-template-columns:minmax(80px,.8fr) minmax(70px,1.1fr) minmax(62px,.5fr);gap:10px}.stock-company strong{font-size:12px}.stock-return-value{font-size:13px}.stock-return-track{height:23px}.stock-period-description{font-size:13px}.stock-chart-key{font-size:11px;text-align:left}.competitor-sheet-intro>p{font-size:14px}.competitor-section{margin:24px 0}.competitor-methodology-card{padding:19px}.competitor-industry-card li{grid-template-columns:minmax(100px,.7fr) 1.3fr;gap:10px}}
+@media print{.competitor-section{break-inside:avoid;margin:18px 0}.competitor-stock-section{padding:15px;border-color:#8ba2b3}.stock-period-controls{display:none}.competitor-table-wrap{overflow:visible;border-radius:0}.competitor-table,.operating-comparison,.stock-closes-table{min-width:0;font-size:10px}.competitor-table th,.competitor-table td{padding:9px;font-size:10px}.competitor-table tbody th{font-size:10px;min-width:0}.operating-comparison td:last-child{min-width:0}.competitor-value{font-size:12px}.competitor-subtext,.competitor-period,.competitor-source{font-size:9px}.competitor-industry-card{padding:15px}.competitor-section h2{font-size:19px}.competitor-sheet a{color:#000}}
+
+.stock-return-track{display:block;width:100%}
+.stock-zero-line{fill:#7793a7}
+.stock-return-fill{fill:#0874bd}
+.stock-return-fill.negative{fill:#a35647}
+.competitor-jump-links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.competitor-jump-links a{display:inline-block;border:1px solid #bdd0df;background:white;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:650;text-decoration:none}
+.competitor-section[id]{scroll-margin-top:24px}
+.compact-peer-line{font-size:12px;line-height:1.5;margin:10px 0}
+.compact-peer-line strong,.compact-peer-line span{display:block}
+.compact-peer-line span{color:#526c7f;margin-top:3px}
+.compact-peer-note{font-size:11px;color:#526c7f;line-height:1.5;margin:0 0 10px}
+.compact-competitors .compact-summary-table{min-width:0;table-layout:fixed;width:100%}
+.compact-competitors .compact-summary-table th:first-child{width:72%;min-width:0;overflow-wrap:anywhere}
+.compact-competitors .compact-summary-table td{padding:10px 6px;white-space:normal;overflow-wrap:anywhere}
+.compact-competitors .competitor-methodology ul{font-size:11px;padding-left:15px}
+@media print{.competitor-jump-links{display:none}.stock-return-fill{print-color-adjust:exact}.stock-return-track{print-color-adjust:exact}}
+
+.latest-comparison{overflow-wrap:anywhere}
+.comparison-periods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 12px}
+.comparison-periods>div{border:1px solid #c6d8e5;border-radius:10px;padding:14px 17px;background:#edf4f9;min-width:0}
+.comparison-periods>div>strong,.comparison-periods>div>span{display:block}
+.comparison-periods>div>strong{font-size:15px;margin-bottom:4px;color:#174c73}
+.comparison-periods>div>span{font-size:12px;line-height:1.65;color:#405f75}
+.comparison-periods .comparison-prior-period{color:#587184}
+.comparison-scope-note{font-size:12px;line-height:1.65;color:#526b7e;margin:13px 0 0;padding-left:12px;border-left:3px solid #b8d1e3}
+.comparison-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.comparison-highlight{border:1px solid #afc9dd;border-radius:13px;padding:23px;background:#eaf3fa;min-width:0}
+.comparison-card-number{font-size:10px;font-weight:650;letter-spacing:1px;color:#386687;margin:0 0 12px}
+.comparison-highlight h3{font-size:19px;line-height:1.4;margin:0 0 10px;color:#164d75}
+.comparison-highlight-figures{font-size:16px;font-weight:650;line-height:1.6;margin:0 0 15px;color:#193f5b;font-variant-numeric:tabular-nums}
+.comparison-explanation{display:grid;gap:13px;margin-top:17px}
+.comparison-explanation>div>strong{font-size:12px;line-height:1.5;color:#285775}
+.comparison-explanation>div>p{font-size:13px;line-height:1.65;color:#48657b;margin:4px 0 0}
+.comparison-explanation .comparison-evidence,.comparison-evidence{font-size:11px;line-height:1.65;color:#3c6784;margin:0}
+.comparison-metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.comparison-metric-card{border:1px solid #c3d5e3;border-radius:13px;background:white;padding:23px;min-width:0}
+.comparison-metric-card>h3{font-size:18px;line-height:1.45;color:#174c73;margin:0 0 15px}
+.comparison-company-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.comparison-company-numbers{min-width:0}
+.comparison-company-numbers h4{display:flex;justify-content:space-between;align-items:baseline;gap:9px;font-size:14px;margin:0 0 7px;line-height:1.4;color:#214d6d}
+.comparison-company-numbers h4>span{font-size:11px;font-weight:400}
+.comparison-metric-scope{font-size:11px;line-height:1.6;color:#587184;margin:0 0 11px}
+.comparison-number-set{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:0;padding:10px 0;border-top:1px solid #dae6ee}
+.comparison-number-set>div{min-width:0}
+.comparison-number-set dt{font-size:10px;font-weight:650;line-height:1.5;color:#526e83}
+.comparison-number-set dt>span{display:block;font-size:9px;font-weight:400;margin-top:2px}
+.comparison-number-set dd{margin:5px 0 0;font-size:15px;font-weight:700;line-height:1.5;color:#183f5d;font-variant-numeric:tabular-nums}
+.comparison-number-set>div:last-child dd{color:#365f7b}
+.comparison-metric-card>.comparison-explanation{border-top:1px solid #dae6ee;padding-top:14px}
+.comparison-detail{border-top:1px solid #d0e0eb;margin:14px 0 0;padding-top:11px}
+.comparison-detail>summary{font-size:12px;font-weight:650;line-height:1.6;cursor:pointer;color:#245577}
+.comparison-detail>summary:focus-visible{outline:3px solid #0a78c9;outline-offset:3px}
+.comparison-detail>p{font-size:12px;line-height:1.65;color:#48657b;margin:10px 0 0}
+.comparison-driver-group{margin-top:25px}
+.comparison-driver-group>h3{font-size:20px;color:#214f72;margin:0 0 15px;line-height:1.4}
+.comparison-driver-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}
+.comparison-driver-card{border:1px solid #c3d5e3;border-radius:12px;background:white;padding:22px;min-width:0}
+.comparison-driver-company{font-size:12px;font-weight:650;color:#3b6787;margin:0 0 5px}
+.comparison-driver-card>h4{font-size:17px;color:#174c73;line-height:1.4;margin:0 0 9px}
+.comparison-driver-metric{margin-top:15px}
+.comparison-driver-metric h5{font-size:12px;font-weight:650;line-height:1.4;margin:0 0 5px;color:#325c78}
+.comparison-driver-metric .comparison-number-set{padding:8px 0 0}
+.comparison-driver-card>.comparison-explanation{border-top:1px solid #d9e5ed;padding-top:13px}
+.comparison-driver-takeaway{border:1px solid #c6d8e5;border-radius:9px;background:#eef5fa;padding:14px 17px;font-size:13px;color:#3d5f78;line-height:1.65;margin:16px 0 0}
+.comparison-driver-takeaway>strong{color:#214d6d}
+.comparison-workforce-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.comparison-workforce-card{border:1px solid #c3d5e3;border-radius:12px;background:white;padding:22px;min-width:0}
+.comparison-workforce-card h3{font-size:17px;margin-bottom:8px;color:#174c73}
+.comparison-workforce-value{font-size:28px;font-weight:700;color:#193f5b;font-variant-numeric:tabular-nums;line-height:1.4;margin:0 0 10px}
+.comparison-workforce-value>span{display:block;font-size:12px;font-weight:400;color:#567286;margin-top:4px}
+.comparison-workforce-card>p:not(.comparison-workforce-value){font-size:13px;line-height:1.65;color:#48657b}
+.compact-competitors .comparison-periods,.compact-competitors .comparison-highlights,.compact-competitors .comparison-metric-grid,.compact-competitors .comparison-company-grid,.compact-competitors .comparison-driver-grid,.compact-competitors .comparison-workforce-grid{grid-template-columns:1fr;gap:12px}
+.compact-competitors .comparison-periods>div{padding:11px 12px}
+.compact-competitors .comparison-periods>div>strong{font-size:13px}
+.compact-competitors .comparison-periods>div>span{font-size:11px}
+.compact-competitors .comparison-scope-note{font-size:11px;line-height:1.6;padding-left:9px}
+.compact-competitors .comparison-highlight,.compact-competitors .comparison-metric-card,.compact-competitors .comparison-driver-card,.compact-competitors .comparison-workforce-card{padding:14px;border-radius:9px}
+.compact-competitors .comparison-card-number{font-size:9px;margin-bottom:7px}
+.compact-competitors .comparison-highlight h3,.compact-competitors .comparison-metric-card>h3,.compact-competitors .comparison-driver-card>h4{font-size:14px;margin-bottom:9px}
+.compact-competitors .comparison-highlight-figures{font-size:12px;margin-bottom:9px}
+.compact-competitors .comparison-highlight-meaning{font-size:11px;line-height:1.65;color:#48657b;margin:0}
+.compact-competitors .comparison-company-numbers h4{font-size:12px}
+.compact-competitors .comparison-company-grid{gap:17px}
+.compact-competitors .comparison-number-set{gap:6px;padding:8px 0 0}
+.compact-competitors .comparison-number-set dt{font-size:10px}
+.compact-competitors .comparison-number-set dt>span{font-size:9px}
+.compact-competitors .comparison-number-set dd{font-size:13px;margin-top:4px}
+.compact-competitors .comparison-detail>summary{font-size:11px}
+.compact-competitors .comparison-explanation{gap:11px;margin-top:11px}
+.compact-competitors .comparison-explanation>div>strong{font-size:11px}
+.compact-competitors .comparison-explanation>div>p,.compact-competitors .comparison-detail>p{font-size:11px;line-height:1.6}
+.compact-competitors .comparison-explanation .comparison-evidence,.compact-competitors .comparison-evidence{font-size:10px}
+.compact-competitors .comparison-driver-group>h3{font-size:15px;margin-bottom:10px}
+.compact-competitors .comparison-driver-takeaway{font-size:11px;padding:11px 12px}
+.compact-competitors .comparison-workforce-card h3{font-size:14px}
+.compact-competitors .comparison-workforce-value{font-size:24px}
+.compact-competitors .comparison-workforce-value>span{font-size:11px}
+@media(max-width:1050px){.latest-comparison:not(.compact-competitors) .comparison-metric-grid{grid-template-columns:1fr}.latest-comparison:not(.compact-competitors) .comparison-highlights{grid-template-columns:1fr}.comparison-highlight{padding:20px}.comparison-highlight-figures{font-size:16px}}
+@media(max-width:700px){.comparison-periods,.comparison-company-grid,.comparison-workforce-grid{grid-template-columns:1fr}.comparison-periods>div{padding:13px 15px}.comparison-metric-card,.comparison-driver-card,.comparison-workforce-card{padding:19px}.comparison-company-grid{gap:20px}.comparison-number-set dd{font-size:16px}.comparison-number-set dt{font-size:11px}.comparison-number-set dt>span{font-size:10px}.comparison-company-numbers h4{font-size:15px}.comparison-company-numbers h4>span{font-size:12px}.comparison-highlight h3{font-size:18px}.comparison-driver-grid{grid-template-columns:1fr}.comparison-driver-group>h3{font-size:18px}}
+@media print{.comparison-highlight,.comparison-metric-card,.comparison-driver-card,.comparison-workforce-card{break-inside:avoid;padding:12px}.comparison-highlights{grid-template-columns:1fr;gap:10px}.comparison-metric-grid{grid-template-columns:1fr;gap:12px}.comparison-driver-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.comparison-highlights h3,.comparison-metric-card>h3,.comparison-driver-card>h4{font-size:13px}.comparison-explanation>div>p,.comparison-scope-note,.comparison-driver-takeaway{font-size:10px}.comparison-number-set dd{font-size:12px}.comparison-periods>div{padding:10px}.comparison-card-number{font-size:9px}.comparison-highlight-figures{font-size:12px}.comparison-workforce-value{font-size:21px}.competitor-page>.reference-next{display:none}}

@@ -1,0 +1,742 @@
+{
+  "verifiedOn": "2026-10-04",
+  "sources": {
+    "q2-release": {
+      "title": "CNH Q2 2026 results",
+      "publisher": "CNH Investor Relations",
+      "published": "2026-08-03",
+      "url": "https://investors.cnh.com/news/news-details/2026/CNH-Industrial-N-V--Reports-Second-Quarter-2026-Results/default.aspx"
+    },
+    "q2-deck": {
+      "title": "CNH Q2 2026 presentation",
+      "publisher": "CNH / SEC filing",
+      "published": "2026-08-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000015/cnh_2026xq2xfinal.htm"
+    },
+    "wasde": {
+      "title": "USDA WASDE · September 2026",
+      "publisher": "USDA",
+      "published": "2026-09-11",
+      "url": "https://www.usda.gov/oce/commodity/wasde/wasde0926.pdf"
+    },
+    "farm-income": {
+      "title": "USDA farm income forecast",
+      "publisher": "USDA ERS",
+      "published": "2026-09-03",
+      "url": "https://www.ers.usda.gov/topics/farm-economy/farm-sector-income-finances/highlights-from-the-farm-income-forecast"
+    },
+    "cbs": {
+      "title": "CNH Business System · investor presentation, p. 39",
+      "publisher": "CNH",
+      "published": "2024-11",
+      "url": "https://www.cnh.com/-/media/CNHi/cnhicorporate/Investor-relation/investor_presentation/2024/CNH-Investor-Presentation-Nov-2024.pdf?rev=-1"
+    },
+    "cnh-values": {
+      "title": "CNH’s five values",
+      "publisher": "CNH",
+      "verifiedOn": "2026-10-04",
+      "url": "https://www.cnh.com/Our-Company"
+    }
+  },
+  "periods": [
+    {
+      "id": "q2-2026",
+      "label": "Q2 2026",
+      "comparison": "Q2 2025",
+      "released": "2026-08-03",
+      "sourceIds": [
+        "q2-release",
+        "q2-deck"
+      ],
+      "segments": [
+        {
+          "id": "industrial",
+          "label": "Industrial Activities",
+          "metrics": [
+            {
+              "label": "Net sales",
+              "current": 4143,
+              "prior": 4021,
+              "unit": "usd-m",
+              "note": "Sales of the equipment business."
+            },
+            {
+              "label": "Adjusted EBIT",
+              "current": 167,
+              "prior": 224,
+              "unit": "usd-m",
+              "note": "Non-GAAP operating profitability; see CNH reconciliation."
+            },
+            {
+              "label": "Adjusted EBIT margin",
+              "current": 4,
+              "prior": 5.6,
+              "unit": "percent",
+              "note": "Adjusted EBIT divided by Industrial Activities net sales."
+            },
+            {
+              "label": "Free cash flow",
+              "current": 150,
+              "prior": 451,
+              "unit": "usd-m",
+              "note": "CNH-defined non-GAAP Industrial Activities cash measure."
+            }
+          ],
+          "read": "Read sales, operating margin, and cash together. Staffing actions can affect each on a different timetable."
+        },
+        {
+          "id": "agriculture",
+          "label": "Agriculture",
+          "metrics": [
+            {
+              "label": "Net sales",
+              "current": 3277,
+              "prior": 3248,
+              "unit": "usd-m",
+              "note": "Equipment sales in Agriculture."
+            },
+            {
+              "label": "Adjusted EBIT",
+              "current": 170,
+              "prior": 263,
+              "unit": "usd-m",
+              "note": "Non-GAAP segment operating profit."
+            },
+            {
+              "label": "Adjusted EBIT margin",
+              "current": 5.2,
+              "prior": 8.1,
+              "unit": "percent",
+              "note": "Margin is 290 basis points lower."
+            }
+          ],
+          "read": "Use the EBIT bridge below to separate demand and mix from pricing and cost."
+        },
+        {
+          "id": "construction",
+          "label": "Construction",
+          "metrics": [
+            {
+              "label": "Net sales",
+              "current": 866,
+              "prior": 773,
+              "unit": "usd-m",
+              "note": "Equipment sales in Construction."
+            },
+            {
+              "label": "Adjusted EBIT",
+              "current": 15,
+              "prior": 35,
+              "unit": "usd-m",
+              "note": "Non-GAAP segment operating profit."
+            },
+            {
+              "label": "Adjusted EBIT margin",
+              "current": 1.7,
+              "prior": 4.5,
+              "unit": "percent",
+              "note": "Margin is 280 basis points lower."
+            }
+          ],
+          "read": "Higher sales do not assure higher earnings. Confirm the cost and mix explanation before proposing a capacity change."
+        },
+        {
+          "id": "financial-services",
+          "label": "Financial Services",
+          "metrics": [
+            {
+              "label": "Revenue",
+              "current": 656,
+              "prior": 685,
+              "unit": "usd-m",
+              "note": "Financing business; keep this scope separate from Industrial Activities."
+            },
+            {
+              "label": "Net income",
+              "current": 71,
+              "prior": 87,
+              "unit": "usd-m",
+              "note": "Segment net income, not segment adjusted EBIT."
+            },
+            {
+              "label": "Receivables >30 days past due",
+              "current": 4.4,
+              "prior": 3.9,
+              "unit": "percent",
+              "note": "Share of the receivable balance past due."
+            }
+          ],
+          "read": "Financing supports equipment purchases. Credit quality and financing terms affect demand and risk."
+        }
+      ]
+    },
+    {
+      "id": "h1-2026",
+      "label": "H1 2026 · year to date",
+      "comparison": "H1 2025",
+      "released": "2026-08-03",
+      "sourceIds": [
+        "q2-release"
+      ],
+      "segments": [
+        {
+          "id": "industrial",
+          "label": "Industrial Activities",
+          "metrics": [
+            {
+              "label": "Net sales",
+              "current": 7313,
+              "prior": 7193,
+              "unit": "usd-m",
+              "note": "Six-month total."
+            },
+            {
+              "label": "Adjusted EBIT",
+              "current": 122,
+              "prior": 325,
+              "unit": "usd-m",
+              "note": "Six-month non-GAAP operating profit."
+            },
+            {
+              "label": "Adjusted EBIT margin",
+              "current": 1.7,
+              "prior": 4.5,
+              "unit": "percent",
+              "note": "Six-month non-GAAP margin."
+            },
+            {
+              "label": "Free cash flow",
+              "current": -439,
+              "prior": -116,
+              "unit": "usd-m",
+              "note": "Negative means cash used during H1."
+            }
+          ],
+          "read": "Q2 cash generation and first-half cash generation tell different stories. Do not substitute one period for the other."
+        },
+        {
+          "id": "agriculture",
+          "label": "Agriculture",
+          "metrics": [
+            {
+              "label": "Net sales",
+              "current": 5873,
+              "prior": 5829,
+              "unit": "usd-m",
+              "note": "Six-month total."
+            },
+            {
+              "label": "Adjusted EBIT",
+              "current": 197,
+              "prior": 402,
+              "unit": "usd-m",
+              "note": "Six-month non-GAAP segment operating profit."
+            },
+            {
+              "label": "Adjusted EBIT margin",
+              "current": 3.4,
+              "prior": 6.9,
+              "unit": "percent",
+              "note": "Six-month non-GAAP margin."
+            }
+          ],
+          "read": "Use the year-to-date view to test whether the latest quarter changes the broader trend."
+        },
+        {
+          "id": "construction",
+          "label": "Construction",
+          "metrics": [
+            {
+              "label": "Net sales",
+              "current": 1440,
+              "prior": 1364,
+              "unit": "usd-m",
+              "note": "Six-month total."
+            },
+            {
+              "label": "Adjusted EBIT",
+              "current": -13,
+              "prior": 49,
+              "unit": "usd-m",
+              "note": "Six-month segment operating loss."
+            },
+            {
+              "label": "Adjusted EBIT margin",
+              "current": -0.9,
+              "prior": 3.6,
+              "unit": "percent",
+              "note": "Six-month non-GAAP margin."
+            }
+          ],
+          "read": "Negative operating profit makes productivity, product cost, and investment timing especially relevant."
+        },
+        {
+          "id": "financial-services",
+          "label": "Financial Services",
+          "metrics": [
+            {
+              "label": "Revenue",
+              "current": 1302,
+              "prior": 1336,
+              "unit": "usd-m",
+              "note": "Six-month total."
+            },
+            {
+              "label": "Net income",
+              "current": 145,
+              "prior": 177,
+              "unit": "usd-m",
+              "note": "Six-month segment net income."
+            }
+          ],
+          "read": "Keep Financial Services income separate from the equipment operations' EBIT and free cash flow."
+        }
+      ]
+    }
+  ],
+  "agricultureBridge": {
+    "period": "Q2 2026",
+    "comparison": "Q2 2025",
+    "unit": "USD millions",
+    "start": 263,
+    "end": 170,
+    "sourceIds": [
+      "q2-deck"
+    ],
+    "items": [
+      {
+        "label": "Volume & Mix",
+        "value": -102
+      },
+      {
+        "label": "Pricing, Net",
+        "value": 53
+      },
+      {
+        "label": "Product Cost",
+        "value": -33
+      },
+      {
+        "label": "SG&A",
+        "value": -8
+      },
+      {
+        "label": "R&D",
+        "value": -5
+      },
+      {
+        "label": "FX & Other",
+        "value": 2
+      }
+    ]
+  },
+  "commodities": {
+    "published": "2026-09-11",
+    "period": "2026/27 marketing year",
+    "type": "USDA season-average farm-price forecasts",
+    "sourceIds": [
+      "wasde"
+    ],
+    "items": [
+      {
+        "name": "Corn",
+        "price": 4.8,
+        "previous": 4.5,
+        "unit": "USD/bushel",
+        "page": 12,
+        "quoteUrl": "https://www.cmegroup.com/markets/agriculture/grains/corn",
+        "driver": "Price and saleable yield shape row-crop cash receipts; fertilizer, fuel, rent, and credit determine the margin."
+      },
+      {
+        "name": "Soybeans",
+        "price": 12,
+        "previous": 11.4,
+        "unit": "USD/bushel",
+        "page": 15,
+        "quoteUrl": "https://www.cmegroup.com/markets/agriculture/oilseeds/soybean",
+        "driver": "Crop margins and export demand influence replacement decisions for tractors, planting, and harvesting equipment."
+      },
+      {
+        "name": "Wheat",
+        "price": 6.4,
+        "previous": 6.2,
+        "unit": "USD/bushel",
+        "page": 11,
+        "quoteUrl": "https://www.cmegroup.com/markets/agriculture/grains/wheat",
+        "driver": "Cash bids vary by wheat class and location. A national price outlook is one signal for grain-producer economics."
+      }
+    ]
+  },
+  "farmIncome": {
+    "published": "2026-09-03",
+    "forecastYear": 2026,
+    "sourceIds": [
+      "farm-income"
+    ],
+    "netFarmIncome": 158.4,
+    "netCashFarmIncome": 176.4,
+    "realNetFarmIncomeChange": -5.5,
+    "realNetCashFarmIncomeChange": -2.5
+  },
+  "glossary": [
+    {
+      "term": "CBS",
+      "name": "CNH Business System",
+      "group": "CNH language",
+      "definition": "CNH's published operating approach includes daily management, strategy deployment, and kaizen.",
+      "question": "Which workforce action changes a daily quality, delivery, safety, or cost measure?",
+      "sourceIds": [
+        "cbs"
+      ]
+    },
+    {
+      "term": "Daily management",
+      "name": "Daily management",
+      "group": "CNH language",
+      "definition": "Track operating measures and address gaps through a repeatable management routine.",
+      "question": "Who owns the gap, the action, and the next check?",
+      "sourceIds": [
+        "cbs"
+      ]
+    },
+    {
+      "term": "Kaizen",
+      "name": "Continuous improvement",
+      "group": "CNH language",
+      "definition": "Make and verify practical improvements to the way work is done.",
+      "question": "Did the change reduce waste or improve good output?",
+      "sourceIds": [
+        "cbs"
+      ]
+    },
+    {
+      "term": "Strategy deployment",
+      "name": "Strategy deployment",
+      "group": "CNH language",
+      "definition": "Connect strategic priorities to operating actions and measures.",
+      "question": "How does this staffing or development action contribute to a business priority?",
+      "sourceIds": [
+        "cbs"
+      ]
+    },
+    {
+      "term": "Industrial Activities",
+      "name": "Industrial Activities",
+      "group": "CNH finance",
+      "definition": "CNH's enterprise scope excluding Financial Services.",
+      "question": "Are you comparing equipment operating results with equipment operating results?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "Adjusted EBIT",
+      "name": "Adjusted earnings before interest and taxes",
+      "group": "CNH finance",
+      "definition": "CNH's non-GAAP profitability measure. Use the company reconciliation for the exact adjustments.",
+      "question": "Which operating variance can our team influence?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "Adjusted EBIT margin",
+      "name": "Adjusted EBIT margin",
+      "group": "CNH finance",
+      "definition": "Adjusted EBIT divided by the matching net-sales measure.",
+      "question": "Did profit change because of sales, product mix, or cost?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "bps",
+      "name": "Basis points",
+      "group": "CNH finance",
+      "definition": "100 basis points equals one percentage point.",
+      "question": "Is the change in margin points or a percent change in the margin?",
+      "sourceIds": []
+    },
+    {
+      "term": "Volume & Mix",
+      "name": "Volume & Mix",
+      "group": "CNH finance",
+      "definition": "An EBIT-bridge category showing the impact of sales volume and the composition of sales.",
+      "question": "Does the product mix change required labor hours, skills, or margin?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Pricing, Net",
+      "name": "Net pricing",
+      "group": "CNH finance",
+      "definition": "The net pricing contribution shown in CNH's EBIT bridge.",
+      "question": "Is pricing enough to offset the other pressures?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Product Cost",
+      "name": "Product Cost",
+      "group": "CNH finance",
+      "definition": "The EBIT-bridge cost category for products, including relevant manufacturing economics.",
+      "question": "What changes cost per good unit: materials, labor, rework, or overhead?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "SG&A",
+      "name": "Selling, general and administrative",
+      "group": "CNH finance",
+      "definition": "Selling and administrative expenses; distinguish them from factory product cost.",
+      "question": "Where does this workforce cost sit in the P&L?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "R&D",
+      "name": "Research and development",
+      "group": "CNH finance",
+      "definition": "Spending to develop products and technology.",
+      "question": "What future capability is being funded?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "FX / c.c.",
+      "name": "Foreign exchange / constant currency",
+      "group": "CNH finance",
+      "definition": "FX is currency impact; c.c. compares performance without currency translation movements.",
+      "question": "Does reported growth also represent operating growth?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "Industrial FCF",
+      "name": "Free cash flow of Industrial Activities",
+      "group": "CNH finance",
+      "definition": "CNH's non-GAAP cash measure for the equipment operations. Read its reconciliation and period.",
+      "question": "Does the proposal use cash now or release cash, and when?",
+      "sourceIds": [
+        "q2-release"
+      ]
+    },
+    {
+      "term": "Production hours",
+      "name": "Production hours",
+      "group": "CNH operations",
+      "definition": "A production-activity measure used in CNH's quarterly presentation.",
+      "question": "What does the schedule imply for qualified hours, overhead, and flexibility?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Dealer inventory",
+      "name": "Dealer / channel inventory",
+      "group": "CNH operations",
+      "definition": "Equipment held in the dealer channel; separate it from CNH factory inventory.",
+      "question": "Are shipments supported by end-customer sell-through?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Production slots",
+      "name": "Production slots filled",
+      "group": "CNH operations",
+      "definition": "CNH's presentation indicates how booked the coming production periods are.",
+      "question": "Are the slots sufficiently firm and matched to executable capacity?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Path to 2030",
+      "name": "Path to 2030",
+      "group": "CNH language",
+      "definition": "CNH's published strategic framework for the business through 2030.",
+      "question": "Which longer-term priority does this operating decision support?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Iron + Tech",
+      "name": "Iron + Tech",
+      "group": "CNH language",
+      "definition": "CNH's language for integrating equipment and technology.",
+      "question": "Which manufacturing and service skills does the product require?",
+      "sourceIds": [
+        "q2-deck"
+      ]
+    },
+    {
+      "term": "Under-absorption",
+      "name": "Fixed-cost under-absorption",
+      "group": "Operating concepts",
+      "definition": "Lower activity leaves fixed manufacturing overhead spread across fewer units. Exact accounting depends on the costing method.",
+      "question": "How do we manage the cost gap without building unsupported inventory?",
+      "sourceIds": []
+    },
+    {
+      "term": "Bottleneck",
+      "name": "Production constraint",
+      "group": "Operating concepts",
+      "definition": "The process that limits completed output; spare capacity elsewhere cannot remove it.",
+      "question": "Which role, process, or material actually limits shipments?",
+      "sourceIds": []
+    },
+    {
+      "term": "Skill matrix",
+      "name": "Qualified role coverage",
+      "group": "Operating concepts",
+      "definition": "Role-by-role evidence of who can perform work at the required quality and level of independence.",
+      "question": "Do we have enough qualified coverage on the required shifts?",
+      "sourceIds": []
+    },
+    {
+      "term": "First-pass yield",
+      "name": "FPY",
+      "group": "Operating concepts",
+      "definition": "Share of units that pass the defined process the first time without rework.",
+      "question": "How much scheduled output becomes good output?",
+      "sourceIds": []
+    },
+    {
+      "term": "Retail / wholesale",
+      "name": "Retail sales / wholesale shipments",
+      "group": "Operating concepts",
+      "definition": "Retail reaches the end customer; wholesale supplies the dealer channel.",
+      "question": "Is the demand signal customer purchases or inventory moving into the channel?",
+      "sourceIds": []
+    },
+    {
+      "term": "Working capital",
+      "name": "Operating working capital",
+      "group": "Operating concepts",
+      "definition": "Inventory and receivables, less operating payables, are common drivers of cash tied up in operations.",
+      "question": "What will happen to inventory, collection, and payment timing?",
+      "sourceIds": []
+    }
+  ],
+  "values": {
+    "source": {
+      "title": "CNH’s five values",
+      "publisher": "CNH",
+      "verifiedOn": "2026-10-04",
+      "url": "https://www.cnh.com/Our-Company"
+    },
+    "items": [
+      {
+        "id": "built-around-customers",
+        "name": "Built Around Customers",
+        "summary": "Anticipate customer needs and help customers succeed."
+      },
+      {
+        "id": "we-go-beyond",
+        "name": "We Go Beyond",
+        "summary": "Keep improving quality and the way we work."
+      },
+      {
+        "id": "make-it-simple",
+        "name": "Make It Simple",
+        "summary": "Make complex choices clear and practical."
+      },
+      {
+        "id": "win-as-one",
+        "name": "Win As One",
+        "summary": "Work together across teams and with partners."
+      },
+      {
+        "id": "you-matter",
+        "name": "You Matter",
+        "summary": "Value people and support their shared growth."
+      }
+    ],
+    "topicDefaults": {
+      "industrial-activities": {
+        "valueId": "make-it-simple",
+        "why": "Separating equipment operations from financing makes the right margin and cash measures easier to use."
+      },
+      "ebit-margin": {
+        "valueId": "make-it-simple",
+        "why": "Expressing the margin change in basis points gives the team one clear way to discuss performance."
+      },
+      "volume-mix": {
+        "valueId": "win-as-one",
+        "why": "Understanding the profit bridge helps Commercial, Manufacturing, Purchasing, Finance, and HR work on the same business problem."
+      },
+      "industrial-fcf": {
+        "valueId": "make-it-simple",
+        "why": "Keeping quarter and year-to-date cash separate makes the financial position clearer before a decision."
+      },
+      "industry-demand": {
+        "valueId": "built-around-customers",
+        "why": "Reading the market signal alongside orders and retail demand helps us plan around what customers actually need."
+      },
+      "commodity-prices": {
+        "valueId": "make-it-simple",
+        "why": "Distinguishing a forecast from a market quote makes a complex commodity signal clearer and more useful."
+      },
+      "farmer-economics": {
+        "valueId": "built-around-customers",
+        "why": "Understanding real purchasing power helps us anticipate the equipment decisions farmers can afford."
+      },
+      "retail-wholesale": {
+        "valueId": "built-around-customers",
+        "why": "Checking end-customer demand helps us serve farmers instead of treating dealer shipments alone as customer success."
+      },
+      "cyclicality": {
+        "valueId": "win-as-one",
+        "why": "Commercial, Operations, Finance, and HR can prepare the recovery together using shared demand signals."
+      },
+      "skills-capacity": {
+        "valueId": "you-matter",
+        "why": "Developing qualified skills at the constraint invests in people and helps them contribute to reliable output."
+      },
+      "absorption": {
+        "valueId": "make-it-simple",
+        "why": "Making fixed cost per unit visible helps the team understand the tradeoff and choose a clear response."
+      },
+      "dealer-inventory": {
+        "valueId": "built-around-customers",
+        "why": "Matching production to genuine customer demand supports the right equipment availability without loading the channel."
+      },
+      "ramp-readiness": {
+        "valueId": "win-as-one",
+        "why": "A credible ramp brings together qualified people, materials, quality, and the production plan."
+      },
+      "downcycle": {
+        "valueId": "you-matter",
+        "why": "Using a downcycle to develop useful skills invests in people’s growth and future opportunities."
+      },
+      "cbs": {
+        "valueId": "we-go-beyond",
+        "why": "Daily management and continuous improvement connect our capabilities to better quality, delivery, and cost."
+      },
+      "product-cost": {
+        "valueId": "we-go-beyond",
+        "why": "Judging staffing by good output, quality, and total cost supports better performance than wages alone."
+      },
+      "capex": {
+        "valueId": "win-as-one",
+        "why": "HR, Operations, and Finance can agree on the training baseline and validate the benefit together."
+      },
+      "working-capital": {
+        "valueId": "we-go-beyond",
+        "why": "Reducing rework and improving flow advances quality and performance while freeing cash for the business."
+      }
+    },
+    "fallback": {
+      "valueId": "make-it-simple",
+      "why": "Turning business information into a clear, practical decision could support Make It Simple."
+    }
+  }
+}

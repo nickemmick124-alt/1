@@ -1,0 +1,870 @@
+[
+  {
+    "round": 0,
+    "level": "apply",
+    "questions": [
+      {
+        "topic": "ebit-margin",
+        "prompt": "CNH Industrial sales rose 3%, but adjusted EBIT fell 25% in Q2. What should a staffing proposal address?",
+        "options": [
+          "Sales growth alone",
+          "Margin pressure and the controllable cost drivers",
+          "Headcount against last year alone",
+          "Market share without cost evidence"
+        ],
+        "correct": 1,
+        "explanation": "Sales growth did not translate into higher operating profit. Connect the proposed workforce action to its cost, quality, output, and cash effects.",
+        "basis": "Reported CNH result · decision interpretation",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which part of the profit pressure can your workforce plan actually influence?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "A shared profit bridge helps HR, Operations, and Finance focus on the same problem."
+        },
+        "id": "w1-apply-01-v1"
+      },
+      {
+        "topic": "profit-margin",
+        "prompt": "When comparing Agriculture and Construction margins, what else is needed to compare their profit contribution?",
+        "options": [
+          "The matching net-sales base",
+          "Only each segment’s headcount",
+          "Only the higher percentage",
+          "Only the consolidated share price"
+        ],
+        "correct": 0,
+        "explanation": "A margin is a ratio. Profit contribution depends on both the margin and the matching sales base; use the published dollar measures as well.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "When would a smaller margin still represent more profit dollars?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Matching a percentage to its dollar base makes the comparison clearer."
+        },
+        "id": "w1-apply-02-v1"
+      },
+      {
+        "topic": "industrial-fcf",
+        "prompt": "Industrial FCF was −$439m in H1 and +$150m in Q2. What does that imply for Q1?",
+        "options": [
+          "−$289m",
+          "+$589m",
+          "−$589m",
+          "+$289m"
+        ],
+        "correct": 2,
+        "explanation": "H1 includes Q1 and Q2: −439 − 150 = −589 million. A strong quarter can coexist with cash pressure across the half-year.",
+        "basis": "Calculation from reported CNH figures",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which part of a staffing proposal has a different cash timetable from its profit effect?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Separating periods gives the team a clearer picture of cash performance."
+        },
+        "id": "w1-apply-03-v1"
+      },
+      {
+        "topic": "product-cost",
+        "prompt": "CNH cites tariffs and R&D in Construction’s Q2 EBIT decline. What should HR establish before claiming a staffing fix?",
+        "options": [
+          "That every cost driver is a labor issue",
+          "That headcount reduction equals the entire EBIT gap",
+          "That higher sales remove the need for cost analysis",
+          "Which cost drivers the workforce action can actually change"
+        ],
+        "correct": 3,
+        "explanation": "Separate the causes of the variance. A workforce action needs its own credible benefit; it cannot automatically offset every tariff or development cost.",
+        "basis": "Reported CNH result · decision interpretation",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Who will validate the benefit and the financial line it affects?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Working with Finance and Operations keeps the workforce proposal tied to the real business drivers."
+        },
+        "id": "w1-apply-04-v1"
+      },
+      {
+        "topic": "industry-demand",
+        "prompt": "North American tractor demand >140 HP fell 17%, while CNH Agriculture revenue rose 1%. What is the sound conclusion?",
+        "options": [
+          "CNH market share rose exactly 18 points",
+          "The two figures have different units and scopes",
+          "CNH’s worldwide unit volume rose 1%",
+          "North American plant schedules must rise"
+        ],
+        "correct": 1,
+        "explanation": "A regional industry-unit measure is not worldwide segment revenue. Product scope, pricing, mix, and currency all matter before drawing a share or capacity conclusion.",
+        "basis": "Reported CNH result · decision interpretation",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which matching product, geography, and period would make this comparison useful?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Understanding the actual customer market improves the demand evidence behind our plan."
+        },
+        "id": "w1-apply-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 0,
+    "level": "stretch",
+    "questions": [
+      {
+        "topic": "volume-mix",
+        "prompt": "Industrial sales growth was +3% reported and +1% at constant currency in Q2. What does the gap indicate?",
+        "options": [
+          "Currency translation helped reported growth",
+          "Unit volume rose exactly 3%",
+          "Currency translation reduced reported growth",
+          "Constant currency removes product-mix changes"
+        ],
+        "correct": 0,
+        "explanation": "The reported growth rate exceeds the constant-currency rate, indicating a favorable translation contribution. The rounded rates do not separately identify unit volume or mix.",
+        "basis": "Reported CNH result · decision interpretation",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which performance claim should be tested at constant currency?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Separating currency from operating performance makes the growth signal easier to interpret."
+        },
+        "id": "w1-stretch-01-v1"
+      },
+      {
+        "topic": "industrial-activities",
+        "prompt": "H1 Industrial adjusted EBIT was $122m and Q2 was $167m. What was the implied Q1 result?",
+        "options": [
+          "+$45m",
+          "−$45m",
+          "+$289m",
+          "−$289m"
+        ],
+        "correct": 1,
+        "explanation": "The implied Q1 result is 122 − 167 = −45 million. Q2 improvement should be read alongside the weaker earlier quarter.",
+        "basis": "Calculation from reported CNH figures",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "What would you need to know before treating Q2 performance as the new run rate?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "A consistent period bridge helps explain what changed and what still needs validation."
+        },
+        "id": "w1-stretch-02-v1"
+      },
+      {
+        "topic": "ebit-margin",
+        "prompt": "Why can’t you average Agriculture’s 5.2% and Construction’s 1.7% to obtain Industrial margin?",
+        "options": [
+          "The percentages use different currencies",
+          "Margins cannot be compared at all",
+          "Sales weights and corporate items also matter",
+          "Financial Services must be added to both margins"
+        ],
+        "correct": 2,
+        "explanation": "Segment margins use their own sales bases. Industrial Activities uses total industrial net sales and also includes corporate and unallocated items, so a simple average is insufficient.",
+        "basis": "Reported CNH result · decision interpretation",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which reconciliation would you use to bridge segment profit to Industrial Activities?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Using the right weights and scope turns a tempting shortcut into a sound comparison."
+        },
+        "id": "w1-stretch-03-v1"
+      },
+      {
+        "topic": "dealer-inventory",
+        "prompt": "An output increase improves absorption but creates unsold machines. Which evidence makes the decision defensible?",
+        "options": [
+          "Lower fixed cost per unit alone",
+          "A larger finished-goods balance alone",
+          "More reported production hours alone",
+          "Demand conversion, margin, and cash tested together"
+        ],
+        "correct": 3,
+        "explanation": "An accounting benefit from absorption does not by itself establish business value. Test demand, inventory risk, and cash alongside the cost outcome.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "When should a plant accept a higher unit cost to protect cash?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Operations, Commercial, and Finance need one view of demand, inventory, and performance."
+        },
+        "id": "w1-stretch-04-v1"
+      },
+      {
+        "topic": "volume-mix",
+        "prompt": "Agriculture’s reported sales rose while EBIT declined. Which challenge belongs in the leadership review?",
+        "options": [
+          "Where did volume, mix, pricing, and cost change the outcome?",
+          "Why not assume all growth is profitable?",
+          "Why not treat revenue as cash generation?",
+          "Why not ramp every product line equally?"
+        ],
+        "correct": 0,
+        "explanation": "The useful challenge is to explain the bridge from sales to profit and then link actions to the drivers. Revenue alone does not establish a profitable ramp.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which product or cost driver would change your workforce recommendation?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Testing the quality of growth supports better business performance rather than a single headline metric."
+        },
+        "id": "w1-stretch-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 1,
+    "level": "apply",
+    "questions": [
+      {
+        "topic": "farmer-economics",
+        "prompt": "Equipment financing rates decline. What should you check before assuming stronger farmer buying capacity?",
+        "options": [
+          "Only the quoted interest rate",
+          "Cash flow, debt commitments, and replacement need",
+          "Only the age of the machine",
+          "Only the manufacturer’s wholesale target"
+        ],
+        "correct": 1,
+        "explanation": "A lower financing rate can help, but affordability still depends on the customer’s cash, repayment commitments, and equipment need.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which affordability signals are most relevant to customers in your product line?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Starting with the customer’s full economics helps anticipate the buying decision."
+        },
+        "id": "w2-apply-01-v1"
+      },
+      {
+        "topic": "commodity-prices",
+        "prompt": "A farmer already locked in a crop sale price. A futures rally alone tells you what about that sale’s revenue?",
+        "options": [
+          "It must rise by the futures gain",
+          "It must fall as futures rise",
+          "The locked sale may not gain from the rally",
+          "It now equals the USDA annual forecast"
+        ],
+        "correct": 2,
+        "explanation": "The revenue effect depends on the actual sales and pricing arrangements. A market move is not automatically the price realized by every grower.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What local cash-price and sales-timing evidence would make a commodity signal useful?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Recognizing how customers actually sell their crops improves our understanding of their needs."
+        },
+        "id": "w2-apply-02-v1"
+      },
+      {
+        "topic": "cyclicality",
+        "prompt": "CNH sees aging fleets and improving cycle indicators, but says recovery is not underway. What is the useful response?",
+        "options": [
+          "Plan capability and monitor order conversion",
+          "Treat aging fleets as booked production",
+          "Stop preparation until every order arrives",
+          "Commit immediately to peak staffing"
+        ],
+        "correct": 0,
+        "explanation": "Aging fleets support replacement potential, while recovery still needs confirmation through orders, retail activity, financing, and channel conditions.",
+        "basis": "Reported CNH result · decision interpretation",
+        "sourceIds": [
+          "q2-deck"
+        ],
+        "discussion": "What demand evidence would trigger the next step in your ramp plan?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Teams can prepare together while using the same evidence to decide when to act."
+        },
+        "id": "w2-apply-03-v1"
+      },
+      {
+        "topic": "retail-wholesale",
+        "prompt": "Dealer retail sales improve while CNH wholesale shipments are flat. Which explanation should you test?",
+        "options": [
+          "All retail growth must be new CNH shipments",
+          "Farmer demand must be unchanged",
+          "CNH market share must have doubled",
+          "Dealers may be selling existing inventory"
+        ],
+        "correct": 3,
+        "explanation": "Retail activity can be supplied from equipment already in the channel. Reconcile sell-through, wholesale shipments, and dealer inventory before changing the factory plan.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which product-family channel balance would support additional production?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Following equipment through to the customer gives a better view of real demand."
+        },
+        "id": "w2-apply-04-v1"
+      },
+      {
+        "topic": "industry-demand",
+        "prompt": "For a product-specific staffing decision, which market evidence is most relevant?",
+        "options": [
+          "A worldwide farm-income headline alone",
+          "Demand, backlog, and dealer stock for that product and market",
+          "A single nearby futures quote alone",
+          "The highest-growth equipment category anywhere"
+        ],
+        "correct": 1,
+        "explanation": "Use evidence matched to the product, market, and production horizon. Broad signals provide context but may not represent the customers served by the plant.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which evidence currently connects your plant’s schedule to end-customer demand?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Matching the evidence to the decision makes the demand signal clearer and more actionable."
+        },
+        "id": "w2-apply-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 1,
+    "level": "stretch",
+    "questions": [
+      {
+        "topic": "farmer-economics",
+        "prompt": "An aggregate farm-income forecast looks stable, but grain growers report weaker economics. How should you use it?",
+        "options": [
+          "Assume the aggregate describes every farmer",
+          "Discard all customer-level evidence",
+          "Separate customer segments before changing the production plan",
+          "Treat nominal income as inflation-adjusted income"
+        ],
+        "correct": 2,
+        "explanation": "An aggregate can conceal different conditions across commodities and customer groups. Match the customer segment to the relevant equipment demand.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which customer mix could make a national headline misleading for our products?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Understanding different customer groups helps us anticipate their actual equipment needs."
+        },
+        "id": "w2-stretch-01-v1"
+      },
+      {
+        "topic": "dealer-inventory",
+        "prompt": "Wholesale orders rise during a dealer financing promotion, but retail stays weak. What should you challenge?",
+        "options": [
+          "Whether orders convert to retail without excess stock or discounting",
+          "Whether every order guarantees profitable demand",
+          "Whether the promotion eliminates inventory carrying cost",
+          "Whether production should ignore dealer stocks"
+        ],
+        "correct": 0,
+        "explanation": "A channel order is a signal, but its quality depends on end-customer demand, inventory exposure, financing, and pricing. Test the conversion before treating it as sustainable recovery.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which cancellation or aging measures would change the schedule decision?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Commercial, Finance, and Operations can test the same demand signal before committing capacity."
+        },
+        "id": "w2-stretch-02-v1"
+      },
+      {
+        "topic": "ramp-readiness",
+        "prompt": "A stronger backlog is cited to justify a ramp. What else tests how executable that backlog is?",
+        "options": [
+          "Only the total order count",
+          "Delivery timing, financing, cancellation risk, and product fit",
+          "Only last year’s peak headcount",
+          "Only the commodity price on the announcement date"
+        ],
+        "correct": 1,
+        "explanation": "Backlog must convert into executable deliveries. Timing, customer financing, cancellations, and product requirements affect the capacity and skills needed.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which backlog assumption creates the greatest workforce risk?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Testing the quality of the plan helps the team deliver reliable results."
+        },
+        "id": "w2-stretch-03-v1"
+      },
+      {
+        "topic": "farmer-economics",
+        "prompt": "USDA forecasts +0.4% nominal net cash farm income but −2.5% in real terms. What does that justify for a plant?",
+        "options": [
+          "An automatic production increase",
+          "An automatic production shutdown",
+          "A uniform hiring plan across all products",
+          "A customer-demand check before a schedule change"
+        ],
+        "correct": 3,
+        "explanation": "The forecast informs the customer-economics discussion; it does not set a CNH schedule. Validate product-specific orders, retail activity, channel stock, and timing.",
+        "basis": "USDA forecast · operating interpretation",
+        "sourceIds": [
+          "farm-income"
+        ],
+        "discussion": "What evidence should connect a sector forecast to a site decision?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Customer evidence turns a broad economic signal into a more useful plan."
+        },
+        "id": "w2-stretch-04-v1"
+      },
+      {
+        "topic": "commodity-prices",
+        "prompt": "A grain-price rally is used to justify immediate hiring. Which link in the argument most needs evidence?",
+        "options": [
+          "That a price move becomes customer cash and then executable equipment orders",
+          "That a futures contract has a quoted price",
+          "That farmers use equipment",
+          "That factories require qualified people"
+        ],
+        "correct": 0,
+        "explanation": "The hiring case needs the whole chain: realized customer economics, buying decisions, order timing, and qualified capacity. A commodity signal alone does not establish each step.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which step in that chain can we observe now, and which remains an assumption?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Making each assumption visible turns a complex demand story into a testable decision."
+        },
+        "id": "w2-stretch-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "level": "apply",
+    "questions": [
+      {
+        "topic": "skills-capacity",
+        "prompt": "Headcount is unchanged, but qualified hours at final test fall. What should the plan reflect?",
+        "options": [
+          "No capacity change because headcount is flat",
+          "A lower executable capacity at the constraint",
+          "Only the number of open jobs",
+          "Only assembly’s spare hours"
+        ],
+        "correct": 1,
+        "explanation": "Qualified hours at the limiting process can change even when headcount is stable. Scheduling, attendance, qualification, and quality determine executable coverage.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which coverage measure is more useful than total headcount at your constraint?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Understanding qualified contributions helps us invest in the people and skills the plan needs."
+        },
+        "id": "w3-apply-01-v1"
+      },
+      {
+        "topic": "ramp-readiness",
+        "prompt": "Overtime is proposed at the bottleneck. What makes the capacity benefit credible?",
+        "options": [
+          "Assuming every added hour produces a good unit",
+          "Counting offered overtime as accepted coverage",
+          "Qualified coverage and sustainable good output",
+          "Using the largest overtime budget available"
+        ],
+        "correct": 2,
+        "explanation": "Extra hours help only if qualified people can cover them and sustain the required quality and throughput. Test the effect on good units and fatigue-sensitive work.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What quality and output measures should accompany the overtime plan?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "A sound plan protects quality while pursuing better delivery performance."
+        },
+        "id": "w3-apply-02-v1"
+      },
+      {
+        "topic": "skills-capacity",
+        "prompt": "One cross-trained person is listed as coverage for two simultaneous operations. What must be resolved?",
+        "options": [
+          "Their actual time allocation between the operations",
+          "Only whether both training courses were attended",
+          "Only the person’s total tenure",
+          "Only the combined number of machines"
+        ],
+        "correct": 0,
+        "explanation": "Cross-training creates flexibility, not two people at once. The schedule must assign enough qualified time to each required process.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Where might the current skills matrix double-count executable coverage?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Clear assignments make a complex skills matrix usable in the production plan."
+        },
+        "id": "w3-apply-03-v1"
+      },
+      {
+        "topic": "downcycle",
+        "prompt": "Training finishes after the proposed ramp starts. What should the readiness plan do?",
+        "options": [
+          "Count all trainees as fully qualified now",
+          "Remove qualification gates to match the schedule",
+          "Use training attendance as shipped capacity",
+          "Stage the ramp around verified qualification dates"
+        ],
+        "correct": 3,
+        "explanation": "Training lead time and qualification dates belong in the capacity plan. Interim coverage and the schedule need a credible bridge until skills are independently ready.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which qualification date controls the first feasible ramp step?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Supporting development with realistic learning time helps people succeed in the new work."
+        },
+        "id": "w3-apply-04-v1"
+      },
+      {
+        "topic": "skills-capacity",
+        "prompt": "Final-test coverage improves and assembly becomes the bottleneck. What is the next action?",
+        "options": [
+          "Keep adding only final-test coverage",
+          "Recheck the system and address the new constraint",
+          "Use the old bottleneck indefinitely",
+          "Measure training attendance instead of output"
+        ],
+        "correct": 1,
+        "explanation": "A capacity action can move the constraint. Recheck good-unit flow and the next limiting process before repeating the same intervention.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "How will you recognize that the constraint moved?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Continuous improvement follows the changing operating problem instead of repeating an old fix."
+        },
+        "id": "w3-apply-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "level": "stretch",
+    "questions": [
+      {
+        "topic": "ramp-readiness",
+        "prompt": "In the capacity screen, how can better first-pass yield increase good output without adding headcount?",
+        "options": [
+          "It changes the number of people on the roster",
+          "It removes all material limits",
+          "More of the constrained throughput becomes good units",
+          "It automatically eliminates every rework hour"
+        ],
+        "correct": 2,
+        "explanation": "The screen multiplies the lowest gross stage capacity by first-pass yield. Better yield can raise good-unit capacity within that simplified model; real rework and mix still need validation.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which quality improvement could relieve a good-unit gap at the current constraint?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Advancing quality can improve delivery and resource use at the same time."
+        },
+        "id": "w3-stretch-01-v1"
+      },
+      {
+        "topic": "working-capital",
+        "prompt": "A small work-in-process buffer protects the bottleneck from starvation. What is the best review?",
+        "options": [
+          "Size and monitor the buffer against flow reliability and cash",
+          "Eliminate every buffer regardless of missed output",
+          "Increase all queues without a target",
+          "Treat every buffered unit as a sale"
+        ],
+        "correct": 0,
+        "explanation": "Inventory can support flow, but excess ties up cash. Test a targeted buffer against constraint uptime, shipments, quality, and inventory exposure.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which buffer has a demonstrated operating purpose rather than simply hiding a problem?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Operations and Finance can agree on the flow benefit and the cash tradeoff."
+        },
+        "id": "w3-stretch-02-v1"
+      },
+      {
+        "topic": "downcycle",
+        "prompt": "Which evidence shows that cross-training improved usable capability?",
+        "options": [
+          "The number of course registrations",
+          "Independent good output on the target operation",
+          "The total hours spent in a classroom",
+          "The number of certificates printed"
+        ],
+        "correct": 1,
+        "explanation": "Usable capability requires demonstrated qualification and reliable performance at the target operation. Course participation is an input, not the capacity outcome.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What qualification check confirms that the capability is available on the required shift?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Verifying development helps people turn learning into a useful contribution."
+        },
+        "id": "w3-stretch-03-v1"
+      },
+      {
+        "topic": "product-cost",
+        "prompt": "A higher-paid staffing option may still have lower cost per good unit. What must the comparison include?",
+        "options": [
+          "Only hourly base pay",
+          "Only the number of requisitions",
+          "Only total headcount",
+          "Qualified productivity, benefits, overtime, and quality losses"
+        ],
+        "correct": 3,
+        "explanation": "Compare total relevant cost and good output over a consistent period. Differences in qualification, productivity, benefits, overtime, and quality can change the result.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which assumption most affects the total-cost comparison?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Evaluating the full outcome supports quality and performance beyond a single wage figure."
+        },
+        "id": "w3-stretch-04-v1"
+      },
+      {
+        "topic": "skills-capacity",
+        "prompt": "A certified-test coverage gap is identified. Why might hiring alone fail to close it immediately?",
+        "options": [
+          "Qualification, onboarding, and shift coverage take time",
+          "A headcount increase always lowers demand",
+          "Every new hire has identical test capability",
+          "Qualified coverage is unrelated to output"
+        ],
+        "correct": 0,
+        "explanation": "Hiring is a step toward capacity, but the relevant skills must be verified and scheduled. Include onboarding and qualification lead time in the recovery plan.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What is the fastest credible route to qualified coverage: hiring, development, or reassignment?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "A realistic development and onboarding plan gives people the support needed to succeed."
+        },
+        "id": "w3-stretch-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "level": "apply",
+    "questions": [
+      {
+        "topic": "volume-mix",
+        "prompt": "The Q2 Agriculture bridge shows Volume & Mix −$102m and net pricing +$53m. Combined, those two contribute:",
+        "options": [
+          "+$155m",
+          "−$49m",
+          "−$155m",
+          "+$49m"
+        ],
+        "correct": 1,
+        "explanation": "The combined contribution is −102 + 53 = −49 million. Pricing partly offsets the volume/mix pressure; other bridge items are still needed to reconcile total EBIT.",
+        "basis": "Calculation from reported CNH figures",
+        "sourceIds": [
+          "q2-deck"
+        ],
+        "discussion": "Which remaining cost items also need an operating response?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Combining the drivers clearly helps explain both the offset and the remaining pressure."
+        },
+        "id": "w4-apply-01-v1"
+      },
+      {
+        "topic": "cbs",
+        "prompt": "Which daily measure best links an HR action to operating performance?",
+        "options": [
+          "Training invitations sent",
+          "A monthly headcount total without shift context",
+          "Qualified coverage at the constraint and the resulting good output",
+          "The number of slides in the staffing review"
+        ],
+        "correct": 2,
+        "explanation": "A daily operating measure should connect the action to a relevant performance gap. Qualified coverage and good output can be checked alongside quality and delivery.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which daily measure would tell you that the workforce action is working?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "A repeatable check on results supports continuous improvement."
+        },
+        "id": "w4-apply-02-v1"
+      },
+      {
+        "topic": "capex",
+        "prompt": "A training proposal claims a throughput benefit. What strengthens the benefit calculation?",
+        "options": [
+          "Demand-backed incremental good units and a validated baseline",
+          "The highest possible production estimate",
+          "Course attendance counted as immediate output",
+          "Assuming the bottleneck never changes"
+        ],
+        "correct": 0,
+        "explanation": "Use an observed baseline, realistic qualification timing, and executable demand. Measure the incremental good output and related cost or cash benefit rather than training activity alone.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What will Operations and Finance agree before the training starts?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "A shared baseline lets HR, Operations, and Finance validate the benefit together."
+        },
+        "id": "w4-apply-03-v1"
+      },
+      {
+        "topic": "product-cost",
+        "prompt": "How should a staffing proposal distinguish factory labor from corporate SG&A?",
+        "options": [
+          "Put every workforce cost in SG&A",
+          "Assume every salary belongs in factory product cost",
+          "Compare the cost lines without checking their scope",
+          "Use the controller’s classification and a consistent cost scope"
+        ],
+        "correct": 3,
+        "explanation": "The affected financial line depends on where and how the labor cost is recognized. Confirm classification and timing with the controller before building the comparison.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which cost categories should be included on both sides of the decision?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Clear cost scope makes the comparison easier to understand and verify."
+        },
+        "id": "w4-apply-04-v1"
+      },
+      {
+        "topic": "working-capital",
+        "prompt": "Work in process decreases. What should you verify before claiming the same amount as cash savings?",
+        "options": [
+          "That each unit was counted as revenue",
+          "Inventory valuation, cash timing, and replacement spending",
+          "That EBIT and cash are always equal",
+          "That all supplier payments immediately disappear"
+        ],
+        "correct": 1,
+        "explanation": "A lower inventory balance can release working capital, but the cash effect depends on transactions, valuation, timing, and replenishment. Reconcile the benefit with Finance.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "How will you separate inventory reduction from a recurring expense saving?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Operations and Finance can distinguish the physical improvement from its cash result."
+        },
+        "id": "w4-apply-05-v1"
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "level": "stretch",
+    "questions": [
+      {
+        "topic": "capex",
+        "prompt": "A business case counts the same avoided rework hours as labor savings and again as productivity savings. What needs correction?",
+        "options": [
+          "Use the two labels to double the benefit",
+          "Count only the benefit with the larger title",
+          "Remove overlap and reconcile incremental benefits",
+          "Move both benefits into revenue"
+        ],
+        "correct": 2,
+        "explanation": "The same avoided cost cannot support two independent savings claims. Reconcile the hours, actual cost reduction, and any separate output benefit using one consistent baseline.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which claimed benefits share the same hours or units?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "A clear benefit bridge makes the business case credible and easier to verify."
+        },
+        "id": "w4-stretch-01-v1"
+      },
+      {
+        "topic": "capex",
+        "prompt": "Training unlocks gross capacity, but demand cannot absorb extra machines. Which benefit may still be defensible?",
+        "options": [
+          "Validated avoided overtime, rework, or coverage risk",
+          "Full margin on every theoretical extra unit",
+          "Guaranteed new revenue from classroom hours",
+          "Immediate full output regardless of qualification"
+        ],
+        "correct": 0,
+        "explanation": "Do not count incremental sales without executable demand. A proposal may still have measured cost, quality, or coverage benefits, with the relevant assumptions stated.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which benefit remains valid at the actual production schedule?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Pursuing verified improvements supports performance even when volume is constrained."
+        },
+        "id": "w4-stretch-02-v1"
+      },
+      {
+        "topic": "skills-capacity",
+        "prompt": "A proposal adds people upstream while the downstream constraint stays unchanged. What should Finance challenge?",
+        "options": [
+          "Whether every added head automatically raises shipments",
+          "The claimed output benefit and added inventory or cost",
+          "Only whether recruiting targets are met",
+          "Only whether upstream utilization improves"
+        ],
+        "correct": 1,
+        "explanation": "Additional upstream activity may not increase completed good units if the downstream limit remains. Test incremental shipments, inventory, and total cost together.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What changes at the actual constraint under this proposal?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Finance, Operations, and HR can test the whole-system result of the staffing choice."
+        },
+        "id": "w4-stretch-03-v1"
+      },
+      {
+        "topic": "volume-mix",
+        "prompt": "Reported revenue improves partly from currency translation. How should an operational productivity claim be tested?",
+        "options": [
+          "Against reported revenue growth alone",
+          "Against the currency gain alone",
+          "Against consolidated EPS alone",
+          "Against comparable operating measures and constant-currency evidence"
+        ],
+        "correct": 3,
+        "explanation": "Currency translation is not proof of local productivity. Use comparable output, quality, cost, and constant-currency measures appropriate to the claim.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which performance measure stays meaningful when exchange rates move?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Separating external effects from operating changes makes the improvement claim clearer."
+        },
+        "id": "w4-stretch-04-v1"
+      },
+      {
+        "topic": "cbs",
+        "prompt": "A kaizen raises speed but increases rework. What should the operating review conclude?",
+        "options": [
+          "Validate good output, quality, delivery, and total cost together",
+          "Accept speed alone as proof of success",
+          "Treat rework as unrelated to the improvement",
+          "Replace every quality measure with cycle time"
+        ],
+        "correct": 0,
+        "explanation": "An improvement needs a balanced operating outcome. Faster processing can fail to improve good shipments or cost when quality losses rise.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which measure would prevent a speed gain from hiding a quality loss?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Continuous improvement should advance quality and results together."
+        },
+        "id": "w4-stretch-05-v1"
+      }
+    ]
+  }
+]

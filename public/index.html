@@ -3,19 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#182d40">
-  <meta name="description" content="A live CNH Industrial business-acumen quiz for HR managers. Twenty seconds, fast correct answers, and a top-three leaderboard.">
+  <meta name="theme-color" content="#041c2d">
+  <meta name="description" content="CNH business-acumen live rounds, real quarterly results, commodity drivers, production readiness, and CNH terminology for North America HR leaders.">
   <title>CNH Finance Live — Business Acumen</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/cnh-logo.png">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/live-style.css">
-  <script src="/live-app.js" defer></script>
+  <link rel="stylesheet" href="/business-style.css">
+  <link rel="stylesheet" href="/leadership-style.css">
+  <link rel="stylesheet" href="/competitors.css">
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/arena.css">
+  <script src="/live-app.js" type="module"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to challenge</a>
-  <header class="header"><a class="brand" href="/" aria-label="CNH Finance Live home"><span class="brand-mark" aria-hidden="true">ƒ</span><span>CNH Finance Live<small>BUSINESS ACUMEN · LIVE QUIZ</small></span></a><nav aria-label="Main navigation"><a class="nav-link active" href="/" id="play-nav">Live game</a><a class="nav-link" href="/results" id="results-nav" hidden>Saved rounds</a></nav><div class="identity" id="identity"></div></header>
-  <main id="main" tabindex="-1"><div class="loading">Opening this week’s challenge…</div></main>
-  <footer><span>Built for CNH business acumen · Fictional training scenarios</span><span>20 seconds · 5 decisions · 3 podium places</span></footer>
+  <header class="header"><a class="brand" href="/" aria-label="CNH Finance Live home" data-view="home"><img class="cnh-logo" src="/cnh-logo.png" width="96" height="41" alt="CNH"><span>Finance Live<small>NORTH AMERICA HR</small></span></a><nav aria-label="Main navigation"><a class="nav-link active" href="/" id="play-nav" data-view="home">Live game</a><a class="nav-link" href="/facts" id="facts-nav" data-view="facts">Fact sheet</a><a class="nav-link" href="/competitors" id="competitors-nav" data-view="competitors">CNH vs John Deere</a><a class="nav-link" href="/decoder" id="decoder-nav" data-view="decoder">Quarter decoder</a><a class="nav-link" href="/drivers" id="drivers-nav" data-view="drivers">Business drivers</a><a class="nav-link" href="/vocabulary" id="vocabulary-nav" data-view="vocabulary">CNH vocabulary</a><a class="nav-link" href="/results" id="results-nav" data-view="history" hidden>Saved rounds</a><a class="nav-link" href="/hosts" id="hosts-nav" data-view="hosts" hidden>Host access</a><a class="nav-link" id="prepare-nav" href="/prepare" data-view="prepare">Prepare</a></nav><div class="identity" id="identity"></div></header>
+  <main id="main" tabindex="-1"><div class="loading">Opening CNH Finance Live…</div></main>
+  <footer><span>Public company & USDA sources · Operating decision practice · Independent training tool</span><span>Leadership decisions · Financial facts · Team discussion</span></footer>
   <div id="toast" role="status" class="toast" hidden></div>
 </body>
 </html>

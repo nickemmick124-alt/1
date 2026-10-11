@@ -1,163 +1,507 @@
 [
   {
-    "title": "Round 1 · Equipment & Cash",
-    "story": "Agriculture and construction equipment scenarios for business-acumen practice. Every company, transaction, and figure is fictional; these are not actual CNH results. Each question is independent.",
-    "difficulty": "Quickfire · Foundation",
-    "facts": [
-      {
-        "label": "Question time",
-        "value": "20 seconds"
-      },
-      {
-        "label": "Scenarios",
-        "value": "Fictional equipment business"
-      },
-      {
-        "label": "Amount notation",
-        "value": "USD · k = thousand · m = million"
-      }
+    "title": "Round 1 · Decode CNH Q2 2026",
+    "story": "Actual CNH results for the quarter ended June 30, 2026. Published August 3. Reported figures stay fixed to their source.",
+    "sourceIds": [
+      "q2-release",
+      "q2-deck"
     ],
     "questions": [
       {
-        "topic": "inventory",
-        "prompt": "A fictional equipment maker pays $20m for inventory. Nothing is sold yet. What immediately happens to cash?",
+        "topic": "industrial-activities",
+        "prompt": "In CNH reporting, Industrial Activities excludes which business?",
         "options": [
-          "Rises $20m",
-          "Falls $20m",
-          "Stays unchanged",
-          "Falls $10m"
-        ],
-        "correct": 1,
-        "explanation": "Paying for inventory uses $20m of cash. Inventory is an asset, but it cannot fund payments until converted into cash."
-      },
-      {
-        "topic": "working-capital",
-        "prompt": "Current assets are $50m; current liabilities are $20m. Working capital equals current assets minus current liabilities. How much?",
-        "options": [
-          "$70m",
-          "$20m",
-          "$50m",
-          "$30m"
-        ],
-        "correct": 3,
-        "explanation": "Working capital is $50m − $20m = $30m. It measures current assets remaining after current liabilities."
-      },
-      {
-        "topic": "dealer-financing",
-        "prompt": "Equipment is delivered to a dealer. The $100k sale is recorded now; payment is due in 60 days. What is recorded?",
-        "options": [
-          "A $100k receivable",
-          "$100k more cash",
-          "A $100k payable",
-          "No revenue yet"
-        ],
-        "correct": 0,
-        "explanation": "The dealer owes $100k, creating accounts receivable. Offering payment terms delays cash collection even though the sale is recorded."
-      },
-      {
-        "topic": "cash-conversion",
-        "prompt": "Dealers pay invoices sooner. Sales, costs, and supplier-payment dates stay unchanged. What is the direct benefit?",
-        "options": [
-          "Higher sales revenue",
-          "Lower product costs",
-          "Cash available sooner",
-          "Fewer supplier bills"
+          "Agriculture",
+          "Construction",
+          "Financial Services",
+          "Corporate costs"
         ],
         "correct": 2,
-        "explanation": "Faster collections convert receivables into cash sooner and shorten the cash-conversion cycle. They do not directly change sales revenue or product costs."
+        "explanation": "Separate the equipment business from customer and dealer financing when reading margin and cash.",
+        "basis": "Reported CNH result",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which results should a plant staffing proposal be measured against?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Separating equipment operations from financing makes the right margin and cash measures easier to use."
+        },
+        "id": "w1-foundation-01-v1"
       },
       {
-        "topic": "capital-expenditure",
-        "prompt": "A factory pays $10m cash for a machine, recorded as equipment. Ignoring depreciation, what changes immediately?",
+        "topic": "ebit-margin",
+        "prompt": "Industrial adjusted EBIT margin moved from 5.6% to 4.0% in Q2. How many basis points did it fall?",
         "options": [
-          "Cash +$10m; equipment −$10m",
-          "Cash −$10m; equipment +$10m",
-          "Cash unchanged; profit +$10m",
-          "Cash −$10m; equipment unchanged"
+          "16 bps",
+          "160 bps",
+          "1,600 bps",
+          "40 bps"
         ],
         "correct": 1,
-        "explanation": "Cash falls by $10m while the equipment asset rises by $10m. A capital purchase changes the asset mix; it is not immediately a $10m operating expense."
+        "explanation": "1 percentage point equals 100 basis points. A margin decline is not the same as a decline in sales.",
+        "basis": "Reported CNH result",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which controllable plant costs can protect margin at the current production schedule?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Expressing the margin change in basis points gives the team one clear way to discuss performance."
+        },
+        "id": "w1-foundation-02-v1"
+      },
+      {
+        "topic": "volume-mix",
+        "prompt": "CNH Agriculture sales rose 1%, while adjusted EBIT fell 35%. What should you examine?",
+        "options": [
+          "Only the sales total",
+          "Volume/mix and the cost bridge",
+          "Only the share price",
+          "Only total headcount"
+        ],
+        "correct": 1,
+        "explanation": "Revenue growth can coexist with weaker profit. Use the EBIT bridge to locate the pressure before proposing actions.",
+        "basis": "Reported CNH result",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Which variance needs a Commercial, Manufacturing, Purchasing, or HR response?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Understanding the profit bridge helps Commercial, Manufacturing, Purchasing, Finance, and HR work on the same business problem."
+        },
+        "id": "w1-foundation-03-v1"
+      },
+      {
+        "topic": "industrial-fcf",
+        "prompt": "CNH Industrial FCF was +$150m in Q2, but −$439m for H1. Which statement is correct?",
+        "options": [
+          "H1 cash generation was positive",
+          "Q2 erased the H1 cash outflow",
+          "Q2 was positive; H1 remained negative",
+          "FCF and EBIT are identical"
+        ],
+        "correct": 2,
+        "explanation": "Quarter and year-to-date measures answer different questions. Check both before calling the cash position healthy.",
+        "basis": "Reported CNH result",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "Does a proposed action improve earnings, cash, or both, and when?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Keeping quarter and year-to-date cash separate makes the financial position clearer before a decision."
+        },
+        "id": "w1-foundation-04-v1"
+      },
+      {
+        "topic": "industry-demand",
+        "prompt": "Q2 North American tractor demand above 140 HP fell 17%. This is a measure of:",
+        "options": [
+          "CNH plant output",
+          "Total industry sales volume",
+          "CNH market share",
+          "CNH revenue"
+        ],
+        "correct": 1,
+        "explanation": "Industry demand is a market signal. It is not a CNH plant schedule or a company sales measure.",
+        "basis": "Reported CNH result",
+        "sourceIds": [
+          "q2-release"
+        ],
+        "discussion": "What additional order, retail, and channel evidence would justify a schedule change?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Reading the market signal alongside orders and retail demand helps us plan around what customers actually need."
+        },
+        "id": "w1-foundation-05-v1"
+      }
+    ],
+    "factual": true,
+    "difficulty": "Evidence-based quickfire",
+    "facts": [
+      {
+        "label": "Evidence",
+        "value": "Published sources + operating principles"
+      },
+      {
+        "label": "Question time",
+        "value": "40 seconds"
       }
     ]
   },
   {
-    "title": "Round 2 · Revenue & Returns",
-    "story": "Test commercial decisions in a fictional agriculture and construction equipment business. All figures are invented and do not describe CNH performance. Each question stands alone.",
-    "difficulty": "Quickfire · Foundation",
-    "facts": [
-      {
-        "label": "Question time",
-        "value": "20 seconds"
-      },
-      {
-        "label": "Scenarios",
-        "value": "Fictional equipment business"
-      },
-      {
-        "label": "Amount notation",
-        "value": "USD · k = thousand · m = million"
-      }
+    "title": "Round 2 · Commodities & the Ag Cycle",
+    "story": "Real USDA and CNH observations. USDA prices are 2026/27 season-average forecasts published September 11, 2026; they are not today's futures quotes.",
+    "sourceIds": [
+      "wasde",
+      "farm-income",
+      "q2-deck"
     ],
     "questions": [
       {
-        "topic": "revenue",
-        "prompt": "A fictional dealer sells 100 tractors for $100k each. What is total sales revenue?",
+        "topic": "commodity-prices",
+        "prompt": "USDA's September corn forecast is $4.80/bu for 2026/27. What kind of price is this?",
         "options": [
-          "$1m",
-          "$100m",
-          "$5m",
-          "$10m"
-        ],
-        "correct": 3,
-        "explanation": "100 tractors × $100,000 each = $10,000,000, or $10m. Revenue counts sales before subtracting costs."
-      },
-      {
-        "topic": "profit-margin",
-        "prompt": "Revenue is $100m; total expenses are $80m. Profit margin equals profit divided by revenue. What is the margin?",
-        "options": [
-          "20%",
-          "80%",
-          "25%",
-          "10%"
-        ],
-        "correct": 0,
-        "explanation": "Profit is $100m − $80m = $20m. Margin is $20m ÷ $100m = 20%."
-      },
-      {
-        "topic": "aftermarket-revenue",
-        "prompt": "A dealer sells a machine once, then earns $2,000 each year servicing it. Which revenue recurs?",
-        "options": [
-          "Original machine sale",
-          "Loan principal repayment",
-          "Yearly servicing",
-          "One-time land sale"
+          "A guaranteed cash price",
+          "Today's nearby futures quote",
+          "A season-average farm-price forecast",
+          "CNH's selling price"
         ],
         "correct": 2,
-        "explanation": "Yearly servicing produces recurring aftermarket revenue. The original machine sale occurs once, and repayment of loan principal is not revenue."
+        "explanation": "A seasonal forecast cannot replace a contract-specific futures quote or a local cash bid.",
+        "basis": "USDA published forecast",
+        "sourceIds": [
+          "wasde"
+        ],
+        "discussion": "What price and cost measures best represent the farmers served by our product line?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Distinguishing a forecast from a market quote makes a complex commodity signal clearer and more useful."
+        },
+        "id": "w2-foundation-01-v1"
+      },
+      {
+        "topic": "farmer-economics",
+        "prompt": "USDA forecasts nominal net cash farm income up 0.4%, but down 2.5% after inflation. What is the better reading?",
+        "options": [
+          "Purchasing power clearly rises",
+          "Nominal growth alone proves recovery",
+          "Real purchasing power remains pressured",
+          "Every crop farmer has the same result"
+        ],
+        "correct": 2,
+        "explanation": "Separate dollar growth from purchasing power and sector totals from the economics of individual customers.",
+        "basis": "USDA published forecast",
+        "sourceIds": [
+          "farm-income"
+        ],
+        "discussion": "Which customer segments have the cash, financing capacity, and need to replace equipment?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Understanding real purchasing power helps us anticipate the equipment decisions farmers can afford."
+        },
+        "id": "w2-foundation-02-v1"
+      },
+      {
+        "topic": "farmer-economics",
+        "prompt": "Crop prices rise, but yields fall and fertilizer costs rise. Can you conclude farmers have more equipment-buying capacity?",
+        "options": [
+          "Yes, from crop prices alone",
+          "No; check revenue, costs, and liquidity together",
+          "Yes, regardless of yield",
+          "No farmer will buy equipment"
+        ],
+        "correct": 1,
+        "explanation": "Price × saleable yield drives revenue. Input cost, debt service, cash, and timing determine how much reaches an equipment decision.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What would we need to know before translating a commodity rally into a production ramp?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Looking at yield, costs, and liquidity together starts with the farmer’s actual business needs."
+        },
+        "id": "w2-foundation-03-v1"
+      },
+      {
+        "topic": "retail-wholesale",
+        "prompt": "If CNH wholesale shipments rise while dealer retail sales stay flat, what should you check first?",
+        "options": [
+          "Whether channel inventory is building",
+          "Whether farmer income doubled",
+          "Whether staffing is automatically too low",
+          "Whether every dealer sold more"
+        ],
+        "correct": 0,
+        "explanation": "Wholesale moves equipment into the dealer channel; retail moves it to the end customer. Compare both before treating shipments as demand recovery.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which product families show genuine end-customer demand rather than channel loading?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Checking end-customer demand helps us serve farmers instead of treating dealer shipments alone as customer success."
+        },
+        "id": "w2-foundation-04-v1"
       },
       {
         "topic": "cyclicality",
-        "prompt": "In a fictional downturn, monthly equipment orders fall from 1,000 to 800. What is the percentage decline?",
+        "prompt": "CNH's Q2 presentation says cycle indicators improved but recovery was not yet underway. What follows?",
         "options": [
-          "25%",
-          "20%",
-          "80%",
-          "10%"
+          "Commit to a full ramp now",
+          "Treat improved indicators as confirmed orders",
+          "Prepare capability while validating demand",
+          "Stop monitoring the channel"
         ],
-        "correct": 1,
-        "explanation": "Orders fall by 200. Dividing 200 by the original 1,000 gives 20%. Lower demand may require changes to production and cash forecasts."
+        "correct": 2,
+        "explanation": "Readiness work can begin before a schedule increase. The size and timing of a ramp still need current demand evidence.",
+        "basis": "CNH management observation",
+        "sourceIds": [
+          "q2-deck"
+        ],
+        "discussion": "Which signals would cause the team to activate, delay, or stop a ramp?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Commercial, Operations, Finance, and HR can prepare the recovery together using shared demand signals."
+        },
+        "id": "w2-foundation-05-v1"
+      }
+    ],
+    "factual": true,
+    "difficulty": "Evidence-based quickfire",
+    "facts": [
+      {
+        "label": "Evidence",
+        "value": "Published sources + operating principles"
       },
       {
-        "topic": "capacity-utilization",
-        "prompt": "A factory can produce 100 machines weekly and makes 80. Utilization equals actual output divided by capacity. What is utilization?",
+        "label": "Question time",
+        "value": "40 seconds"
+      }
+    ]
+  },
+  {
+    "title": "Round 3 · Production & Skills",
+    "story": "Equipment-manufacturing decisions. These prompts teach operating principles; they do not claim to describe conditions at any CNH plant. Use your own demand, skills, quality, and supplier evidence in the discussion.",
+    "sourceIds": [],
+    "questions": [
+      {
+        "topic": "skills-capacity",
+        "prompt": "Final test is the bottleneck; assembly has spare capacity. Which staffing action best increases shippable output?",
         "options": [
-          "20%",
-          "100%",
-          "125%",
-          "80%"
+          "Add only assembly operators",
+          "Add qualified final-test coverage",
+          "Increase finished-goods inventory",
+          "Ignore certification"
         ],
-        "correct": 3,
-        "explanation": "Utilization is 80 ÷ 100 = 80%. The factory is using four-fifths of its available weekly capacity."
+        "correct": 1,
+        "explanation": "Staff the constraint. Adding people elsewhere may build work in process without increasing completed machines.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which role limits your plant's output, and how long does qualification take?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Developing qualified skills at the constraint invests in people and helps them contribute to reliable output."
+        },
+        "id": "w3-foundation-01-v1"
+      },
+      {
+        "topic": "absorption",
+        "prompt": "Production falls while fixed factory cost stays unchanged. What happens to fixed cost per unit?",
+        "options": [
+          "It falls automatically",
+          "It rises",
+          "It disappears",
+          "It becomes sales revenue"
+        ],
+        "correct": 1,
+        "explanation": "Fewer units carry the same fixed cost. That pressure needs a cost and schedule response; it does not prove that extra inventory is useful.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which costs are truly avoidable during down weeks, and which remain?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Making fixed cost per unit visible helps the team understand the tradeoff and choose a clear response."
+        },
+        "id": "w3-foundation-02-v1"
+      },
+      {
+        "topic": "dealer-inventory",
+        "prompt": "Dealer sell-through is weak. Why avoid building extra units purely to improve absorption?",
+        "options": [
+          "Units never use cash",
+          "More inventory always creates profit",
+          "Inventory ties up cash and can add discount risk",
+          "Dealers must accept every unit"
+        ],
+        "correct": 2,
+        "explanation": "Align the plan with credible demand. A favorable unit-cost metric can conceal a worse cash or inventory outcome.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "How are retail demand, wholesale shipments, and dealer inventory reconciled in the production plan?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Matching production to genuine customer demand supports the right equipment availability without loading the channel."
+        },
+        "id": "w3-foundation-03-v1"
+      },
+      {
+        "topic": "ramp-readiness",
+        "prompt": "Orders recover. Which evidence best supports a production ramp?",
+        "options": [
+          "Total headcount alone",
+          "Qualified skills, materials, and good-unit capacity",
+          "Open jobs alone",
+          "Last year's peak output alone"
+        ],
+        "correct": 1,
+        "explanation": "A name on the roster is not a qualified hour at the right process. Check the constraint, coverage, quality, and parts together.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What skill, onboarding, attendance, or supplier limit could block the promised ramp?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "A credible ramp brings together qualified people, materials, quality, and the production plan."
+        },
+        "id": "w3-foundation-04-v1"
+      },
+      {
+        "topic": "downcycle",
+        "prompt": "During a downcycle, what is the best cross-training priority?",
+        "options": [
+          "Every course equally",
+          "Skills needed at the next likely constraint",
+          "Training only by tenure",
+          "Training without qualification checks"
+        ],
+        "correct": 1,
+        "explanation": "Prioritize coverage that changes executable capacity. Include training lead time and quality requirements.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "What capability can we build now that would shorten a future ramp?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Using a downcycle to develop useful skills invests in people’s growth and future opportunities."
+        },
+        "id": "w3-foundation-05-v1"
+      }
+    ],
+    "factual": true,
+    "difficulty": "Evidence-based quickfire",
+    "facts": [
+      {
+        "label": "Evidence",
+        "value": "Operating principles"
+      },
+      {
+        "label": "Question time",
+        "value": "40 seconds"
+      }
+    ]
+  },
+  {
+    "title": "Round 4 · CBS, Cost & Cash",
+    "story": "Published CNH Business System vocabulary and the real Agriculture EBIT bridge, combined with practical manufacturing finance decisions.",
+    "sourceIds": [
+      "cbs",
+      "q2-deck"
+    ],
+    "questions": [
+      {
+        "topic": "cbs",
+        "prompt": "In published CNH material, CBS stands for:",
+        "options": [
+          "Commodity Buying Strategy",
+          "CNH Business System",
+          "Corporate Bonus Schedule",
+          "Construction Budget Summary"
+        ],
+        "correct": 1,
+        "explanation": "CNH links CBS with daily management, strategy deployment, and kaizen. For HR, connect capability to operating results.",
+        "basis": "Published CNH vocabulary",
+        "sourceIds": [
+          "cbs"
+        ],
+        "discussion": "Which daily measure connects a workforce action to quality, delivery, or cost?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Daily management and continuous improvement connect our capabilities to better quality, delivery, and cost."
+        },
+        "id": "w4-foundation-01-v1"
+      },
+      {
+        "topic": "volume-mix",
+        "prompt": "In CNH's Q2 Agriculture EBIT bridge, which item was the largest negative movement?",
+        "options": [
+          "Net pricing",
+          "Volume & Mix",
+          "FX & Other",
+          "R&D"
+        ],
+        "correct": 1,
+        "explanation": "The bridge shows Volume & Mix at −$102m, versus a +$53m pricing offset. Prioritize the driver rather than treating every variance equally.",
+        "basis": "Reported CNH result",
+        "sourceIds": [
+          "q2-deck"
+        ],
+        "discussion": "How should staffing flexibility reflect a volume and product-mix change?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Focusing on the largest profit driver turns a detailed bridge into a clear business priority."
+        },
+        "id": "w4-foundation-02-v1"
+      },
+      {
+        "topic": "product-cost",
+        "prompt": "An hourly wage increase affects plant product cost. What else belongs in the staffing economics?",
+        "options": [
+          "Only base wages",
+          "Benefits, productivity, overtime, scrap, and rework",
+          "Only corporate SG&A",
+          "Only number of requisitions"
+        ],
+        "correct": 1,
+        "explanation": "Evaluate cost per good unit and total cash impact. Manufacturing labor and corporate labor can appear in different financial lines.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which workforce option has the lowest total cost for the required quality and output?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Judging staffing by good output, quality, and total cost supports better performance than wages alone."
+        },
+        "id": "w4-foundation-03-v1"
+      },
+      {
+        "topic": "capex",
+        "prompt": "A training investment relieves the production bottleneck. What makes the business case stronger?",
+        "options": [
+          "Training hours alone",
+          "Credible good-unit gain and measured cost/cash benefit",
+          "The largest attendance list",
+          "Assuming immediate full productivity"
+        ],
+        "correct": 1,
+        "explanation": "Tie qualified coverage to good output, avoided overtime or rework, and timing. Ask Finance to validate benefits rather than counting participation as ROI.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "Which benefit can be observed after qualification, and who owns the baseline?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "HR, Operations, and Finance can agree on the training baseline and validate the benefit together."
+        },
+        "id": "w4-foundation-04-v1"
+      },
+      {
+        "topic": "working-capital",
+        "prompt": "A plan reduces rework and work in process without hurting shipments. Which benefit should Finance test?",
+        "options": [
+          "Lower trapped inventory cash and conversion cost",
+          "Guaranteed revenue growth",
+          "Higher dealer inventory",
+          "Automatic EPS improvement"
+        ],
+        "correct": 0,
+        "explanation": "Less work in process can release working capital; less rework can lower cost. Confirm both with the controller because accounting and cash timing differ.",
+        "basis": "Operating decision · no plant figures",
+        "sourceIds": [],
+        "discussion": "How will we measure cost reduction separately from cash release?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Reducing rework and improving flow advances quality and performance while freeing cash for the business."
+        },
+        "id": "w4-foundation-05-v1"
+      }
+    ],
+    "factual": true,
+    "difficulty": "Evidence-based quickfire",
+    "facts": [
+      {
+        "label": "Evidence",
+        "value": "Published sources + operating principles"
+      },
+      {
+        "label": "Question time",
+        "value": "40 seconds"
       }
     ]
   }

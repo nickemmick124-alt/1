@@ -1,0 +1,588 @@
+[
+  {
+    "title": "Beginner 1 \u00b7 Everyday decisions to business basics",
+    "story": "Start with three familiar situations, learn three business basics, then make two simple CNH connections. No financial-result memorization is required.",
+    "track": "beginner",
+    "level": "beginner",
+    "weekNumber": null,
+    "format": "current",
+    "setId": "beginner-1-v1",
+    "factual": true,
+    "sourceIds": [],
+    "questions": [
+      {
+        "id": "beginner-1-1-v1",
+        "topic": "constraint",
+        "stage": "Familiar situation",
+        "prompt": "The team is ready, but a required part has not arrived. What is limiting production right now?",
+        "options": [
+          "Available people",
+          "The missing material",
+          "The shift length",
+          "The training schedule"
+        ],
+        "correct": 1,
+        "explanation": "More people cannot make this product until its required material arrives. The missing part is the immediate constraint.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Which constraint do we sometimes mistake for a staffing shortage?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Identify the immediate constraint before adding activity or complexity."
+        },
+        "learning": {
+          "id": "constraint",
+          "term": "Constraint",
+          "definition": "A constraint is the factor currently limiting useful output.",
+          "lookFor": "Check materials, qualified people, and equipment before choosing a staffing response.",
+          "prepare": "Describe one reason a staffed line might still be unable to produce.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#constraint"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-2-v1",
+        "topic": "overtime",
+        "stage": "Familiar situation",
+        "prompt": "A short backlog may need overtime. What should HR and Operations check before approving it?",
+        "options": [
+          "Only the number of volunteers",
+          "Only the normal hourly rate",
+          "Needed good output, qualified coverage, and total overtime cost",
+          "Only last month\u2019s overtime hours"
+        ],
+        "correct": 2,
+        "explanation": "Overtime may help, but only if trained people, materials, and equipment can produce the needed good units. Include the overtime premium in the cost.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "What would make extra hours unproductive?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "HR and Operations can agree on the output needed and the resources to deliver it."
+        },
+        "learning": {
+          "id": "overtime",
+          "term": "Overtime",
+          "definition": "Overtime adds working time and usually costs more per hour than regular time.",
+          "lookFor": "Use the production need, available qualified coverage, and applicable payroll cost; confirm the figures locally.",
+          "prepare": "Explain what additional output the extra hours would buy.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#overtime"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-3-v1",
+        "topic": "qualified-coverage",
+        "stage": "Familiar situation",
+        "prompt": "Only one person is qualified for a critical station. What would reduce the coverage risk?",
+        "options": [
+          "Rotate an untrained employee into the job",
+          "Add people to an unrelated station",
+          "Remove the qualification check",
+          "Train and qualify backup coverage"
+        ],
+        "correct": 3,
+        "explanation": "Backup coverage needs the required skills and authorization. Headcount alone does not replace qualification.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Which task needs a stronger backup plan?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Developing skills supports people\u2019s growth while improving coverage."
+        },
+        "learning": {
+          "id": "qualified-coverage",
+          "term": "Qualified Coverage",
+          "definition": "Qualified coverage means people with the skills and authorization required for the work.",
+          "lookFor": "Check the skills matrix, qualification requirements, and actual shift coverage with Operations.",
+          "prepare": "Find one critical task and explain how its backup is qualified.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#qualified-coverage"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-4-v1",
+        "topic": "revenue",
+        "stage": "Business basic",
+        "prompt": "Which item is revenue?",
+        "options": [
+          "The amount earned from selling products or services",
+          "Money borrowed from a bank",
+          "The wages paid to employees",
+          "The cost of parts purchased"
+        ],
+        "correct": 0,
+        "explanation": "Revenue is what the business earns from selling products or services. A loan brings cash in, but it is not sales revenue.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Why does cash coming in not always mean revenue?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "A clear definition makes financial conversations easier to follow."
+        },
+        "learning": {
+          "id": "revenue",
+          "term": "Revenue",
+          "definition": "Revenue is the amount earned from sales before subtracting business costs.",
+          "lookFor": "Look for the revenue or net-sales line, its period, and what business it covers.",
+          "prepare": "Explain the difference between a sale and a loan.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#revenue"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-5-v1",
+        "topic": "profit",
+        "stage": "Business basic",
+        "prompt": "In a simplified practice example, sales are $100 and all costs are $80. What is profit?",
+        "options": [
+          "$100",
+          "$80",
+          "$20",
+          "$180"
+        ],
+        "correct": 2,
+        "explanation": "Sales minus all costs gives profit: $100 minus $80 equals $20. Real reports distinguish several profit measures, so read the label.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Can sales rise while profit falls? What would have to happen to costs?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Start with the basic relationship before introducing more detailed measures."
+        },
+        "learning": {
+          "id": "profit",
+          "term": "Profit",
+          "definition": "Profit is what remains after the relevant costs are subtracted from revenue.",
+          "lookFor": "Read which profit measure is shown; ask Finance what costs it includes.",
+          "prepare": "Try a different sales-minus-costs example and explain the result.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#profit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-6-v1",
+        "topic": "inventory",
+        "stage": "Business basic",
+        "prompt": "Parts have been purchased but are still waiting to be used. What does that mean for cash?",
+        "options": [
+          "All the money is still available in the bank",
+          "Some cash is tied up in inventory",
+          "The parts have already created profit",
+          "The purchase automatically creates customer revenue"
+        ],
+        "correct": 1,
+        "explanation": "Money spent on parts is no longer available as cash. Those parts are inventory until they are used or sold; collecting from customers is a separate step.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Which inventory can we reduce without disrupting customer delivery?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Understanding inventory helps improve flow and use resources well."
+        },
+        "learning": {
+          "id": "inventory",
+          "term": "Inventory",
+          "definition": "Inventory includes materials and products held for future use or sale. It can tie up cash.",
+          "lookFor": "Ask the controller how inventory is measured and how purchasing, production, and collection affect cash.",
+          "prepare": "Explain why a warehouse full of parts is different from a bank account full of cash.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#inventory"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-7-v1",
+        "topic": "customer-demand",
+        "stage": "CNH connection",
+        "prompt": "A farming customer has less money available after paying operating costs. How might that affect a new machine purchase?",
+        "options": [
+          "They may delay it or look for financing",
+          "They will always buy more machines",
+          "The purchase becomes unrelated to their finances",
+          "The purchase must happen immediately"
+        ],
+        "correct": 0,
+        "explanation": "A customer with less available money may delay replacement or need financing. This is a possible response, not a prediction for every customer.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "What would you want to know before treating a demand forecast as a staffing plan?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Connecting decisions to customers\u2019 needs and finances keeps their perspective central."
+        },
+        "learning": {
+          "id": "customer-demand",
+          "term": "Customer Demand",
+          "definition": "Customer demand depends partly on whether customers need a product and can afford to buy it.",
+          "lookFor": "In Business drivers, follow the farmer-economics explanation; discuss actual demand evidence with the business.",
+          "prepare": "Explain how a customer\u2019s costs and cash can affect equipment decisions.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#customer-demand"
+            },
+            {
+              "label": "Business drivers",
+              "url": "/drivers"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-1-8-v1",
+        "topic": "reading-results",
+        "stage": "CNH connection",
+        "prompt": "You want to understand a CNH financial result you do not recognize. What is the best first step?",
+        "options": [
+          "Compare it with a figure from any other period",
+          "Guess from the size of the number",
+          "Treat every profit measure as the same",
+          "Check the measure, business scope, period, and source notes"
+        ],
+        "correct": 3,
+        "explanation": "First identify what the number measures, which business it covers, and the period. Quarter decoder and the linked source notes are places to start.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Which part of a financial report would you ask someone to clarify?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "A few clear questions make a detailed result easier to understand."
+        },
+        "learning": {
+          "id": "reading-results",
+          "term": "Reading Results",
+          "definition": "A financial figure needs a measure, a business scope, a period, and an evidence source to be interpreted.",
+          "lookFor": "Open Quarter decoder, select the period and business, then read the measure\u2019s note and linked source.",
+          "prepare": "Find one measure and explain what it describes without memorizing its value.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#reading-results"
+            },
+            {
+              "label": "Quarter decoder",
+              "url": "/decoder"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Beginner 2 \u00b7 Practice the basics again",
+    "story": "Start with three familiar situations, learn three business basics, then make two simple CNH connections. No financial-result memorization is required.",
+    "track": "beginner",
+    "level": "beginner",
+    "weekNumber": null,
+    "format": "current",
+    "setId": "beginner-2-v1",
+    "factual": true,
+    "sourceIds": [],
+    "questions": [
+      {
+        "id": "beginner-2-1-v1",
+        "topic": "production-plan",
+        "stage": "Familiar situation",
+        "prompt": "Orders are expected to slow. What should the team check before changing staffing schedules?",
+        "options": [
+          "Only the number of open jobs",
+          "Confirmed production needs, critical skills, and available coverage",
+          "Only last year\u2019s hiring plan",
+          "Only the size of the building"
+        ],
+        "correct": 1,
+        "explanation": "Start with the actual production plan and the skills required to deliver it. A broad market headline alone does not tell you the plant\u2019s staffing need.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "What information is missing when someone says we need fewer people?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Shared planning connects people decisions with operating needs."
+        },
+        "learning": {
+          "id": "production-plan",
+          "term": "Production Plan",
+          "definition": "A production plan connects demand, output timing, and the resources required to deliver.",
+          "lookFor": "Discuss confirmed orders, planned output, and qualification needs with Operations.",
+          "prepare": "Explain which evidence you would request before changing a schedule.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#production-plan"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-2-v1",
+        "topic": "rework",
+        "stage": "Familiar situation",
+        "prompt": "Some units need to be repaired before shipment. Why does this matter to the business?",
+        "options": [
+          "The units are already ready for the customer",
+          "Repairs always create extra sales",
+          "Rework uses time and resources before good units can ship",
+          "Quality has no effect on output"
+        ],
+        "correct": 2,
+        "explanation": "Rework consumes labor, material, or equipment time. Counting completed work without checking quality can overstate what is ready to ship.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Where should we measure good output rather than activity alone?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Reliable quality helps deliver products customers can use."
+        },
+        "learning": {
+          "id": "rework",
+          "term": "Rework",
+          "definition": "Rework is additional work needed to bring a product to the required standard.",
+          "lookFor": "Use quality and production records to distinguish good units from units awaiting repair.",
+          "prepare": "Explain why good units matter more than a count of all units worked on.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#rework"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-3-v1",
+        "topic": "shift-coverage",
+        "stage": "Familiar situation",
+        "prompt": "A trained operator is absent from a critical station. What should the supervisor check first?",
+        "options": [
+          "Whether qualified backup coverage is available",
+          "Whether any available person can be assigned immediately",
+          "Whether an unrelated station has spare capacity",
+          "Whether yesterday\u2019s output was high"
+        ],
+        "correct": 0,
+        "explanation": "Check for a qualified backup and follow the required operating and safety procedures. An available person may not have the right qualification.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "How could cross-training improve tomorrow\u2019s coverage?",
+        "valueConnection": {
+          "valueId": "you-matter",
+          "why": "Matching work to qualified coverage respects people and the skills they need."
+        },
+        "learning": {
+          "id": "shift-coverage",
+          "term": "Shift Coverage",
+          "definition": "Shift coverage is the availability of the right qualified people for the work scheduled.",
+          "lookFor": "Review the skills matrix and shift plan with the responsible supervisor.",
+          "prepare": "Distinguish total attendance from coverage of critical tasks.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#shift-coverage"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-4-v1",
+        "topic": "cash-timing",
+        "stage": "Business basic",
+        "prompt": "A customer receives a product today but will pay later. Which statement is most useful?",
+        "options": [
+          "A sale and its cash collection always happen together",
+          "Profit and cash are always identical",
+          "The payment has already reached the bank",
+          "The sale and cash collection may happen at different times"
+        ],
+        "correct": 3,
+        "explanation": "A sale can be recorded before the customer pays. Profit and cash therefore need separate attention; ask Finance about the actual accounting and payment terms.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "What happens to available cash while we wait for a customer to pay?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Separating profit from cash avoids a common misunderstanding."
+        },
+        "learning": {
+          "id": "cash-timing",
+          "term": "Cash Timing",
+          "definition": "Cash timing describes when money is actually received or paid, which can differ from when sales or costs are recorded.",
+          "lookFor": "Ask Finance about customer payment terms and read cash-flow measures separately from profit.",
+          "prepare": "Explain why a profitable business still needs to manage cash.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#cash-timing"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-5-v1",
+        "topic": "cost-per-good-unit",
+        "stage": "Business basic",
+        "prompt": "In a simplified example, total production cost is $2,000 for 100 good units. What is cost per good unit?",
+        "options": [
+          "$2",
+          "$20",
+          "$100",
+          "$2,000"
+        ],
+        "correct": 1,
+        "explanation": "Divide the total cost by good units: $2,000 divided by 100 equals $20 per good unit. The example is fictional and excludes any separate costs not stated.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "How would more scrap affect cost per good unit if total cost stayed the same?",
+        "valueConnection": {
+          "valueId": "we-go-beyond",
+          "why": "Measuring useful output helps judge performance and improvement."
+        },
+        "learning": {
+          "id": "cost-per-good-unit",
+          "term": "Cost Per Good Unit",
+          "definition": "Cost per good unit divides a defined cost by output that meets the required standard.",
+          "lookFor": "Agree the cost scope and good-unit count with the controller before comparing two plans.",
+          "prepare": "Calculate a simple cost-per-unit example and say what is included.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#cost-per-good-unit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-6-v1",
+        "topic": "bottleneck",
+        "stage": "Business basic",
+        "prompt": "One step can handle 80 units per shift, while every other required step can handle 100. What limits this simple process?",
+        "options": [
+          "The average capacity of all steps",
+          "The fastest step",
+          "The step that can handle 80 units",
+          "The total number of people alone"
+        ],
+        "correct": 2,
+        "explanation": "In this simplified process, the 80-unit step is the bottleneck. Improving a different step alone will not raise the process\u2019s maximum output.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Which assumption should we verify before using a simple capacity model?",
+        "valueConnection": {
+          "valueId": "make-it-simple",
+          "why": "Focus on the limiting step before spreading effort across the whole process."
+        },
+        "learning": {
+          "id": "bottleneck",
+          "term": "Bottleneck",
+          "definition": "A bottleneck is the process step whose available capacity currently limits the flow.",
+          "lookFor": "Use Production readiness in Business drivers to compare stage capacity; confirm the real process with Operations.",
+          "prepare": "Explain why adding capacity at the fastest step may not improve total output.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#bottleneck"
+            },
+            {
+              "label": "Business drivers",
+              "url": "/drivers"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-7-v1",
+        "topic": "customer-uptime",
+        "stage": "CNH connection",
+        "prompt": "In a practice scenario, a CNH customer needs a machine during harvest. Why could faster, reliable repair support matter?",
+        "options": [
+          "It can help the customer return the machine to work",
+          "It removes the need for trained service staff",
+          "It guarantees higher crop prices",
+          "It makes repair quality less important"
+        ],
+        "correct": 0,
+        "explanation": "Reliable repair support can reduce time the machine is unavailable. The connection is the customer\u2019s ability to do the work, not a guaranteed financial outcome.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "Which workforce capability supports reliable customer service?",
+        "valueConnection": {
+          "valueId": "built-around-customers",
+          "why": "Reliable support starts with the work the customer needs to complete."
+        },
+        "learning": {
+          "id": "customer-uptime",
+          "term": "Customer Uptime",
+          "definition": "Uptime is the time equipment is available to do its intended work.",
+          "lookFor": "Discuss customer service needs and critical service skills with the responsible business team.",
+          "prepare": "Connect one skill or coverage decision to a customer\u2019s ability to work.",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#customer-uptime"
+            }
+          ]
+        }
+      },
+      {
+        "id": "beginner-2-8-v1",
+        "topic": "asking-finance",
+        "stage": "CNH connection",
+        "prompt": "You are unsure whether a staffing proposal really saves money. What should you do next?",
+        "options": [
+          "Count training attendance as proof of savings",
+          "Use the lowest wage rate as the entire cost",
+          "Assume any headcount reduction guarantees savings",
+          "Ask the controller to validate total cost, good output, and cash timing"
+        ],
+        "correct": 3,
+        "explanation": "HR can frame the people options, Operations can test delivery and skills, and Finance can validate the financial assumptions. Asking a precise question is part of learning.",
+        "basis": "Practice scenario \u00b7 general business concept",
+        "sourceIds": [],
+        "discussion": "What evidence would persuade you that the claimed benefit is real?",
+        "valueConnection": {
+          "valueId": "win-as-one",
+          "why": "Different teams can combine their expertise to test a proposal fairly."
+        },
+        "learning": {
+          "id": "asking-finance",
+          "term": "Asking Finance",
+          "definition": "A business case connects an action to expected benefits, costs, timing, and evidence.",
+          "lookFor": "Bring the proposal\u2019s assumptions to the plant controller and Operations; use Vocabulary to clarify unfamiliar terms.",
+          "prepare": "Prepare three questions: what changes, what benefit is measurable, and who verifies it?",
+          "links": [
+            {
+              "label": "Beginner preparation guide",
+              "url": "/prepare#asking-finance"
+            },
+            {
+              "label": "Vocabulary",
+              "url": "/vocabulary"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
